@@ -1,0 +1,1059 @@
+<!doctype html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="description" content="出羽国檜山郡（現・秋田県能代市檜山）を本拠とした大高氏について、現存する書状を原文と現代語訳で並べたもの。">
+<style>:root{color-scheme:light dark}body{margin:0}img{max-width:100%}[hidden]:not([hidden=until-found]){display:none!important}</style>
+<title>檜山大高家記</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Shippori+Mincho+B1:wght@500;700;800&family=Zen+Kaku+Gothic+New:wght@400;500;700&display=swap">
+<style>
+:root{
+  --washi:#E4E7E4; --paper:#EFF1EE; --raise:#F6F7F5; --sink:#D8DCD8;
+  --rule:#BFC6BF; --rule2:#9FA9A0;
+  --sumi:#15181A; --sumi2:#454C4B; --sumi3:#727B79;
+  --ai:#2C4A5E; --ai-soft:#8FA6B6; --kachi:#6B7F8C; --tan:#9A7B4F; --shu:#A63A28;
+  --mincho:"Shippori Mincho B1",'Hiragino Mincho ProN','Yu Mincho',serif;
+  --goth:"Zen Kaku Gothic New",'Hiragino Sans','Yu Gothic',sans-serif;
+}
+@media (prefers-color-scheme:dark){
+  :root:not([data-theme="light"]){
+    --washi:#14171A; --paper:#1A1E22; --raise:#212630; --sink:#101316;
+    --rule:#2E353B; --rule2:#465059;
+    --sumi:#E6E8E3; --sumi2:#B2B8B4; --sumi3:#828A88;
+    --ai:#8FB4CE; --ai-soft:#4C6B82; --kachi:#8CA3B0; --tan:#C0A075; --shu:#DE7C63;
+  }
+}
+:root[data-theme="dark"]{
+  --washi:#14171A; --paper:#1A1E22; --raise:#212630; --sink:#101316;
+  --rule:#2E353B; --rule2:#465059;
+  --sumi:#E6E8E3; --sumi2:#B2B8B4; --sumi3:#828A88;
+  --ai:#8FB4CE; --ai-soft:#4C6B82; --kachi:#8CA3B0; --tan:#C0A075; --shu:#DE7C63;
+}
+*{box-sizing:border-box}
+body{background:var(--washi); color:var(--sumi); font-family:var(--goth); font-size:15px; line-height:1.85; -webkit-font-smoothing:antialiased}
+.wide{max-width:64rem; margin:0 auto; padding:0 1.4rem}
+
+/* masthead */
+.mast{border-bottom:2px solid var(--sumi); background:var(--paper)}
+.mast-in{max-width:64rem; margin:0 auto; padding:2.6rem 1.4rem 1.9rem}
+.kicker{font-size:.68rem; font-weight:500; letter-spacing:.26em; color:var(--ai); margin:0 0 .9rem}
+h1{font-family:var(--mincho); font-weight:800; font-size:clamp(1.9rem,5.4vw,2.7rem); letter-spacing:.13em; line-height:1.25; margin:0 0 .85rem; text-wrap:balance}
+.sub{max-width:41rem; font-size:.95rem; line-height:2.05; color:var(--sumi2); margin:0 0 1.5rem}
+.sub b{color:var(--sumi); font-weight:700}
+.keyfacts{display:grid; grid-template-columns:repeat(auto-fit,minmax(9rem,1fr)); gap:0; border-top:1px solid var(--rule)}
+.kf{padding:.85rem 1rem .85rem 0; border-right:1px solid var(--rule)}
+.kf:last-child{border-right:0}
+.kf .n{font-family:var(--mincho); font-weight:800; font-size:1.5rem; line-height:1.2; color:var(--ai); font-variant-numeric:tabular-nums; display:block}
+.kf .l{font-size:.7rem; color:var(--sumi3); letter-spacing:.05em; line-height:1.6; display:block; margin-top:.25rem}
+
+section{padding:3rem 0 0}
+.shead{display:flex; align-items:baseline; gap:.85rem; margin:0 0 .35rem; flex-wrap:wrap}
+.snum{font-family:var(--mincho); font-weight:800; font-size:.72rem; letter-spacing:.22em; color:var(--tan); flex:0 0 auto}
+h2{font-family:var(--mincho); font-weight:800; font-size:clamp(1.22rem,3.4vw,1.55rem); letter-spacing:.07em; line-height:1.45; margin:0; text-wrap:balance}
+.slede{font-size:.89rem; line-height:1.98; color:var(--sumi2); margin:0 0 1.5rem; max-width:44rem}
+.slede b{color:var(--sumi); font-weight:700}
+p{margin:0 0 1.1rem; max-width:44rem}
+strong{font-weight:700}
+
+.g{font-size:.63rem; font-weight:500; letter-spacing:.07em; line-height:1.5; padding:.15em .48em .2em; white-space:nowrap; border-radius:1px}
+.g-doc{color:var(--ai); border:1px solid currentColor}
+.g-cpy{color:var(--kachi); border:1px dotted currentColor}
+.g-bk{color:var(--tan); border:1px solid currentColor}
+.g-den{color:var(--tan); border:1px dashed currentColor}
+.g-x{color:var(--shu); border:1px solid currentColor; font-weight:700}
+
+/* ---- 書状カード ---- */
+.letter{border:1px solid var(--rule2); background:var(--paper); margin:0 0 1.6rem}
+.letter.x{border-color:var(--shu)}
+.lt-head{padding:.85rem 1.1rem .8rem; border-bottom:1px solid var(--rule2); background:var(--sink); display:flex; flex-wrap:wrap; gap:.3rem .8rem; align-items:baseline}
+.letter.x .lt-head{background:color-mix(in srgb,var(--shu) 12%,var(--sink))}
+.lt-head .yy{font-family:var(--mincho); font-weight:800; font-size:1.02rem; letter-spacing:.07em}
+.lt-head .ww{font-size:.75rem; color:var(--sumi2); letter-spacing:.03em}
+.lt-head .no{font-size:.68rem; color:var(--sumi3); margin-left:auto; font-variant-numeric:tabular-nums}
+.lt-body{padding:1.05rem 1.1rem 1.1rem}
+.lt-what{font-size:.86rem; line-height:2; color:var(--sumi2); margin:0 0 1rem; max-width:none}
+.lt-what b{color:var(--sumi); font-weight:700}
+.pair{display:grid; grid-template-columns:1fr; gap:0; border:1px solid var(--rule); background:var(--raise)}
+@media(min-width:52rem){.pair{grid-template-columns:1fr 1fr}}
+.pane{padding:.9rem 1rem}
+.pane + .pane{border-top:1px solid var(--rule)}
+@media(min-width:52rem){.pane + .pane{border-top:0; border-left:1px solid var(--rule)}}
+.pane h4{font-size:.66rem; font-weight:700; letter-spacing:.16em; color:var(--sumi3); margin:0 0 .6rem}
+.genbun{font-family:var(--mincho); font-size:.93rem; line-height:2.15; letter-spacing:.045em; color:var(--sumi); margin:0; max-width:none}
+.genbun b{font-weight:800}
+.genbun .k{font-size:.78em; color:var(--sumi3)}
+.yaku{font-size:.84rem; line-height:2.05; color:var(--sumi2); margin:0; max-width:none}
+.yaku b{color:var(--sumi); font-weight:700}
+.lt-meta{font-size:.7rem; line-height:1.75; color:var(--sumi3); padding:.7rem 1.1rem; border-top:1px solid var(--rule); margin:0; display:flex; flex-wrap:wrap; gap:.3rem .7rem; align-items:baseline}
+.lt-meta a{color:var(--ai)}
+
+/* ---- 図 ---- */
+.figbox{border:1px solid var(--rule2); background:var(--paper); margin:0 0 1.3rem}
+.figscroll{overflow-x:auto}
+.figscroll svg{display:block}
+.figcap{font-size:.72rem; line-height:1.8; color:var(--sumi3); padding:.7rem 1rem; border-top:1px solid var(--rule); margin:0}
+.figcap b{color:var(--sumi2); font-weight:700}
+.legend{display:flex; flex-wrap:wrap; gap:.4rem .55rem; align-items:center; padding:.7rem 1rem; border-top:1px solid var(--rule)}
+
+/* ---- 総覧 ---- */
+.ledger{border:1px solid var(--rule2); background:var(--paper); margin:0 0 1rem}
+.ledgerscroll{overflow-x:auto}
+table{border-collapse:collapse; width:100%; min-width:40rem; font-size:.79rem}
+caption{text-align:left; font-family:var(--mincho); font-weight:800; font-size:.92rem; letter-spacing:.1em; padding:.7rem 1rem; border-bottom:1px solid var(--rule2); background:var(--sink)}
+th{text-align:left; font-weight:500; font-size:.68rem; letter-spacing:.08em; color:var(--sumi3); padding:.5rem .8rem; border-bottom:1px solid var(--rule2); white-space:nowrap; background:var(--raise)}
+td{padding:.55rem .8rem; border-bottom:1px solid var(--rule); vertical-align:top; line-height:1.7}
+tbody tr:last-child td{border-bottom:0}
+.nm{font-family:var(--mincho); font-weight:700; font-size:.93rem; white-space:nowrap; letter-spacing:.04em}
+.koku{font-variant-numeric:tabular-nums; white-space:nowrap; text-align:right; font-size:.76rem}
+.pos{font-size:.76rem; color:var(--sumi2)}
+.src{font-size:.7rem; color:var(--sumi3); line-height:1.65}
+tr.band td{background:var(--raise); font-family:var(--mincho); font-weight:800; font-size:.78rem; letter-spacing:.1em; color:var(--ai)}
+tr.contested td{background:color-mix(in srgb,var(--shu) 7%,transparent)}
+
+/* ---- 三説 ---- */
+.theory{border:1px solid var(--rule2); background:var(--paper); margin:0 0 .7rem}
+.theory > summary{padding:.8rem 1rem; cursor:pointer; list-style:none; display:flex; gap:.7rem; align-items:baseline; flex-wrap:wrap; font-family:var(--mincho); font-weight:700; font-size:.98rem; letter-spacing:.06em}
+.theory > summary::-webkit-details-marker{display:none}
+.theory > summary::before{content:"＋"; font-family:var(--goth); font-size:.8rem; color:var(--tan); flex:0 0 auto}
+.theory[open] > summary::before{content:"−"}
+.theory > summary:focus-visible{outline:2px solid var(--shu); outline-offset:-2px}
+.tbody{padding:0 1rem 1rem 2.4rem; border-top:1px solid var(--rule)}
+.tbody p{font-size:.8rem; line-height:1.95; color:var(--sumi2); margin:.9rem 0 0; max-width:none}
+.tbody p.weak{color:var(--shu)}
+.tbody b{color:var(--sumi); font-weight:700}
+.tbody p.weak b{color:var(--shu)}
+
+/* ---- 分岐 ---- */
+.branch{display:grid; grid-template-columns:repeat(auto-fit,minmax(17rem,1fr)); gap:0; border:1px solid var(--rule2); margin:0 0 1.2rem; background:var(--paper)}
+.br{padding:1.1rem 1.15rem; border-right:1px solid var(--rule)}
+.br:last-child{border-right:0}
+.br h3{font-family:var(--mincho); font-weight:800; font-size:1.05rem; letter-spacing:.08em; margin:0 0 .5rem}
+.br ol{margin:0; padding-left:1.1rem; font-size:.79rem; line-height:1.95; color:var(--sumi2)}
+.br ol b{color:var(--sumi); font-weight:700}
+.br .foot{font-size:.73rem; color:var(--sumi3); line-height:1.8; margin:.7rem 0 0; padding-top:.6rem; border-top:1px solid var(--rule)}
+
+.caveat{background:var(--sink); border:1px solid var(--rule2); padding:1.2rem 1.25rem; margin:1.4rem 0 0}
+.caveat h3{font-family:var(--mincho); font-weight:800; font-size:.98rem; letter-spacing:.09em; margin:0 0 .8rem}
+.caveat p{font-size:.79rem; line-height:1.95; color:var(--sumi2); margin:0 0 .8rem; max-width:none}
+.caveat p:last-child{margin-bottom:0}
+.caveat b{color:var(--sumi); font-weight:700}
+.srcs{margin:0; padding:0; list-style:none; font-size:.77rem; line-height:1.85; color:var(--sumi2); display:grid; gap:.5rem}
+.srcs li{padding-left:1rem; position:relative}
+.srcs li::before{content:""; position:absolute; left:0; top:.75em; width:.45rem; height:1px; background:var(--rule2)}
+.srcs b{color:var(--sumi); font-weight:700}
+a{color:var(--ai); text-underline-offset:.18em}
+a:focus-visible{outline:2px solid var(--shu); outline-offset:2px}
+footer{border-top:2px solid var(--sumi); margin-top:3rem; padding:1.5rem 0 3rem; font-size:.73rem; color:var(--sumi3); line-height:1.85}
+@media (max-width:640px){body{font-size:14px} .kf{padding-right:.7rem} .br{border-right:0; border-bottom:1px solid var(--rule)} .br:last-child{border-bottom:0}}
+</style>
+</head>
+<body>
+<header class="mast">
+  <div class="mast-in">
+    <p class="kicker">出羽国檜山郡　安東（秋田）氏家中</p>
+    <h1>檜山大高家記</h1>
+    <p class="sub">越後の上杉から鷹の羽が届き、庄内からは鉄砲十四、五挺と羽黒山の材木の話が来る。鹿角の国境では主君の名代として脇差を贈り、米代川の材木にかかる関所の役を免除してやる。<b>大高氏とは、そういう仕事をした一族である。</b>この頁は、その人たちが実際に受け取り、書いた紙を、原文と訳文で並べたものである。</p>
+    <p style="max-width:42rem;font-size:.85rem;line-height:1.95;color:var(--sumi2);margin:0 0 1.4rem;padding:.6rem .9rem;border-left:3px solid var(--tan);background:var(--paper)"><b style="color:var(--sumi)">別巻『<a href="https://mochanwanwan.github.io/hiyama-otaka/yomimono.html">伝承帖</a>』を分けて置いた。</b>軍記の合戦、近世地誌の館の主、村の口碑——<b style="color:var(--sumi)">紙の裏づけを持たない話</b>は、この頁には入れず、人ごと・年代ごとに別巻へまとめてある。</p>
+    <div class="keyfacts">
+      <div class="kf"><span class="n">1541</span><span class="l">初見。封紙に「進上」と書かれる</span></div>
+      <div class="kf"><span class="n">4か国</span><span class="l">庄内・越後・鹿角・蝦夷地と交渉</span></div>
+      <div class="kf"><span class="n">3,194石</span><span class="l">甚介が預かった十八か村</span></div>
+      <div class="kf"><span class="n">9人</span><span class="l">文禄3年の帳に同時に載る大高</span></div>
+    </div>
+  </div>
+</header>
+
+<main>
+
+<!-- ══ 序 ══ -->
+<section class="wide">
+  <div class="shead"><span class="snum">序</span><h2>見取り図 — 四つの系と、依頼者の家がどこにつながるか</h2></div>
+  <p class="slede">先に全体の位置関係を置く。<b>この図でいちばん大事なのは、線が引けなかったところである。</b>実線は『世臣譜』が親子・兄弟と明記する関係、破線は伝承と仮説、<b>赤い点線は、まだ紙で裏づけていない関係</b>である。依頼者の在所は<b>南秋田郡八郎潟町</b>——安政期は<b>真坂</b>、いまは<b>夜叉袋</b>。どちらも旧・面潟村の内で、檜山と秋田湊と脇本城のちょうど中間にあたる。<b>右下の帰農した系とつながるかどうかは、まだ確かめられていない。</b></p>
+
+  <div class="figbox">
+    <div class="figscroll">
+      <svg viewBox="0 0 1240 1245" style="min-width:1140px" role="img" aria-label="大高氏の系統図。戦国期の檜山の大高をひとまとめの一群として置き、そこから四つの行き先が分かれる。大高筑前の系は秋田主馬の代で断絶、伊駒兵右衛門は薦槌秋田家、大高甚助の系は三春で八代続く、そして檜山に残って帰農した系。三春から赤穂の大高忠晴・源五忠雄が分かれたとする仮説を破線で示す。檜山に残って帰農した八家から、荷八田の伝右衛門家（山本郡側。依頼者の家と同一ではない）へ伝承として破線で示す枝と、依頼者の家（南秋田郡八郎潟町）へ、まだ紙で裏づけていない関係として赤い点線で示す枝がある。大高相模守は伝承のうえでの接続点だが同時代文書に裏づけがない。永禄10年の大高主馬は系図につながらず、帰農組とも三春組とも決められないため、行き先の線を途中で止めて示す。">
+
+        <text x="14" y="26" font-family="var(--mincho)" font-size="13.5" font-weight="800" fill="var(--sumi)" letter-spacing="1.4">大高氏　四つの系と、つながらないところ</text>
+        <text x="14" y="45" font-family="var(--goth)" font-size="10" fill="var(--sumi3)">横は世代の順。年代の目盛りではない。</text>
+
+        <!-- ══ 祖 ══ -->
+        <rect x="14" y="176" width="160" height="80" rx="1" fill="var(--sink)" stroke="var(--ai)" stroke-width="1.8"/>
+        <text x="94" y="197" text-anchor="middle" font-family="var(--mincho)" font-size="12.5" font-weight="800" fill="var(--sumi)">戦国期の檜山の大高</text>
+        <text x="94" y="212" text-anchor="middle" font-family="var(--goth)" font-size="9" fill="var(--sumi2)">1541〜1602　同時代文書に出る人々</text>
+        <text x="94" y="226" text-anchor="middle" font-family="var(--goth)" font-size="9" fill="var(--sumi2)">四郎右衛門尉・筑前・主馬・甚介</text>
+        <text x="94" y="238" text-anchor="middle" font-family="var(--goth)" font-size="9" fill="var(--sumi2)">傳右衛門＝安時・又兵衛ほか</text>
+        <text x="94" y="250" text-anchor="middle" font-family="var(--goth)" font-size="9" fill="var(--shu)">互いの続柄はほとんど分からない</text>
+
+        <!-- ひとまとめ → 四つの行き先 -->
+        <path d="M174,216 H188 V105 H200" fill="none" stroke="var(--sumi2)" stroke-width="1.3"/>
+        <path d="M174,216 H188 V196 H200" fill="none" stroke="var(--sumi2)" stroke-width="1.3"/>
+        <path d="M174,216 H188 V286 H200" fill="none" stroke="var(--sumi2)" stroke-width="1.3"/>
+        <path d="M174,216 H188 V519 H200" fill="none" stroke="var(--sumi2)" stroke-width="1.3"/>
+
+        <!-- ══ R1 嫡流 ══ -->
+        <text x="200" y="72" font-family="var(--goth)" font-size="9.5" font-weight="700" fill="var(--tan)" letter-spacing="1.6">世臣譜が立てる嫡流</text>
+        <rect x="200" y="80" width="172" height="50" rx="1" fill="var(--raise)" stroke="var(--ai)" stroke-width="1.6"/>
+        <text x="286" y="99" text-anchor="middle" font-family="var(--mincho)" font-size="12.5" font-weight="800" fill="var(--sumi)">大高筑前</text>
+        <text x="286" y="113" text-anchor="middle" font-family="var(--goth)" font-size="9.5" fill="var(--sumi2)">愛季の侍大将・宿老・家老</text>
+        <text x="286" y="124" text-anchor="middle" font-family="var(--goth)" font-size="9" fill="var(--sumi3)">1558〜71 外交／1589 湊合戦で討たれる</text>
+
+        <path d="M372,105 H408" fill="none" stroke="var(--sumi2)" stroke-width="1.3"/>
+        <rect x="408" y="80" width="172" height="50" rx="1" fill="var(--raise)" stroke="var(--tan)" stroke-width="1.4"/>
+        <text x="494" y="99" text-anchor="middle" font-family="var(--mincho)" font-size="12.5" font-weight="800" fill="var(--sumi)">其子　又兵衛</text>
+        <text x="494" y="113" text-anchor="middle" font-family="var(--goth)" font-size="9.5" fill="var(--sumi2)">→ 秋田主馬。秋田姓を賜る</text>
+        <text x="494" y="124" text-anchor="middle" font-family="var(--goth)" font-size="9" fill="var(--sumi3)">大坂陣侍大将・大郡代兼老職</text>
+
+        <path d="M580,105 H616" fill="none" stroke="var(--shu)" stroke-width="1.3"/>
+        <rect x="616" y="80" width="172" height="50" rx="1" fill="var(--sink)" stroke="var(--shu)" stroke-width="1.8"/>
+        <text x="702" y="103" text-anchor="middle" font-family="var(--mincho)" font-size="13" font-weight="800" fill="var(--shu)">不幸子孫絶</text>
+        <text x="702" y="119" text-anchor="middle" font-family="var(--goth)" font-size="9.5" fill="var(--shu)">嫡流はここで終わっている</text>
+
+        <!-- ══ R2 一門へ ══ -->
+        <rect x="200" y="171" width="172" height="50" rx="1" fill="var(--raise)" stroke="var(--tan)" stroke-width="1.4"/>
+        <text x="286" y="190" text-anchor="middle" font-family="var(--mincho)" font-size="12.5" font-weight="800" fill="var(--sumi)">伊駒兵右衛門</text>
+        <text x="286" y="205" text-anchor="middle" font-family="var(--goth)" font-size="9.5" fill="var(--sumi2)">安東一門の名跡を継ぐ。大高の兄弟</text>
+        <text x="286" y="216" text-anchor="middle" font-family="var(--goth)" font-size="9" fill="var(--sumi3)">※続柄の典拠は世臣譜のみ</text>
+
+        <path d="M372,196 H408" fill="none" stroke="var(--sumi2)" stroke-width="1.3"/>
+        <rect x="408" y="171" width="172" height="50" rx="1" fill="var(--raise)" stroke="var(--tan)" stroke-width="1.4"/>
+        <text x="494" y="190" text-anchor="middle" font-family="var(--mincho)" font-size="12.5" font-weight="800" fill="var(--sumi)">薦槌（薦土）秋田家</text>
+        <text x="494" y="205" text-anchor="middle" font-family="var(--goth)" font-size="9.5" fill="var(--sumi2)">天正19年（1591）に千石</text>
+        <text x="494" y="216" text-anchor="middle" font-family="var(--goth)" font-size="9" fill="var(--sumi3)">大高家の兄弟家</text>
+
+        <!-- ══ R3 三春へ ══ -->
+        <rect x="200" y="261" width="172" height="50" rx="1" fill="var(--raise)" stroke="var(--ai)" stroke-width="1.6"/>
+        <text x="286" y="280" text-anchor="middle" font-family="var(--mincho)" font-size="12.5" font-weight="800" fill="var(--sumi)">大高甚助（甚介）</text>
+        <text x="286" y="295" text-anchor="middle" font-family="var(--goth)" font-size="9.5" fill="var(--sumi2)">文禄3年 十八か村3,194石余を預る</text>
+        <text x="286" y="306" text-anchor="middle" font-family="var(--goth)" font-size="9" fill="var(--sumi3)">個人知行414石余／慶長5年(1600)歿</text>
+
+        <path d="M372,286 H408" fill="none" stroke="var(--sumi2)" stroke-width="1.3"/>
+        <rect x="408" y="261" width="172" height="50" rx="1" fill="var(--raise)" stroke="var(--tan)" stroke-width="1.4"/>
+        <text x="494" y="280" text-anchor="middle" font-family="var(--mincho)" font-size="12.5" font-weight="800" fill="var(--sumi)">二代　甚助季時</text>
+        <text x="494" y="295" text-anchor="middle" font-family="var(--goth)" font-size="9.5" fill="var(--sumi2)">慶長6年 鎗奉行・部卒76人</text>
+        <text x="494" y="306" text-anchor="middle" font-family="var(--goth)" font-size="9" fill="var(--sumi3)">寛永19年(1642)歿</text>
+
+        <path d="M580,286 H616" fill="none" stroke="var(--sumi2)" stroke-width="1.3"/>
+        <rect x="616" y="261" width="172" height="50" rx="1" fill="var(--raise)" stroke="var(--tan)" stroke-width="1.4"/>
+        <text x="702" y="280" text-anchor="middle" font-family="var(--mincho)" font-size="12.5" font-weight="800" fill="var(--sumi)">三春　大高甚助家</text>
+        <text x="702" y="295" text-anchor="middle" font-family="var(--goth)" font-size="9.5" fill="var(--sumi2)">三代 重時〜八代 道時。通字「時」</text>
+        <text x="702" y="306" text-anchor="middle" font-family="var(--goth)" font-size="9" fill="var(--sumi3)">家老家のすぐ後に並ぶ家格で幕末まで</text>
+
+        <!-- ══ R4 赤穂（仮説） ══ -->
+        <path d="M494,311 V400 H616" fill="none" stroke="var(--tan)" stroke-width="1.5" stroke-dasharray="6 4"/>
+        <text x="506" y="352" font-family="var(--goth)" font-size="9.5" font-weight="700" fill="var(--tan)">季時の庶子か？</text>
+        <text x="506" y="365" font-family="var(--goth)" font-size="9" fill="var(--shu)">＝依頼者の見立て。書いた史料は無い</text>
+
+        <rect x="616" y="375" width="172" height="50" rx="1" fill="var(--raise)" stroke="var(--tan)" stroke-width="1.4" stroke-dasharray="4 3"/>
+        <text x="702" y="394" text-anchor="middle" font-family="var(--mincho)" font-size="12.5" font-weight="800" fill="var(--sumi)">大高忠晴（兵左衛門）</text>
+        <text x="702" y="409" text-anchor="middle" font-family="var(--goth)" font-size="9.5" fill="var(--sumi2)">寛永16年ヵ 浅野長直に二百石ヵ</text>
+        <text x="702" y="420" text-anchor="middle" font-family="var(--goth)" font-size="9" fill="var(--shu)">この一行が原典未確認</text>
+
+        <path d="M788,400 H824" fill="none" stroke="var(--tan)" stroke-width="1.5" stroke-dasharray="6 4"/>
+        <rect x="824" y="375" width="172" height="50" rx="1" fill="var(--raise)" stroke="var(--tan)" stroke-width="1.4" stroke-dasharray="4 3"/>
+        <text x="910" y="394" text-anchor="middle" font-family="var(--mincho)" font-size="12.5" font-weight="800" fill="var(--sumi)">大高源五忠雄</text>
+        <text x="910" y="409" text-anchor="middle" font-family="var(--goth)" font-size="9.5" fill="var(--sumi2)">寛文12年(1672)生・二十石五人扶持</text>
+        <text x="910" y="420" text-anchor="middle" font-family="var(--goth)" font-size="9" fill="var(--sumi3)">通字は「時」ではなく「忠」</text>
+
+        <path d="M996,400 H1032" fill="none" stroke="var(--tan)" stroke-width="1.5" stroke-dasharray="6 4"/>
+        <rect x="1032" y="375" width="176" height="50" rx="1" fill="var(--sink)" stroke="var(--tan)" stroke-width="1.4"/>
+        <text x="1120" y="397" text-anchor="middle" font-family="var(--mincho)" font-size="12.5" font-weight="800" fill="var(--sumi)">元禄15年 討ち入り</text>
+        <text x="1120" y="413" text-anchor="middle" font-family="var(--goth)" font-size="9.5" fill="var(--sumi2)">赤穂義士 四十七人の一人</text>
+
+        <!-- ══ R5 檜山に残る＝依頼者の家 ══ -->
+        <!-- 相模：戦国期の一員かどうかが問われている -->
+        <path d="M94,256 V288" fill="none" stroke="var(--tan)" stroke-width="1.5" stroke-dasharray="6 4"/>
+        <rect x="14" y="288" width="166" height="154" rx="1" fill="var(--sink)" stroke="var(--shu)" stroke-width="1.6" stroke-dasharray="5 3"/>
+        <text x="97" y="307" text-anchor="middle" font-family="var(--mincho)" font-size="11" font-weight="800" fill="var(--sumi)">大高相模（守）</text>
+        <text x="22" y="321" font-family="var(--goth)" font-size="8" fill="var(--sumi2)">在地伝承では「康澄」</text>
+        <text x="22" y="333" font-family="var(--goth)" font-size="8" fill="var(--sumi2)">同時代の紙は資料1115ただ</text>
+        <text x="22" y="345" font-family="var(--goth)" font-size="8" fill="var(--sumi2)">一件。それも近世の写である</text>
+        <text x="22" y="357" font-family="var(--goth)" font-size="8" fill="var(--shu)">「康澄」は原文に一度も出ない</text>
+        <text x="22" y="369" font-family="var(--goth)" font-size="8" fill="var(--shu)">＝県史編者の比定註</text>
+        <text x="22" y="381" font-family="var(--goth)" font-size="8" fill="var(--sumi2)">説一 安東一門の下国相模</text>
+        <text x="22" y="393" font-family="var(--goth)" font-size="8" fill="var(--sumi2)">　　　入道安叟</text>
+        <text x="22" y="405" font-family="var(--goth)" font-size="8" fill="var(--sumi2)">説二 大高甚介その人</text>
+        <text x="22" y="417" font-family="var(--goth)" font-size="8" fill="var(--sumi2)">説三 実在した</text>
+        <text x="22" y="429" font-family="var(--goth)" font-size="8" fill="var(--sumi2)">同時代文書が支えるのは説一</text>
+        <text x="97" y="436" text-anchor="middle" font-family="var(--goth)" font-size="8" font-weight="700" fill="var(--ai)">入れれば帰農は八家になる</text>
+        <!-- 帰農した家をひとまとめに -->
+        <text x="200" y="444" font-family="var(--goth)" font-size="9.5" font-weight="700" letter-spacing="1.6" fill="var(--ai)">檜山に残り、帰農した</text>
+        <rect x="200" y="452" width="200" height="130" rx="1" fill="var(--sink)" stroke="var(--sumi)" stroke-width="2.6"/>
+        <text x="300" y="471" text-anchor="middle" font-family="var(--mincho)" font-size="11.5" font-weight="800" fill="var(--sumi)">帰農した八家</text>
+        <text x="212" y="487.0" font-family="var(--mincho)" font-size="9" font-weight="700" fill="var(--sumi)">傳右衛門＝安時</text>
+        <text x="390" y="487.0" text-anchor="end" font-family="var(--goth)" font-size="8" fill="var(--sumi3)">386石</text>
+        <text x="212" y="498.5" font-family="var(--mincho)" font-size="9" font-weight="700" fill="var(--sumi)">四郎右衛門</text>
+        <text x="390" y="498.5" text-anchor="end" font-family="var(--goth)" font-size="8" fill="var(--sumi3)">695石</text>
+        <text x="212" y="510.0" font-family="var(--mincho)" font-size="9" font-weight="700" fill="var(--sumi)">孫四郎</text>
+        <text x="390" y="510.0" text-anchor="end" font-family="var(--goth)" font-size="8" fill="var(--sumi3)">137石</text>
+        <text x="212" y="521.5" font-family="var(--mincho)" font-size="9" font-weight="700" fill="var(--sumi)">清八</text>
+        <text x="390" y="521.5" text-anchor="end" font-family="var(--goth)" font-size="8" fill="var(--sumi3)">100石</text>
+        <text x="212" y="533.0" font-family="var(--mincho)" font-size="9" font-weight="700" fill="var(--sumi)">与惣右衛門</text>
+        <text x="390" y="533.0" text-anchor="end" font-family="var(--goth)" font-size="8" fill="var(--sumi3)">50石</text>
+        <text x="212" y="544.5" font-family="var(--mincho)" font-size="9" font-weight="700" fill="var(--sumi)">藤十郎</text>
+        <text x="390" y="544.5" text-anchor="end" font-family="var(--goth)" font-size="8" fill="var(--sumi3)">34石</text>
+        <text x="212" y="556.0" font-family="var(--mincho)" font-size="9" font-weight="700" fill="var(--sumi)">右馬丞</text>
+        <text x="390" y="556.0" text-anchor="end" font-family="var(--goth)" font-size="8" fill="var(--sumi3)">20石</text>
+        <text x="212" y="567.5" font-family="var(--mincho)" font-size="9" font-weight="700" fill="var(--shu)">（大高相模）</text>
+        <text x="390" y="567.5" text-anchor="end" font-family="var(--goth)" font-size="8" fill="var(--sumi3)">？</text>
+        <text x="300" y="576" text-anchor="middle" font-family="var(--goth)" font-size="7.5" fill="var(--sumi3)">九人から三春組を除いた残り</text>
+        <text x="436" y="446" font-family="var(--goth)" font-size="9" font-weight="700" fill="var(--sumi3)">山本郡側の帰農家（枝1）　※依頼者の家と同一ではない。枝かどうかは人別改帳待ち</text>
+        <path d="M400,480 H436" fill="none" stroke="var(--tan)" stroke-width="1.5" stroke-dasharray="6 4"/>
+        <rect x="436" y="452" width="176" height="56" rx="1" fill="var(--raise)" stroke="var(--tan)" stroke-width="1.4" stroke-dasharray="4 3"/>
+        <text x="524" y="471" text-anchor="middle" font-family="var(--mincho)" font-size="11" font-weight="800" fill="var(--sumi)">荷八田の伝右衛門家</text>
+        <text x="524" y="486" text-anchor="middle" font-family="var(--goth)" font-size="8.5" fill="var(--sumi2)">代々「伝右衛門」を称し村の肝煎</text>
+        <text x="524" y="498" text-anchor="middle" font-family="var(--goth)" font-size="8.5" fill="var(--sumi3)">『能代市史稿』「高十五石」</text>
+        <path d="M612,480 H648" fill="none" stroke="var(--sumi2)" stroke-width="1.3"/>
+        <rect x="648" y="452" width="176" height="56" rx="1" fill="var(--raise)" stroke="var(--tan)" stroke-width="1.4"/>
+        <text x="736" y="471" text-anchor="middle" font-family="var(--mincho)" font-size="11" font-weight="800" fill="var(--sumi)">文政期 → 明治</text>
+        <text x="736" y="486" text-anchor="middle" font-family="var(--goth)" font-size="8.5" fill="var(--sumi2)">菅江真澄が子孫を書きとめる</text>
+        <text x="736" y="498" text-anchor="middle" font-family="var(--goth)" font-size="8.5" fill="var(--sumi3)">明治の県庁文書に戸長・地主</text>
+        <path d="M824,480 H860" fill="none" stroke="var(--sumi2)" stroke-width="1.3"/>
+        <rect x="860" y="452" width="176" height="56" rx="1" fill="var(--raise)" stroke="var(--tan)" stroke-width="1.4"/>
+        <text x="948" y="471" text-anchor="middle" font-family="var(--mincho)" font-size="11" font-weight="800" fill="var(--sumi)">いまの山本郡の大高</text>
+        <text x="948" y="486" text-anchor="middle" font-family="var(--goth)" font-size="8.5" fill="var(--sumi2)">二ツ井町飛根富根・荷八田</text>
+        <text x="948" y="498" text-anchor="middle" font-family="var(--goth)" font-size="8.5" fill="var(--sumi3)">向能代・檜山霧山下・鶴形</text>
+        <path d="M400,553 H648" fill="none" stroke="var(--shu)" stroke-width="2" stroke-dasharray="2 4"/>
+        
+        <rect x="648" y="522" width="300" height="60" rx="1" fill="var(--sink)" stroke="var(--ai)" stroke-width="2.8"/>
+        <text x="798" y="543" text-anchor="middle" font-family="var(--mincho)" font-size="13" font-weight="800" fill="var(--sumi)">我が家</text>
+        <text x="798" y="558" text-anchor="middle" font-family="var(--goth)" font-size="9" font-weight="700" fill="var(--sumi)">南秋田郡八郎潟町　安政期＝真坂、いま＝夜叉袋</text>
+        <text x="798" y="572" text-anchor="middle" font-family="var(--goth)" font-size="8" fill="var(--sumi2)">檜山と秋田湊と脇本城の中間。八郎潟の湖畔の湊</text>
+        
+        <text x="648" y="600" font-family="var(--goth)" font-size="9" font-weight="700" fill="var(--ai)">大高は秋田でも数の少ない姓で、分布は檜山と八郎潟の周辺に偏る。</text>
+        <text x="648" y="614" font-family="var(--goth)" font-size="9" fill="var(--sumi2)">地理と姓の希少さから見て、つながっていると見てよい。いまは裏づけの紙を探している段階である。</text>
+
+        <!-- ══ 凡例 ══ -->
+        <line x1="828" y1="618" x2="866" y2="618" stroke="var(--sumi2)" stroke-width="1.3"/>
+        <text x="874" y="622" font-family="var(--goth)" font-size="9.5" fill="var(--sumi2)">世臣譜・同時代文書が明記する関係</text>
+        <line x1="828" y1="640" x2="866" y2="640" stroke="var(--tan)" stroke-width="1.5" stroke-dasharray="6 4"/>
+        <text x="874" y="644" font-family="var(--goth)" font-size="9.5" fill="var(--sumi2)">伝承・仮説（紙の裏づけがない）</text>
+        <line x1="828" y1="662" x2="866" y2="662" stroke="var(--shu)" stroke-width="2" stroke-dasharray="2 4"/>
+        <text x="874" y="666" font-family="var(--goth)" font-size="9.5" fill="var(--shu)">まだ紙で裏づけていない関係</text>
+      
+        <!-- ══ 大高主馬 — どちらとも書かれていない ══ -->
+        <rect x="14" y="598" width="620" height="112" rx="1" fill="var(--sink)" stroke="var(--tan)" stroke-width="1.5" stroke-dasharray="5 3"/>
+        <text x="26" y="618" font-family="var(--mincho)" font-size="12" font-weight="800" fill="var(--sumi)">大高主馬　永禄十年（1567）</text>
+        <text x="200" y="618" font-family="var(--goth)" font-size="8.5" fill="var(--sumi3)">系図に接続できない三人目</text>
+        <text x="26" y="634" font-family="var(--goth)" font-size="9" fill="var(--sumi2)">「近季〔愛季〕カ家老 大高主馬 大將ニテ…人數六千人ニテ谷内ヘ押寄テ戰ケル」——<tspan font-weight="700" fill="var(--sumi)">南部側の記録にしか出ない。</tspan>秋田側の紙には一度も出ない</text>
+        <text x="26" y="649" font-family="var(--goth)" font-size="9" fill="var(--sumi2)">世臣譜が書く蓬田筑前の三子（筑前・伊駒兵右衛門・甚助）に入らない。<tspan font-weight="700" fill="var(--sumi)">傳右衛門＝安時・四郎右衛門と同じく、系図につながらない大高である</tspan></text>
+        <text x="26" y="664" font-family="var(--goth)" font-size="9" fill="var(--sumi2)">文禄三年の帳（1594）に名が無い。二十七年後なので、<tspan font-weight="700" fill="var(--sumi)">死んだか隠居したと見るのが自然</tspan>で、その場合は跡取りが別の通称で帳に載っている</text>
+        <text x="26" y="682" font-family="var(--goth)" font-size="9.5" font-weight="700" fill="var(--shu)">＝その家が九人のどれになったかを、誰も書いていない。帰農組とも三春組とも決められない。</text>
+        <text x="26" y="698" font-family="var(--goth)" font-size="8.5" fill="var(--sumi3)">※三春側にだけは言える——世臣譜八代に主馬は出ない。又兵衛の「秋田主馬」は四十八年後の別人で「不幸子孫絶」。＝三春に主馬の家は残っていない</text>
+        <!-- 上へ伸びる二本。どちらも途中で止める -->
+        <path d="M300,598 V585" fill="none" stroke="var(--shu)" stroke-width="1.6" stroke-dasharray="2 4"/>
+        <text x="308" y="594" font-family="var(--goth)" font-size="9" font-weight="700" fill="var(--shu)">帰農八家へ？</text>
+        <path d="M120,598 V585" fill="none" stroke="var(--shu)" stroke-width="1.6" stroke-dasharray="2 4"/>
+        <text x="128" y="594" font-family="var(--goth)" font-size="9" font-weight="700" fill="var(--shu)">三春へ？</text>
+
+        <!-- ══ 文禄三年の断面 ══ -->
+        <line x1="14" y1="726" x2="1226" y2="726" stroke="var(--rule2)" stroke-width="1"/>
+        <text x="14" y="750" font-family="var(--mincho)" font-size="13" font-weight="800" fill="var(--sumi)" letter-spacing="1.2">文禄三年八月（1594）の断面 — 一冊の帳に、大高が九人</text>
+        <text x="14" y="766" font-family="var(--goth)" font-size="9.5" fill="var(--sumi3)">この帳が、一族についていちばん硬い証拠である。他のほとんどの年に大高は一人か二人しか現れない。</text>
+        <rect x="14" y="778" width="284" height="126" rx="1" fill="none" stroke="var(--tan)" stroke-width="1.4"/>
+        <text x="26" y="798" font-family="var(--goth)" font-size="9.5" font-weight="700" fill="var(--tan)" letter-spacing="1.2">主家に従って三春へ　二人</text>
+                <rect x="26" y="806" width="122" height="88" rx="1" fill="var(--raise)" stroke="var(--tan)" stroke-width="1.4"/>
+        <text x="87.0" y="825" text-anchor="middle" font-family="var(--mincho)" font-size="11" font-weight="800" fill="var(--sumi)">大高甚介</text>
+        <text x="87.0" y="844" text-anchor="middle" font-family="var(--mincho)" font-size="12" font-weight="800" fill="var(--ai)" style="font-variant-numeric:tabular-nums">3,194.846</text>
+        <text x="87.0" y="856" text-anchor="middle" font-family="var(--goth)" font-size="8" fill="var(--sumi3)">代官所十八か村</text>
+        <text x="87.0" y="872" text-anchor="middle" font-family="var(--goth)" font-size="8.5" fill="var(--sumi2)">個人知行 414.332</text>
+        <text x="87.0" y="884" text-anchor="middle" font-family="var(--goth)" font-size="8.5" fill="var(--sumi2)">慶長5年(1600)歿</text>
+                <rect x="160" y="806" width="122" height="88" rx="1" fill="var(--raise)" stroke="var(--tan)" stroke-width="1.4"/>
+        <text x="221.0" y="825" text-anchor="middle" font-family="var(--mincho)" font-size="11" font-weight="800" fill="var(--sumi)">大高又兵衛</text>
+        <text x="221.0" y="844" text-anchor="middle" font-family="var(--mincho)" font-size="12" font-weight="800" fill="var(--ai)" style="font-variant-numeric:tabular-nums">267.435</text>
+        <text x="221.0" y="856" text-anchor="middle" font-family="var(--goth)" font-size="8" fill="var(--sumi3)">個人知行</text>
+        <text x="221.0" y="872" text-anchor="middle" font-family="var(--goth)" font-size="8.5" fill="var(--sumi2)">→ 秋田主馬。大坂陣</text>
+        <text x="221.0" y="884" text-anchor="middle" font-family="var(--goth)" font-size="8.5" fill="var(--sumi2)">侍大将。子孫絶</text>
+        <rect x="316" y="778" width="910" height="126" rx="1" fill="var(--sink)" stroke="var(--sumi)" stroke-width="2.6"/>
+        <text x="328" y="798" font-family="var(--goth)" font-size="10" font-weight="700" fill="var(--sumi)" letter-spacing="1.2">檜山に残り、帰農した　七人　＝　依頼者が先祖と考える系（在所は下記のとおり別郡。要確認）</text>
+                <rect x="328" y="806" width="120" height="88" rx="1" fill="var(--raise)" stroke="var(--ai)" stroke-width="1.8"/>
+        <text x="388.0" y="825" text-anchor="middle" font-family="var(--mincho)" font-size="11" font-weight="800" fill="var(--sumi)">大高傳右衛門</text>
+        <text x="388.0" y="844" text-anchor="middle" font-family="var(--mincho)" font-size="12" font-weight="800" fill="var(--ai)" style="font-variant-numeric:tabular-nums">386.713</text>
+        <text x="388.0" y="856" text-anchor="middle" font-family="var(--goth)" font-size="8" fill="var(--sumi3)">代官所（個人120.866）</text>
+        <text x="388.0" y="872" text-anchor="middle" font-family="var(--goth)" font-size="8.5" fill="var(--sumi2)">野代（能代）城代</text>
+        <text x="388.0" y="884" text-anchor="middle" font-family="var(--goth)" font-size="8.5" fill="var(--sumi2)">1602年まで確認</text>
+                <rect x="456" y="806" width="120" height="88" rx="1" fill="var(--raise)" stroke="var(--ai)" stroke-width="1.8"/>
+        <text x="516.0" y="825" text-anchor="middle" font-family="var(--mincho)" font-size="11" font-weight="800" fill="var(--sumi)">大高四郎右衛門</text>
+        <text x="516.0" y="844" text-anchor="middle" font-family="var(--mincho)" font-size="12" font-weight="800" fill="var(--ai)" style="font-variant-numeric:tabular-nums">695.769</text>
+        <text x="516.0" y="856" text-anchor="middle" font-family="var(--goth)" font-size="8" fill="var(--sumi3)">配下計（個別和643.89）</text>
+        <text x="516.0" y="872" text-anchor="middle" font-family="var(--goth)" font-size="8.5" fill="var(--sumi2)">鉄炮之者 指南22人</text>
+        <text x="516.0" y="884" text-anchor="middle" font-family="var(--goth)" font-size="8.5" fill="var(--sumi2)">1600年 矢島一揆へ</text>
+                <rect x="584" y="806" width="120" height="88" rx="1" fill="var(--raise)" stroke="var(--tan)" stroke-width="1.2"/>
+        <text x="644.0" y="825" text-anchor="middle" font-family="var(--mincho)" font-size="11" font-weight="800" fill="var(--sumi)">大高孫四郎</text>
+        <text x="644.0" y="844" text-anchor="middle" font-family="var(--mincho)" font-size="12" font-weight="800" fill="var(--ai)" style="font-variant-numeric:tabular-nums">137.57</text>
+        <text x="644.0" y="856" text-anchor="middle" font-family="var(--goth)" font-size="8" fill="var(--sumi3)">個人知行</text>
+        <text x="644.0" y="872" text-anchor="middle" font-family="var(--goth)" font-size="8.5" fill="var(--sumi2)">三ヶ一ノ代官所無之者</text>
+        <text x="644.0" y="884" text-anchor="middle" font-family="var(--goth)" font-size="8.5" fill="var(--sumi2)">以後 一切現れない</text>
+                <rect x="712" y="806" width="120" height="88" rx="1" fill="var(--raise)" stroke="var(--tan)" stroke-width="1.2"/>
+        <text x="772.0" y="825" text-anchor="middle" font-family="var(--mincho)" font-size="11" font-weight="800" fill="var(--sumi)">大高清八</text>
+        <text x="772.0" y="844" text-anchor="middle" font-family="var(--mincho)" font-size="12" font-weight="800" fill="var(--ai)" style="font-variant-numeric:tabular-nums">100.0</text>
+        <text x="772.0" y="856" text-anchor="middle" font-family="var(--goth)" font-size="8" fill="var(--sumi3)">個人知行</text>
+        <text x="772.0" y="872" text-anchor="middle" font-family="var(--goth)" font-size="8.5" fill="var(--sumi2)">—</text>
+        <text x="772.0" y="884" text-anchor="middle" font-family="var(--goth)" font-size="8.5" fill="var(--sumi2)">以後 一切現れない</text>
+                <rect x="840" y="806" width="120" height="88" rx="1" fill="var(--raise)" stroke="var(--tan)" stroke-width="1.2"/>
+        <text x="900.0" y="825" text-anchor="middle" font-family="var(--mincho)" font-size="11" font-weight="800" fill="var(--sumi)">大高与惣右衛門</text>
+        <text x="900.0" y="844" text-anchor="middle" font-family="var(--mincho)" font-size="12" font-weight="800" fill="var(--ai)" style="font-variant-numeric:tabular-nums">50.0</text>
+        <text x="900.0" y="856" text-anchor="middle" font-family="var(--goth)" font-size="8" fill="var(--sumi3)">個人知行</text>
+        <text x="900.0" y="872" text-anchor="middle" font-family="var(--goth)" font-size="8.5" fill="var(--sumi2)">鉄炮之者・飛根村ノ内</text>
+        <text x="900.0" y="884" text-anchor="middle" font-family="var(--goth)" font-size="8.5" fill="var(--sumi2)">以後 現れない</text>
+                <rect x="968" y="806" width="120" height="88" rx="1" fill="var(--raise)" stroke="var(--tan)" stroke-width="1.2"/>
+        <text x="1028.0" y="825" text-anchor="middle" font-family="var(--mincho)" font-size="11" font-weight="800" fill="var(--sumi)">大高藤十郎</text>
+        <text x="1028.0" y="844" text-anchor="middle" font-family="var(--mincho)" font-size="12" font-weight="800" fill="var(--ai)" style="font-variant-numeric:tabular-nums">34.49</text>
+        <text x="1028.0" y="856" text-anchor="middle" font-family="var(--goth)" font-size="8" fill="var(--sumi3)">個人知行</text>
+        <text x="1028.0" y="872" text-anchor="middle" font-family="var(--goth)" font-size="8.5" fill="var(--sumi2)">鉄炮之者・道地村ノ内</text>
+        <text x="1028.0" y="884" text-anchor="middle" font-family="var(--goth)" font-size="8.5" fill="var(--sumi2)">以後 現れない</text>
+                <rect x="1096" y="806" width="120" height="88" rx="1" fill="var(--raise)" stroke="var(--tan)" stroke-width="1.2"/>
+        <text x="1156.0" y="825" text-anchor="middle" font-family="var(--mincho)" font-size="11" font-weight="800" fill="var(--sumi)">大高右馬丞</text>
+        <text x="1156.0" y="844" text-anchor="middle" font-family="var(--mincho)" font-size="12" font-weight="800" fill="var(--ai)" style="font-variant-numeric:tabular-nums">20.0</text>
+        <text x="1156.0" y="856" text-anchor="middle" font-family="var(--goth)" font-size="8" fill="var(--sumi3)">個人知行</text>
+        <text x="1156.0" y="872" text-anchor="middle" font-family="var(--goth)" font-size="8.5" fill="var(--sumi2)">鉄炮之者・扇田村ノ内</text>
+        <text x="1156.0" y="884" text-anchor="middle" font-family="var(--goth)" font-size="8.5" fill="var(--sumi2)">以後 現れない</text>
+        
+        <text x="14" y="928" font-family="var(--goth)" font-size="9.5" fill="var(--sumi2)"><tspan font-weight="700" fill="var(--sumi)">三春へ行ったと文書で確認できるのは、甚介と又兵衛の二人だけである。</tspan>残る七人は、以後どの史料にも現れない。久保田藩の「諸士系図」千二百七十五家にも、文化二年提出の系図千八百三十一点にも、<tspan font-weight="700" fill="var(--sumi)">大高姓は一件も無い</tspan>——佐竹家臣にはならなかった。</text>
+        <text x="14" y="944" font-family="var(--goth)" font-size="9.5" fill="var(--sumi2)">＝<tspan font-weight="700" fill="var(--sumi)">檜山に残って田に下りた</tspan>と考えるのが自然である。<tspan fill="var(--shu)">ただしこれは消去法による推定であって、七人それぞれの行方を書いた紙があるわけではない。</tspan></text>
+        <text x="14" y="962" font-family="var(--goth)" font-size="9.5" fill="var(--sumi2)">与惣右衛門の五十石は飛根村ノ内、右馬丞は扇田村、藤十郎は道地村。<tspan font-weight="700" fill="var(--sumi)">いずれも山本郡（檜山・二ツ井）の内である</tspan>。飛根はいまも大高姓が集まる土地だが、<tspan fill="var(--shu)">依頼者の在所はそこではない。</tspan></text>
+        <text x="14" y="978" font-family="var(--goth)" font-size="9" fill="var(--sumi3)">※石高は帳の記載による。甚介代官所と四郎右衛門指南分は個別値の和が合計に届かず（一条脱落の疑い）、傳右衛門代官所386.713石と甚介預り分726石は個別和と完全に一致する。</text>
+        <line x1="14" y1="996" x2="1226" y2="996" stroke="var(--rule2)" stroke-width="1"/>
+        <text x="14" y="1018" font-family="var(--mincho)" font-size="12" font-weight="800" fill="var(--ai)">在所についての追記（2026-09-10）　依頼者の家は南秋田郡八郎潟町。安政期は<tspan fill="var(--sumi)">真坂</tspan>、いまは<tspan fill="var(--sumi)">夜叉袋</tspan>。山本郡ではない。</text>
+        <text x="14" y="1037" font-family="var(--goth)" font-size="9.5" fill="var(--sumi2)">檜山と秋田湊と脇本城の、ちょうど中間にあたる。<tspan font-weight="700" fill="var(--sumi)">上の七人と依頼者の家の関係は、まだ紙で裏づけていない。</tspan>荷八田の伝右衛門家を経由する筋は在所が合わず、前提から外れた。安政期に真坂なら、明治の移住でもない。</text>
+        <text x="14" y="1053" font-family="var(--goth)" font-size="9.5" fill="var(--sumi2)"><tspan font-weight="700" fill="var(--ai)">かわりに出てきた手がかり。</tspan>複数の地誌が「天正年中、南秋田郡 <tspan font-weight="700" fill="var(--sumi)">面潟村字浦大町</tspan>の城主 三浦兵庫頭盛永が、<tspan font-weight="700" fill="var(--sumi)">檜山の大高相模守</tspan>に殺された」と伝える（土崎港町史・文化の秋田・姓氏家系大辞典）。</text>
+        <text x="14" y="1069" font-family="var(--goth)" font-size="9.5" fill="var(--sumi2)">その<tspan font-weight="700" fill="var(--sumi)">浦大町村と、真坂村・夜叉袋村は、明治二十二年に同じ面潟村を構成した隣村である</tspan>（秋田県市町村要覧1891／渡辺彦太郎翁伝1917「秋田郡（今南秋田郡）夜叉袋村（今面潟村の内）」）。＝討伐の現場は、依頼者の在所の隣にあたる。</text>
+        <text x="14" y="1085" font-family="var(--goth)" font-size="9.5" fill="var(--sumi2)">依頼者の家は<tspan font-weight="700" fill="var(--sumi)">久保田藩士ではない</tspan>（＝百姓身分）。常陸那珂郡発祥の藤原姓大高氏＝佐竹家臣→久保田藩士という筋は、これで外れる。ただし在地に下った佐竹系の分流という筋までは、まだ消えていない。</text>
+        <text x="14" y="1101" font-family="var(--goth)" font-size="9.5" fill="var(--sumi2)"><tspan font-weight="700" fill="var(--sumi)">見つからなかったことも書いておく。</tspan>大正4年『秋田県公民録』の面潟村（小池・眞坂・浦大町・浦横町・夜叉袋・野田・川崎）の項に、<tspan font-weight="700" fill="var(--shu)">大高姓は一人も載らない</tspan>。</text>
+        <text x="14" y="1117" font-family="var(--goth)" font-size="9.5" fill="var(--sumi2)">同書で大高姓が十数人ずつ固まって出るのは、山本郡の側である。ただし「公民」は一定額を納める有権者で、全戸ではない。<tspan font-weight="700" fill="var(--sumi)">載らないのは村に居なかったからではなく、納税額が線に届かなかったからである。</tspan></text>
+        <text x="14" y="1133" font-family="var(--goth)" font-size="9" fill="var(--sumi3)">※空振りも記録する。菅江真澄集第3の「くすし大高安定」は<tspan font-weight="700">深浦（津軽）</tspan>の医師で、八郎潟とは無関係。NDL全文検索「夜叉袋×大高」「真坂×大高」にも、八郎潟の大高を示すものは出なかった。</text>
+        <text x="14" y="1149" font-family="var(--goth)" font-size="9" fill="var(--sumi3)">※生きている手がかり：享保4・7年の入会山争論に「<tspan font-weight="700">夜叉袋村ハ夜叉袋村山役と申御證據是又所持仕候</tspan>」（日本林制史資料 第19巻）＝夜叉袋村は証拠文書を持つ村だった。浦大町の三浦盛永を弔う寺は<tspan font-weight="700">清源寺</tspan>。</text>
+        <text x="14" y="1165" font-family="var(--goth)" font-size="9.5" fill="var(--sumi2)"><tspan font-weight="700" fill="var(--ai)">依頼者の家に伝わること〈伝承〉。</tspan>先祖は<tspan font-weight="700" fill="var(--sumi)">材木を扱っていた</tspan>という。檜山の大高がしていた仕事そのものである——羽黒山造営の板柾と材木、米代川の山の口・川の口の諸役、大高安時「能代川添諸役算用状」。伝承の等級だが、符合する。</text>
+        <text x="14" y="1181" font-family="var(--goth)" font-size="9.5" fill="var(--sumi2)"><tspan font-weight="700" fill="var(--ai)">そして真坂と夜叉袋は、八郎潟の湖畔の湊である。</tspan>菅江真澄は「<tspan font-weight="700" fill="var(--sumi)">眞阪の浦やかた</tspan>」「<tspan font-weight="700" fill="var(--sumi)">夜叉袋の浦</tspan>」と書き、夜叉袋の古名を「<tspan font-weight="700" fill="var(--sumi)">夜砂が帝、蝦夷が湊</tspan>」と伝える（秋田叢書別集第3）。</text>
+        <text x="14" y="1197" font-family="var(--goth)" font-size="9.5" fill="var(--sumi2)">昭和13年『全国漁業協同組合名簿』にも夜叉袋が載る＝水運の地である。<tspan font-weight="700" fill="var(--ai)">ただし依頼者は、材木は湖畔ではなく米代川の方だろうと言う〈推測〉。</tspan></text>
+        <text x="14" y="1213" font-family="var(--goth)" font-size="9.5" fill="var(--sumi2)"><tspan font-weight="700" fill="var(--sumi)">米代川は檜山・野代の川</tspan>——大高がその山の口・川の口の役を差配した、まさにその川である。＝この伝承が指しているのは八郎潟ではなく<tspan font-weight="700" fill="var(--sumi)">檜山の側</tspan>で、家が山本郡から南秋田郡へ移った筋を示すのかもしれない。<tspan font-weight="700" fill="var(--shu)">——ここまではあくまで推測である。裏づける史料は一点も見ていない。</tspan></text>
+      </svg>
+    </div>
+    <p class="figcap"><b>読みどころは四つある。</b><br>
+    ① <b>戦国期の大高は、ひとまとめにした。</b>この図はもともと『世臣譜』の立てる祖「<b>蓬田筑前</b>」を左端に置き、その長子＝大高筑前、二男＝伊駒兵右衛門、三男＝大高甚助と枝分かれさせていた。<b>それを一旦やめた。</b>理由は二つある。世臣譜自身が「<b>本稱蓬田、系譜失</b>」と書いていて、この祖から下の続柄は同書の一言に頼りきりであること。そして檜山に残った四郎右衛門尉や傳右衛門＝安時が蓬田筑前とどうつながるかは、<b>どの史料にも書かれていない</b>こと。枝を描くと、分かっていないことまで分かったように見える。<br>② <b>「嫡流」はすでに絶えている。</b>世臣譜は大高筑前を長子とし、その子が秋田姓を賜った秋田主馬で、そこに「<b>不幸子孫絶</b>」と書いて終わる。三春に続いたのは三男・甚助の系である。<br>
+    ③ <b>帰農した家は丸めて置いた。</b>文禄三年の帳の九人のうち、三春へ行ったと文書で確認できるのは甚介と又兵衛だけである。残る七家——相模を入れれば八家——が檜山側に残ったと考えられる。<b>伝右衛門は記録がいちばん多い一人にすぎず、本線として扱う根拠は無い。</b>そのうち江戸期まで動向を追えるのは荷八田の伝右衛門家だけで、それも伝承の等級である。<b>そして荷八田は山本郡——依頼者の在所（南秋田郡八郎潟町）ではない。</b>八家と依頼者の家を結ぶ紙は、まだ出ていない。<b>ただし、別の家だという意味ではない。</b>檜山と八郎潟は羽州街道で<b>一日の行程</b>、郡境を挟むだけである。<b>依頼者は、大高が希少姓でありながら分布が檜山まわりと八郎潟まわりの二つの塊に偏ることから、どこかの枝が一度この行程を越えたとほぼ見ている〈推測・依頼者〉。裏づけとなる宗門人別改帳・人別送り状は、まだ見ていない。ここが、いま探しているところである。</b><br>
+    ④ <b>その穴を埋めていたのが「相模守」だった。</b>荷八田の家は「相模守の末孫」と伝え、菅江真澄がそれを書きとめた。ところがその相模守は、同時代の紙では安東一門の下国相模入道安叟を指す可能性が高い。<b>伝承が消えたのではなく、伝承と同時代文書をつなぐ道が断たれたのである。</b><br>
+    ⑤ <b>主馬は、どちらとも決められない。</b>永禄十年（1567）に六千を率いた大高主馬は、南部側の記録にしか出ず、世臣譜の三子にも入らない。文禄三年の帳に名が無いのは、二十七年後だから死んだか隠居したと見るのが自然で、<b>その場合は跡取りが別の通称で帳に載っている</b>。＝<b>主馬の家が九人のどれになったかは、誰も書いていない。</b>図では行き先の線を途中で止めた。<br>
+    ※大高筑前が一人か二人かは決着していない（1309「大高筑前胡斎也」／近世1 kins1-1-0015「大高筑前<b>胡斎ノおや也</b>」で一世代ずれる）。</p>
+  </div>
+
+</section>
+
+<!-- ══ 一 ══ -->
+<section class="wide">
+  <div class="shead"><span class="snum">一</span><h2>他国の重臣が、へりくだって宛てた相手</h2></div>
+  <p class="slede">この一族の最初の姿は、<b>封筒の表書き</b>である。天文十年（一五四一）十二月十八日、庄内・藤島城の土佐林宮内少輔氏頼が一通を封じ、その表にこう書いた。</p>
+
+  <div class="letter">
+    <div class="lt-head">
+      <span class="yy">封紙ウワ書</span>
+      <span class="ww">天文十年ヵ（1541）12月18日　土佐林氏頼 → 大高四郎右衛門尉</span>
+      <span class="no">資料995</span>
+    </div>
+    <div class="lt-body">
+      <p class="lt-what">土佐林氏は<b>羽黒山の別当職を出す家</b>で、庄内では大宝寺氏と肩を並べる勢力である。その当主が、へりくだった<b>「進上」</b>の二字を使って宛てた——それがこの一族の初見になる。県史はこの人物に「<b>檜山屋形下国家執事</b>」と註を付けた。屋形とは檜山安東氏の当主、執事は家政と外交を預かる家宰である。</p>
+      <div class="pair">
+        <div class="pane">
+          <h4>原文</h4>
+          <p class="genbun">（封紙ウワ書）「……<b>進上　大高四郎右衛門尉殿</b>　　　宮内少輔氏頼」</p>
+        </div>
+        <div class="pane">
+          <h4>訳文</h4>
+          <p class="yaku">（封紙のおもて）進上いたします　大高四郎右衛門尉殿へ　　宮内少輔氏頼<br><span style="color:var(--sumi3);font-size:.94em">※「進上」は、差出人が自分を低く置く書き方。同格や目下には使わない。</span></p>
+        </div>
+      </div>
+      <p class="lt-what" style="margin-top:1.1rem"><b>中の本文には、もっと大きなことが書いてある。</b>これは<b>家督相続の挨拶状</b>である。父が出家したのでこの年に家を継いだ、太刀を一腰さしあげる、という。そして——</p>
+      <div class="pair">
+        <div class="pane">
+          <h4>原文</h4>
+          <p class="genbun">未能言達之条、今度申上候、抑御太刀一腰令遣献候、聊奉表御祝意迄候、<b>如禅棟不相更存日可預御芳情事</b>、可爲本望候、萬緒重而可申披之旨、<b>可預御披露候</b>、恐惶謹言、</p>
+        </div>
+        <div class="pane">
+          <h4>訳文</h4>
+          <p class="yaku">まだご挨拶も申し上げられずにおりましたので、このたび申し上げます。太刀を一腰さしあげます。お祝いの気持ちをあらわすまでのものです。<b>禅棟のときと変わらぬお心づかいを、これからも頂戴できますこと</b>、本望に存じます。細々のことは重ねて申し上げますので、<b>殿へお取り次ぎくださいますよう</b>。</p>
+        </div>
+      </div>
+    </div>
+    <p class="lt-meta"><span class="g g-doc">同時代文書</span> 音喜多勝氏所蔵 八戸湊文書 巻子11-3　本紙18.6×47.0cm・切紙・鳥ノ子／封紙19.0×13.0cm　<a href="https://kenshi-archives.pref.aomori.lg.jp/il/meta_pub/G0000004txt_Chus2-995-000-a">原文（青森県史DA）</a>　<span style="color:var(--sumi3)">画像＝オンライン公開なし。写真は『青森県史 資料編 中世2』口絵</span></p>
+    <p class="figcap"><b>「如禅棟」——禅棟のときと同じように、と書いている。</b>禅棟は差出人の父、土佐林能登入道杖林斎禅棟である。<b>つまり、この家と大高家の付き合いは、この手紙より前の代から続いていた。</b>大高氏が檜山で庄内との窓口を勤めた期間は、記録に残る最初の名前よりさらに遡る。<b>ただし、遡った先に立つ大高の名は、まだ一つも見つかっていない。</b><br>
+    <b>父の出家は天文十年十一月だった。</b>庄内側の記録がそれを書いている——『荘内人名辞書』（言霊書房 1937）土佐林の項、「大寳寺氏に屬し天文元年以降砂越氏維と戰ひ利あらずして大寶寺城陷り武藤晴氏は尾浦城に移る、<b>同十年十一月晴氏死去するや土佐林以下家中百余人出家す</b>」。主君の死に伴う集団出家である。<b>この手紙は、その翌月に書かれている。</b>父が出家し、子が家を継ぎ、襲名の挨拶を大高に出した——という筋書きが、庄内側から独立に裏づけられた。<br>
+    そしてもう一つ。「<b>可預御披露候</b>」＝殿へのお取り次ぎを頼む、と書く。<b>大高は取次だった。</b>県史はこの人に「檜山屋形下国家執事」と註を付けたが、<b>「執事」は編者の語で原文には無い</b>。原文にあるのは、この「御披露」の二字である。</p>
+  </div>
+</section>
+
+<!-- ══ 二 ══ -->
+<section class="wide">
+  <div class="shead"><span class="snum">二</span><h2>筑前守の仕事 — 受け取った紙、書いた紙</h2></div>
+  <p class="slede">四郎右衛門尉はやがて<b>筑前守</b>を名乗る。永禄から元亀にかけて、この人のもとには越後と庄内から次々に書状が届く。<b>他国の重臣が「御宿所」の書札礼で宛てる格</b>だった。以下、届いた順に、原文と訳文を並べる。<br><b>先に断っておく。</b>「大高筑前守」と書かれた同時代の紙は、じつは<b>土佐林禅棟の二通（資料1017・1018）だけ</b>である。越後から届く二通の宛名は「大<b>鷹</b>筑前守」と「関戸和泉守」であり、主君が書いた略称は「大筑」の三字にすぎない。天文十年の四郎右衛門尉とこの筑前守を同じ人と見るのは<b>県史編者の判断</b>で、その註は自ら「<b>実名未詳</b>」と書いている——「檜山屋形下国家執事で、<b>実名未詳</b>ながら、本冊999号文書その他、永禄年間に大高筑前守として記される人物と同人」（資料995 註2）。<b>そして999号の註は、逆に995号を指している</b>——「本冊995号文書の宛所大高四郎右衛門尉と同一人物」。<b>二つの註は互いを指し合っているだけで、第三の典拠を挙げていない。</b>同一人と見てよい理由はある——仮名から官途への推移は武家の通例で、二十五年の隔たりは一人の生涯に収まり、どちらも檜山の対外取次という同じ位置に立つ。<b>それでも、決め手になる紙はまだ無い。</b></p>
+
+  <!-- 鹿角 -->
+  <div class="letter">
+    <div class="lt-head">
+      <span class="yy">中の平の会見</span>
+      <span class="ww">永禄元年（1558）夏　鹿角・比内領の国境にて</span>
+      <span class="no">鹿角由来集／鹿角志</span>
+    </div>
+    <div class="lt-body">
+      <p class="lt-what">安東愛季が南部領・鹿角の在地武士に会いたいと申し入れた。仲介は比内の浅利氏。猿田川を越えた「中の平」で両者が向かい合ったとき、<b>秋田側の筆頭に立ったのが、愛季の名代・大高筑前</b>である。鹿角側は大湯四郎左衛門・小平彦次郎・柴内弥次郎・花輪中務・大里豊前の五人。</p>
+      <div class="pair">
+        <div class="pane">
+          <h4>原文</h4>
+          <p class="genbun">秋田ヨリ近季ノ名代ニ<b>大高筑前</b>・大浦縫殿助・無仁内久藏・同平右衛門四人ハ比内領猿田川ヲ越テ中ノ臺ニテ見參シケル……依之<b>大髙筑前</b>方ヨリ小枝指小次郞ニ脇指ヲ引出物ニ出シケル</p>
+        </div>
+        <div class="pane">
+          <h4>訳文</h4>
+          <p class="yaku">秋田から、（安東）近季の名代として<b>大高筑前</b>・大浦縫殿助・無仁内久蔵・同平右衛門の四人が、比内領の猿田川を越え、中の台で会見した。……これにより<b>大高筑前</b>のほうから、酌に立った小枝指小次郎へ脇差を引出物として与えた。</p>
+        </div>
+      </div>
+      <p style="font-size:.8rem;line-height:1.95;color:var(--sumi2);margin:1rem 0 0;max-width:none">国境をまたいだ調略の席で、<b>主君の代わりに刀を贈る</b>。それができる立場だった、ということである。（南部側の史料は愛季を「近季」と書く。）</p>
+    </div>
+    <p class="lt-meta"><span class="g g-bk">近世の編纂物</span> 『鹿角由来集』（慶安4年成立）→『鹿角志』／『鹿角市史』第1巻</p>
+  </div>
+
+  <!-- 上杉 -->
+  <div class="letter">
+    <div class="lt-head">
+      <span class="yy">越後から、鷹の羽の礼</span>
+      <span class="ww">永禄9〜10年ヵ（1566-67）5月4日　直江政綱 → 大鷹筑前守殿</span>
+      <span class="no">資料999</span>
+    </div>
+    <div class="lt-body">
+      <p class="lt-what">差出は<b>上杉謙信の重臣・直江政綱</b>。筑前守が謙信へ音信を送り、その披露を政綱が取り次いだ。<b>贈答が動いている</b>——奥羽の鷹の羽が越後へ、越後の白布が檜山へ。県史の註はこの人物を「<b>下国愛季執事</b>」と説明する。</p>
+      <div class="pair">
+        <div class="pane">
+          <h4>原文</h4>
+          <p class="genbun">貴札拝見、忝奉存候、此比絶書信疎遠候条、先度令啓上候キ、定而可爲参着候、仍<b>屋形（上杉謙信）江御音信、則令披露候處ニ御懇意本望之段、被及直報候</b>、随而小鳥羽<span class="k">〈壱羽〉</span>被懸御意候、従是雖軽少候白布<span class="k">〈弐端〉</span>令進上之候、誠々表一儀迄候、當国相應之儀、被仰下不可有疎儀候、此旨可得御意候、恐々謹言、</p>
+        </div>
+        <div class="pane">
+          <h4>訳文</h4>
+          <p class="yaku">お手紙拝見しました、かたじけなく存じます。このところ文が絶えて疎遠になっておりましたので、先ごろこちらから申し上げました。きっとお手元に届いていることと存じます。<b>さて、屋形（上杉謙信）へのお便りは、すぐに披露いたしましたところ、ご懇意のほど本望である旨、直々にご返事がございました。</b>あわせて小鳥の羽一羽を、お心にかけてお贈りくださいました。こちらからは軽少ではありますが白布二端を進上いたします。まことに志ばかりのものです。当国（越後）で入用の儀がございましたら、仰せ下されればおろそかにはいたしません。この旨お心得ください。</p>
+        </div>
+      </div>
+    </div>
+    <p class="lt-meta"><span class="g g-doc">同時代文書</span> 音喜多勝氏所蔵 八戸湊文書 巻子11-8　本紙20.6×43.2cm・切紙・鳥ノ子・<b>花押3.8×3.6cm</b>　※宛名は「大<b>鷹</b>筑前守」。大高／大鷹は同一人の表記ゆれ　<a href="https://kenshi-archives.pref.aomori.lg.jp/il/meta_pub/G0000004txt_Chus2-999-000-a">原文（青森県史DA）</a>　<span style="color:var(--sumi3)">画像＝オンライン公開なし。写真は同書口絵</span></p>
+  </div>
+
+  <!-- 主馬 長牛城 -->
+  <div class="letter">
+    <div class="lt-head">
+      <span class="yy">六千余を率いて、長牛城へ</span>
+      <span class="ww">永禄10年（1567）10月15日　比内・鹿角</span>
+      <span class="no">南部叢書 第2冊</span>
+    </div>
+    <div class="lt-body">
+      <p class="lt-what">中の平の会見から九年。<b>開いた道の先へ、軍が動いた。</b>率いたのは大高主馬である。南部側の記録が、その兵力の内訳まで書いている——<b>比内・阿仁・松前・由利の勢に、鹿角の内応者を加えた六千余。</b>松前とは蝦夷地の蠣崎勢のことで、この記事の直前に「松前兄弟・蠣崎右衛門ノ首級ヲ獲タリ」とある。<b>檜山の外交が集めた兵が、そのまま戦場に出ている。</b></p>
+      <div class="pair">
+        <div class="pane">
+          <h4>原文</h4>
+          <p class="genbun">十月十五日、秋田近季<span class="k">〔愛季〕</span><b>家老大高主馬</b>ハ、<b>比內・阿仁・松前・由利及ヒ鹿角內應ノ士、六千餘兵ヲ率テ谷內城ヲ圍ミ擊ツ</b>、或ハ民屋ニ火ヲ放テ燒之。十六日黎明兩陣接戰、刻ヲ移ス、<b>芥塵天ヲ翳テ汗血地ニ模糊ス</b>。</p>
+        </div>
+        <div class="pane">
+          <h4>訳文</h4>
+          <p class="yaku">十月十五日、秋田愛季の<b>家老・大高主馬</b>は、比内・阿仁・松前・由利の勢、および鹿角で内応した者どもを合わせ、<b>六千余の兵を率いて谷内城を囲み攻めた。</b>民家に火を放って焼いたりもした。十六日の夜明け、両陣が接戦して時が移る。<b>塵埃が天を覆い、汗と血とが地に入り混じって判然としない。</b></p>
+        </div>
+      </div>
+      <p style="font-size:.8rem;line-height:1.95;color:var(--sumi2);margin:1rem 0 0;max-width:none"><b>「家老」と書いているのは、この南部側の記録である。</b>檜山側の紙にこの人の名は出ない。同じ戦いを『聞老遺事』も伝え、そちらは長牛城の陥落まで書く。<b>大高が軍を率いた場面としては、これが最大である。</b></p>
+    </div>
+    <p class="lt-meta"><span class="g g-bk">近世の編纂物</span> 『南部叢書』第2冊（1931）<a href="https://dl.ndl.go.jp/pid/1179163/1/198">NDL pid 1179163 コマ198</a>　同じ戦いを『九戸戦史』(1907) <a href="https://dl.ndl.go.jp/pid/763275">pid 763275</a> も「敵將大高主馬 兵六千」と書く／『聞老遺事』→『鹿角市史』第1巻0542</p>
+  </div>
+
+  <!-- 庄内 材木 -->
+  <div class="letter">
+    <div class="lt-head">
+      <span class="yy">鉄砲十四、五挺と、羽黒山の材木</span>
+      <span class="ww">元亀2年ヵ（1571）4月8日　土佐林（杖林斎）禅棟 → 大高筑前守殿 御宿所</span>
+      <span class="no">資料1017</span>
+    </div>
+    <div class="lt-body">
+      <p class="lt-what"><b>この一通が、筑前守の職掌をいちばんよく映している。</b>前半は軍事——庄内の平定状況を報せ、鉄砲を十四、五挺そちらへ回すと言う。後半は流通行政——羽黒山を造営するので板柾と材木がほしい、小舟を出すから<b>湊の津料と、山の口・川の口の諸役を免除してくれ</b>と頼む。米代川の上流から流し下ろす材木と、その関所。<b>それを裁可できる立場に、この人はいた。</b></p>
+      <div class="pair">
+        <div class="pane">
+          <h4>原文</h4>
+          <p class="genbun">在城候衆、悉此方へ被罷出候、家風ニ候号長澤仁不罷出故、一二ヶ所未罷出候、依之庄中之諸士拂而相立、無手透之条、<b>鐡炮十四五丁差下候</b>、爰元之儀當月中ニ悉可属本意之条、以其上可申合候、彼口之始末点然可被聞召逮候、當敵を手前へ引取候事、前代未聞之由申事候、別而申談之条、可為御悦喜候哉、然者<b>為羽黒山造営、板柾其外材木等可相求之条、小舩を指下可申候、湊津并山之口・川之口諸役預御免許候之様、可預御心得候</b>、此口之儀も津湊在之条、如此之類被仰越、不可有疎儀候、恐々謹言、</p>
+        </div>
+        <div class="pane">
+          <h4>訳文</h4>
+          <p class="yaku">城に籠っておりました者どもは、ことごとくこちらへ降参して出てまいりました。ただ一門筋で長澤と号する者が出てこないため、一、二か所がまだ片づいておりません。そのため庄内じゅうの諸士を残らず動員しており、手が空きませんので、<b>鉄砲を十四、五挺そちらへ差し下します</b>。当地の情勢は今月中にすべて思いどおりになりますので、そのうえで打ち合わせいたしましょう。あちらの戦線の始末も、追ってお聞き届けいただけるはずです。敵をこちらの手元へ引き取ってしまったことは前代未聞だと申しております。とりわけ入念に申し合わせておりますので、さぞお喜びくださることでしょう。<br><b>さて、羽黒山の造営のため、板柾そのほか材木などを調達したく、小舟を差し下します。湊での津料、ならびに山の口・川の口の諸役をご免許いただけますよう、お心得ください。</b>こちらにも津・湊がございますので、同じような件を仰せ越されれば、決しておろそかにはいたしません。</p>
+        </div>
+      </div>
+    </div>
+    <p class="lt-meta"><span class="g g-doc">同時代文書</span> 湊學氏所蔵 秋田湊文書 68B-N28-180　31.0×62.4cm・竪紙貼継・斐紙・<b>鼎型黒印3.9×3.3cm</b>　正文の写が秋田藩家蔵文書51-17　<a href="https://kenshi-archives.pref.aomori.lg.jp/il/meta_pub/G0000004txt_Chus2-1017-000-a">原文（青森県史DA）</a>　<b><a href="https://kenshi-archives.pref.aomori.lg.jp/il/meta_pub/G0000004doc_68B-N28-180">▶ 原本の画像を見る（68B-N28-180）</a></b></p>
+  </div>
+
+  <!-- 庄内 和睦 -->
+  <div class="letter">
+    <div class="lt-head">
+      <span class="yy">最上と小野寺の和睦を報せる</span>
+      <span class="ww">元亀2年ヵ（1571）7月24日　土佐林禅棟 → 大高筑前守殿 御報</span>
+      <span class="no">資料1018</span>
+    </div>
+    <div class="lt-body">
+      <p class="lt-what">三か月後の返信。鮭延口の件が最上義光の取りなしで収まったこと、そして<b>小野寺輝道が檜山に和睦を望んでいる</b>ことを報せる。<b>出羽の諸勢力の和戦の情報が、この人のところへ集まってくる。</b></p>
+      <div class="pair">
+        <div class="pane">
+          <h4>原文</h4>
+          <p class="genbun">其以来音絶之条、内々御床敷候處、示給本望之至候、仍<span class="k">（村山郡）</span>鮭延口之儀、從山形<span class="k">（最上義光）</span>一和之被逮取成候間、被属無事候間、可御心安候、然者貴郡<span class="k">（檜山郡）</span>御備等堅固之由從何可然存候、殊ニ<b>從小野寺<span class="k">（輝道）</span>殿御和望之御刷有之由承、於吾満足候</b>、定而落着不可有程候段存候、相替子細も候者後便示預、可為本懐候、委曲期重信之砌、不具候、恐々謹言</p>
+        </div>
+        <div class="pane">
+          <h4>訳文</h4>
+          <p class="yaku">その後お便りが絶えておりましたので、内々に恋しく思っておりましたところ、お知らせをいただき本望の至りです。さて鮭延口（村山郡）の件は、山形（最上義光）から和睦の取りなしがございましたので、無事に落ち着きました。ご安心ください。そちらの郡（檜山郡）のお備えも堅固とのこと、何よりと存じます。<b>とりわけ小野寺（輝道）殿から和睦を望むお働きかけがあったと承り、私も満足に思っております。</b>きっと落着まで間もないことでしょう。変わったことがございましたら、後便でお知らせください。本望に存じます。詳しくは重ねて便りする折に。</p>
+        </div>
+      </div>
+      <p style="font-size:.8rem;line-height:1.95;color:var(--sumi2);margin:1rem 0 0;max-width:none">丸括弧の（村山郡）（最上義光）（檜山郡）（輝道）は、いずれも<b>県史編者が補った註</b>であって原文にはない。</p>
+    </div>
+    <p class="lt-meta"><span class="g g-doc">同時代文書</span> 湊學氏所蔵 秋田湊文書 68B-N28-181　33.2×46.0cm・竪紙・斐紙・鼎型黒印　同封紙内に双鉤塡墨の精密な写が併存　<a href="https://kenshi-archives.pref.aomori.lg.jp/il/meta_pub/G0000004txt_Chus2-1018-000-a">原文（青森県史DA）</a>　<b><a href="https://kenshi-archives.pref.aomori.lg.jp/il/meta_pub/G0000004doc_68B-N28-181">▶ 原本の画像を見る（68B-N28-181）</a></b>　<a href="https://kenshi-archives.pref.aomori.lg.jp/il/meta_pub/G0000004doc_68B-N28-182">写の画像（182）</a></p>
+  </div>
+
+  <!-- 実物の姿 -->
+  <div class="figbox">
+    <div class="figscroll">
+      <svg viewBox="0 0 980 250" role="img" aria-label="筑前守が受け取った四通の書状を、記録された法量から同じ縮尺で作図した図。最大は元亀2年4月の土佐林禅棟書状で31.0×62.4センチ。">
+        <text x="14" y="22" font-family="var(--mincho)" font-size="13" font-weight="800" fill="var(--sumi)" letter-spacing="1.2">受け取った紙を、記録された法量から同じ縮尺で起こす</text>
+        <!-- scale bar -->
+        <line x1="14" y1="234" x2="86" y2="234" stroke="var(--sumi2)" stroke-width="1.4"/>
+        <line x1="14" y1="230" x2="14" y2="238" stroke="var(--sumi2)" stroke-width="1.4"/>
+        <line x1="86" y1="230" x2="86" y2="238" stroke="var(--sumi2)" stroke-width="1.4"/>
+        <text x="92" y="238" font-family="var(--goth)" font-size="10.5" fill="var(--sumi3)">20cm</text>
+
+        <!-- 995 本紙 18.6x47.0 -->
+        <rect x="14" y="150" width="169" height="67" fill="var(--raise)" stroke="var(--rule2)" stroke-width="1.2"/>
+        <text x="14" y="144" font-family="var(--goth)" font-size="10.5" fill="var(--sumi2)">資料995　1541　18.6×47.0cm　切紙・鳥ノ子</text>
+        <!-- 995 封紙 19.0x13.0 -->
+        <rect x="191" y="150" width="47" height="68" fill="var(--sink)" stroke="var(--ai)" stroke-width="1.3"/>
+        <text x="214" y="188" font-family="var(--mincho)" font-size="9" fill="var(--ai)" text-anchor="middle">封紙</text>
+        <text x="214" y="232" font-family="var(--goth)" font-size="9.5" fill="var(--sumi3)" text-anchor="middle">進上</text>
+
+        <!-- 999 20.6x43.2 -->
+        <rect x="256" y="143" width="156" height="74" fill="var(--raise)" stroke="var(--rule2)" stroke-width="1.2"/>
+        <circle cx="272" cy="207" r="6.8" fill="none" stroke="var(--ai)" stroke-width="1.3"/>
+        <text x="256" y="137" font-family="var(--goth)" font-size="10.5" fill="var(--sumi2)">資料999　1566-67　20.6×43.2cm　花押あり</text>
+
+        <!-- 1017 31.0x62.4 -->
+        <rect x="430" y="105" width="225" height="112" fill="var(--raise)" stroke="var(--ai)" stroke-width="1.6"/>
+        <line x1="542" y1="105" x2="542" y2="217" stroke="var(--rule2)" stroke-width="1" stroke-dasharray="3 3"/>
+        <rect x="440" y="199" width="14" height="12" fill="none" stroke="var(--ai)" stroke-width="1.3"/>
+        <text x="430" y="99" font-family="var(--goth)" font-size="10.5" fill="var(--ai)">資料1017　1571　31.0×62.4cm　竪紙貼継・斐紙・鼎型黒印</text>
+        <text x="542" y="240" font-family="var(--goth)" font-size="9.5" fill="var(--sumi3)" text-anchor="middle">破線は紙を貼り継いだ位置（推定）</text>
+
+        <!-- 1018 33.2x46.0 -->
+        <rect x="672" y="97" width="166" height="120" fill="var(--raise)" stroke="var(--rule2)" stroke-width="1.2"/>
+        <rect x="682" y="199" width="14" height="12" fill="none" stroke="var(--ai)" stroke-width="1.3"/>
+        <text x="672" y="91" font-family="var(--goth)" font-size="10.5" fill="var(--sumi2)">資料1018　1571　33.2×46.0cm　竪紙・斐紙</text>
+
+        <text x="858" y="150" font-family="var(--goth)" font-size="10" fill="var(--sumi3)">□＝黒印</text>
+        <text x="858" y="166" font-family="var(--goth)" font-size="10" fill="var(--sumi3)">○＝花押</text>
+        <text x="858" y="182" font-family="var(--goth)" font-size="10" fill="var(--sumi3)">3.9×3.3cm</text>
+      </svg>
+    </div>
+    <p class="figcap">上の図は、県史・古文書DBに記録された法量から起こした<b>縮尺図</b>である。実物の写真は、<b>湊學氏所蔵分（資料1017・1018・1052）だけが青森県史デジタルアーカイブスの古文書DBでフルカラー公開されている</b>——各書状の下の「<b>▶ 原本の画像を見る</b>」からご覧いただきたい。音喜多勝氏所蔵分（資料995・999・1000）はオンライン画像がなく、写真は『青森県史 資料編 中世2』の口絵に掲載されている。<br>※同館の使用条件は画像の利用について事前の問い合わせを求めているため、この頁には画像を転載せずリンクにとどめた。</p>
+  </div>
+
+  <!-- 大筑 -->
+  <div class="letter">
+    <div class="lt-head">
+      <span class="yy">主君は「大筑」と略した</span>
+      <span class="ww">天正6年ヵ（1578）　安東愛季書状</span>
+      <span class="no">資料695</span>
+    </div>
+    <div class="lt-body">
+      <p class="lt-what">蠣崎（松前）氏との交渉について、愛季が自ら書いた書状。<b>くわしいことは大筑が申す</b>——姓一字と官途一字で略して呼ぶ。日常的に使っている者への呼び方である。</p>
+      <div class="pair">
+        <div class="pane">
+          <h4>原文</h4>
+          <p class="genbun">くわしく文にてハ難叶候条、<b>大筑</b><span class="k">（大高筑前守）</span>申へく候／……くわしく<b>大筑</b>可申候</p>
+        </div>
+        <div class="pane">
+          <h4>訳文</h4>
+          <p class="yaku">詳しいことは書面では申し尽くしがたいので、<b>大筑</b>（大高筑前守）から申し上げさせます。／……詳しくは<b>大筑</b>が申すはずです。</p>
+        </div>
+      </div>
+    </div>
+    <p class="lt-meta"><span class="g g-doc">同時代文書</span> 東北大学附属図書館所蔵 秋田家史料 81-15-19　※（大高筑前守）は県史編者の比定註</p>
+  </div>
+
+  <!-- 最期 -->
+  <div class="letter">
+    <div class="lt-head">
+      <span class="yy">最期 — 使者に立ち、討たれる</span>
+      <span class="ww">天正十七年（1589）　湊合戦</span>
+      <span class="no">資料1309</span>
+    </div>
+    <div class="lt-body">
+      <p class="lt-what">愛季が急死し、十二歳の実季が家督を継いだ。従兄の湊通季が挙兵し、南部・小野寺・戸沢が加担する。籠城百五十日。その戦の終盤、<b>和平を持ちかけたのは敵方についていた由利の赤尾津</b>だった。実季方は家老の大高筑前ら三人を使者に立てる。相手方の湊九郎（通季）は、それを受けなかった。</p>
+      <div class="pair">
+        <div class="pane">
+          <h4>原文</h4>
+          <p class="genbun">赤尾津先扱べしとて、<b>家老大高筑前</b>、小介川右衛門太夫<span class="k">〈秋田十左衛門親也〉</span>、きんあミ<span class="k">〈同朋なから勇士也〉</span>、三人九郎江遣す、<b>九郎誠ニせずして右三人を打殺ス</b>、そこニて赤尾津腹ヲ立、後詰仕、</p>
+        </div>
+        <div class="pane">
+          <h4>訳文</h4>
+          <p class="yaku">赤尾津が「まず和議をまとめよう」と言うので、<b>家老の大高筑前</b>、小介川右衛門大夫（秋田十左衛門の父である）、きんあみ（同朋衆ながら勇士である）の三人を、九郎のもとへ遣わした。<b>九郎は誠意をもって応じず、この三人を打ち殺した。</b>そこで赤尾津は腹を立て、後詰に回った。</p>
+        </div>
+      </div>
+      <p style="font-size:.8rem;line-height:1.95;color:var(--sumi2);margin:1rem 0 0;max-width:none">使者を殺された赤尾津が寝返り、戦の帰趨はここで決した。<b>この人の死が、主家を救った</b>ことになる。三春藩の家臣系譜は、鎌田家の項にそっけなく四文字を残している——「<b>分内・大高既死</b>」（実季の代には、分内と大高はもう死んでいた）。<br><b>ところが、その四文字と、いま読んだ記事が噛み合わない。</b>湊合戦は実季の代の戦いである。実季の代にはもう死んでいた者が、実季の代の戦で使者に立って殺されることはできない。<br><b>同じ資料の後半に、大高筑前がもう一度出てくる。</b>愛季の代、由利をめぐって庄内の大宝寺義氏と争ったときの記事である——「愛季公ト茂氏〔義氏〕ト由利之<b>いとおけ山むしかげ権現堂</b>抔ト云処か合戦之ちまたにて、度々およへども、愛季公終に利を失給ハスト言、<b>此時之武将、ぶ〔分〕に内平右衛門、大高筑前、加成播广〔播磨〕、鎌田河内</b>、むしかげハ茂氏方ゟのとりて〔砦〕なり、<b>互ニ歴々打死ス</b>」。『世臣譜』も同じ戦いを書いていて、<b>戦場の名が一致する</b>——「數戰<b>絲桶山蒸懸権現堂</b>等之地〈地在由利郡〉、終不敗北」。<br><b>ただし「互ニ歴々打死ス」は「両軍で名のある者が討死した」の意である。</b>列挙された四人が死んだとは書いていない。四人の討死と読むのは行きすぎになる。<br>なお、この筑前が号「胡斎」その人か、胡斎の父かは決着していない。資料1309は「愛季之時、大高筑前胡斎也」、東北大学本は「愛季公ノ時ハ大高筑前<b>胡斎ノおや也</b>」と書き、一世代ずれる。<b>筑前が二代いたのなら、父が愛季の代の由利で、子が湊合戦で、と読める。そう書いた史料は無い。ここは推測である。</b></p>
+    </div>
+    <p class="lt-meta"><span class="g g-bk">近世の編纂物</span> 『秋田実季公御一代記』橋元家文書／三春町歴史民俗資料館蔵　実季自身の口述を早川又兵衛氏職が筆記したものが原型　<a href="https://kenshi-archives.pref.aomori.lg.jp/il/meta_pub/G0000004txt_Chus2-1309-000-a">原文（青森県史DA）</a></p>
+  </div>
+</section>
+
+<!-- ══ 三 ══ -->
+<section class="wide">
+  <div class="shead"><span class="snum">三</span><h2>相模の一通</h2></div>
+  <p class="slede">同じ湊合戦のさなかに書かれた、もう一通。<b>この一行が、この家の家伝すべての土台だった。</b>荷八田の伝右衛門家が「相模守の末孫」と伝え、菅江真澄が村で聞き取り、明治の郷土史が実名を「康澄」と書いた、その相模守である。</p>
+
+  <div class="letter x">
+    <div class="lt-head">
+      <span class="yy">「大なる相模、御忠節」</span>
+      <span class="ww">天正17年ヵ（1589）5月13日　嘉成康清 → 賀成右馬・奈良岡惣五郎</span>
+      <span class="no">資料1115</span>
+    </div>
+    <div class="lt-body">
+      <div class="pair">
+        <div class="pane">
+          <h4>原文</h4>
+          <p class="genbun"><span class="k">（小鹿島）</span>脇本之御城御静謐、千万恐悦不斜候、八柳長門又ハ新庄石見、舟越川表にて打死之由、天罸如矢にて候、戸澤九郎<span class="k">（盛安）</span>始逆心之輩、<b>大高相模</b><span class="k">（康澄入道安叟）</span>勢にて打返し候て黒川おもてより脇本へ通路等いたし、御城無恙、<b>大なる相模御忠節、毎度と申なから驚目候</b></p>
+        </div>
+        <div class="pane">
+          <h4>訳文</h4>
+          <p class="yaku">脇本（小鹿島）のお城が静まりましたこと、千万恐悦にたえません。八柳長門または新庄石見が舟越川のあたりで討死したとのこと、天罰は矢のごとくです。戸沢九郎（盛安）をはじめ逆心の輩を、<b>相模の軍勢で打ち返し</b>、黒川方面から脇本へ通路などを開き、お城は無事でした。<b>大いなる相模のご忠節、毎度のこととは申しながら、目を驚かせます。</b></p>
+        </div>
+      </div>
+      <p style="font-size:.82rem;line-height:2;color:var(--sumi2);margin:1rem 0 0;max-width:none">「<b>毎度と申しながら目を驚かす</b>」——毎度のことながら驚かされる。この言い方に、この人物の戦い方が出ている。ところが、この一通を丁寧に調べ直すと、深刻な問題が出てくる。</p>
+    </div>
+    <p class="lt-meta"><span class="g g-cpy">近世の写</span> 秋田県公文書館『秋田藩家蔵文書』巻32（奈良岡惣五郎家蔵文書 32-35）　<b>花押影＝写本</b>　※丸括弧（小鹿島）（盛安）（康澄入道安叟）はすべて<b>県史編者の比定註で、原文にはない</b>　<a href="https://kenshi-archives.pref.aomori.lg.jp/il/meta_pub/G0000004txt_Chus2-1115-000-a">原文（青森県史DA）</a>　<span style="color:var(--sumi3)">画像＝オンライン公開なし</span></p>
+  </div>
+
+  <p><strong>「大高相模」という語は、青森県史のテキストデータベース二万六千十八件のうち、この一件にしか現れない。</strong>しかもその一件が近世の写である。そして実名「康澄」は、原文に一度も出てこない。さらに県史編者は、『秋田実季公御一代記』の本文にある「<strong>下國相模</strong>」にも<strong>まったく同じ註</strong>「（康澄入道安叟）」を付けている。つまり編者は、二人を同一人物と見ている。</p>
+  <p>では安叟とは誰か。ここは註ではなく<strong>原文の署名が答える</strong>。</p>
+
+  <div class="letter">
+    <div class="lt-head">
+      <span class="yy">安叟自身の署名</span>
+      <span class="ww">文禄3年（1594）10月23日　連署起請文</span>
+      <span class="no">資料1111</span>
+    </div>
+    <div class="lt-body">
+      <div class="pair">
+        <div class="pane">
+          <h4>原文（署名部分・編者註なし）</h4>
+          <p class="genbun">文禄三年　十月廿三日　　安倍駿河入道　夢湔<br>　　　　　　　　　　　　<b>安東相模入道　安叟</b><br>　　　　　　　　　　　　安東三拾郎　　儀季<br>　　　　　　　　　　　　安東勝丸<br>　　　　　　　　　　　　湊忠次郎　　　英季</p>
+        </div>
+        <div class="pane">
+          <h4>読みどころ</h4>
+          <p class="yaku"><b>安叟は「安東」相模入道である。</b>安東儀季・安東勝丸・湊英季と肩を並べて署名している。<br><br>愛季自筆書状（資料710）の県史註も、この人物を「<b>檜山城留守居 下国相模入道安叟</b>」「<b>下国家一門</b>」と説明する。『御一代記』の原文は「下國相模、是ハ當家御一門也、潮潟四郎・横木刑部少輔・下國相模ト言て、御當家自然たゆる時ハ此家ゟ継」——<b>当主家が絶えたとき跡を継ぐ一門三家の一つ</b>だと書く。</p>
+        </div>
+      </div>
+    </div>
+    <p class="lt-meta"><span class="g g-doc">同時代文書</span> 秋田県公文書館『秋田藩家蔵文書』28-53（秋田郡飛根村郷民家蔵文書）　<a href="https://kenshi-archives.pref.aomori.lg.jp/il/meta_pub/G0000004txt_Chus2-1111-000-a">原文（青森県史DA）</a></p>
+  </div>
+
+  <p style="margin-bottom:1.3rem"><strong>「相模」は大高氏の官途ではなく、安東一門の筆頭が帯びる官途だった可能性が高い。</strong>資料1115の「大高」の二字は、写す過程で生じた誤写か、県史編者の比定のほうが誤っているか、そのどちらかである。——ただし、<strong>崩れたのは「相模守」という一人の人物像であって、この家そのものではない</strong>。ここまで読んできた筑前守の仕事は、一つも動かない。</p>
+
+  <details class="theory" open>
+    <summary>説一　安東一門の下国相模入道安叟である<span class="g g-doc">同時代文書が支える</span></summary>
+    <div class="tbody">
+      <p>上に挙げた資料1111の署名、資料710の県史註、『御一代記』の本文、そして十八世紀初めの湊家の由緒書「<b>下国氏ノ一門頭 安東相模守ト云</b>」が、いずれも同じ方向を指す。</p>
+      <p class="weak"><b>弱点</b>　県史編者は「大高相模＝下国相模」とは明言しておらず、比定の根拠も書いていない。またこの説では、資料1115の原文にある「大高」の二字が説明できない。</p>
+    </div>
+  </details>
+  <details class="theory">
+    <summary>説二　大高甚介その人である<span class="g g-bk">『能代木材産業史』1979</span></summary>
+    <div class="tbody">
+      <p>同書は「<b>山城預の大高相模守は大高甚介であり、伝右衛門とは別人である。城預と城代を混同してはならない</b>」とする。文禄3年の帳で檜山周辺十八か村・三千百九十四石余を支配し、鑓之者三十六人を預かる甚介は、天正17年に「勢にて打返し」と書かれる軍勢の主将たりうる規模を持つ。説一が有力になったことで、相対的に有力化した。</p>
+      <p class="weak"><b>弱点</b>　大高甚介が「相模守」を称したことを示す史料が一点もない。文禄3年の帳は甚介を受領名なしの「甚介」と記す。</p>
+    </div>
+  </details>
+  <details class="theory">
+    <summary>説三　大高相模守康澄が実在した<span class="g g-den">近世地誌・軍記・在地伝承</span></summary>
+    <div class="tbody">
+      <p>『奥羽永慶軍記』「檜山ノ城ハ秋田實季郞等大高相模在テ之ヲ渡ス」、『柞山峯之嵐』「大高相模守居城なり」、檜山愛宕神社の社領寄進「舘主大高相模守康澄」、菅江真澄『霞むつきほし』の「<b>大高相模守康澄の末</b>」、『能代市史稿』第4輯「<b>大高相模守カ末孫ナリトゾ　伝右エ門ト云フ者</b>」。</p>
+      <p class="weak"><b>弱点</b>　「康澄」は県史の原文に一度も現れず、異伝「勝澄」もある。すべて近世地誌・軍記・在地伝承の等級で、同時代文書は一点もない。</p>
+      <p><b>ただし、伝承そのものが消えるわけではない。</b>荷八田の伝右衛門家が「相模守の末」と自称してきたこと自体は、記録として残る。消えたのは、その相模守を同時代の誰かに接続する道である。</p>
+    </div>
+  </details>
+</section>
+
+<!-- ══ 四 ══ -->
+<section class="wide">
+  <div class="shead"><span class="snum">四</span><h2>文禄三年八月、一冊の帳に九人</h2></div>
+  <p class="slede">豊臣政権のもとで検地と知行の再編が行われ、「秋田実季代官所知行高帳」が作られた。<b>この一冊が、一族についての最も硬い証拠である。</b>他のほとんどの年に大高は一人か二人しか現れないのに、ここには九人がまとめて載る。</p>
+
+  <div class="ledger">
+    <div class="ledgerscroll">
+      <table>
+        <caption>文禄3年（1594）知行高帳に載る大高　全九人</caption>
+        <thead><tr><th>人物</th><th>役職・内訳</th><th>知行（石）</th><th>のちの行方</th></tr></thead>
+        <tbody>
+          <tr>
+            <td class="nm">大高甚介</td>
+            <td class="pos"><b>代官所十八か村</b>／鑓之者36人を預る<br><span style="color:var(--sumi3);font-size:.94em">志戸橋・町ノ内・大釜谷地・扇田・道地・鵜鳥・靏形・飛根・駒かた・二鮒・小懸・ぬかの・大沢・床岩・梅内・小手ヶ萩・はた屋・林崎</span></td>
+            <td class="koku"><b>3,194.846</b><br><span style="color:var(--sumi3)">個人 414.332</span></td>
+            <td class="pos">慶長5年歿。<b>三春 大高甚助家 八代の祖</b></td>
+          </tr>
+          <tr>
+            <td class="nm">大高傳右衛門<br>（＝安時）</td>
+            <td class="pos"><b>野代（能代）城代</b>・代官<br><span style="color:var(--sumi3);font-size:.94em">新田村・志ほから田村・長崎村</span></td>
+            <td class="koku"><b>386.713</b><br><span style="color:var(--sumi3)">個人 120.866</span></td>
+            <td class="pos">1602年まで確認。<b>檜山に残ったと伝承</b></td>
+          </tr>
+          <tr>
+            <td class="nm">大高四郎右衛門</td>
+            <td class="pos">鉄炮之者<b>指南</b>（配下22人）・足軽大将</td>
+            <td class="koku"><b>695.769</b><br><span style="color:var(--shu);font-size:.92em">個別和 643.89</span></td>
+            <td class="pos">1600年 矢島・自然古の一揆へ<br><span style="color:var(--sumi3);font-size:.94em">資料1310に「家老并足軽大将」</span></td>
+          </tr>
+          <tr>
+            <td class="nm">大高又兵衛</td>
+            <td class="pos">—　※大浦傳内の直後に並記</td>
+            <td class="koku">267.435</td>
+            <td class="pos">のち<b>秋田主馬</b>。大坂陣侍大将。子孫絶</td>
+          </tr>
+          <tr><td class="nm">大高孫四郎</td><td class="pos">三ヶ一ノ代官所無之者</td><td class="koku">137.57</td><td class="pos">他の史料に一切現れない</td></tr>
+          <tr><td class="nm">大高清八</td><td class="pos">—</td><td class="koku">100.0</td><td class="pos">他の史料に一切現れない</td></tr>
+          <tr><td class="nm">大高与惣右衛門</td><td class="pos">鉄炮之者（飛根村ノ内）</td><td class="koku">50.0</td><td class="pos">—</td></tr>
+          <tr><td class="nm">大高藤十郎</td><td class="pos">鉄炮之者（道地村ノ内）</td><td class="koku">34.49</td><td class="pos">—</td></tr>
+          <tr><td class="nm">大高右馬丞</td><td class="pos">鉄炮之者（扇田村ノ内）</td><td class="koku">20.0</td><td class="pos">—</td></tr>
+        </tbody>
+      </table>
+    </div>
+    <p class="figcap"><b><a href="https://kenshi-archives.pref.aomori.lg.jp/il/meta_pub/G0000004doc_68B-N16-077">▶ この知行高帳の原本の画像を見る（68B-N16-077・竪帳32帖）</a></b><br><b>386.713</b> は三百八十六石七斗一升三合の意。<b>全十六の代官所のうち「城代」の肩書を冠されるのは、大高傳右衛門ただ一人である。</b>また兵種別の「指南」は大高四郎右衛門（鉄炮）・鎌田河内・湊兵右衛門の三人のみ、「預り」は大高甚介（鑓）のみ——<b>この一族が鉄炮衆と鑓衆の両方の指揮系統を握っていた</b>ことになる。<br>※太字の村名 <b>靏形（鶴形）・飛根・梅内・林崎</b> は、いまも大高姓が集まる土地である。<br><b>数字は検算した。</b>この帳は原本ではなく写である。<b>野代城代 大高傳右衛門代官所 386.713石</b>と<b>鑓之者 大高甚介預り分 726石</b>は、村ごとの個別値を足した和と<b>完全に一致する</b>。いっぽう<b>大高甚介代官所</b>は個別和3,195.127石に対し記載合計3,194.846石で0.281石の差、<b>大高四郎右衛門指南分</b>は個別和643.89石に対し記載合計695.769石で<b>51.879石の差</b>があり、一条脱落した疑いがある。<b>伝右衛門の代官所と甚介預り分の数字は信頼してよく、甚介代官所と四郎右衛門指南分は幅をもって読むべきである。</b></p>
+  </div>
+
+  <p>『奥羽永慶軍記』が天正十七年の比内合戦を語るとき、大館城の陥落を告げる目印はこう書かれる——「<strong>野代城主大高伝右衛門の旗が飜っていた</strong>」。軍記の脚色だと片づけられていたその肩書きは、五年後の帳簿で裏が取れたことになる。</p>
+
+  <div class="letter">
+    <div class="lt-head">
+      <span class="yy">六年後 — 鉄炮だけを添えて、由利へ</span>
+      <span class="ww">慶長5年（1600）　由利郡 矢島・自然古の一揆</span>
+      <span class="no">資料1310</span>
+    </div>
+    <div class="lt-body">
+      <p class="lt-what">関ヶ原の年、出羽の諸勢力が動いた。小野寺が上杉方につき、それを見て由利郡矢島の者どもが一揆を起こす。実季が差し向けた三人のうちの一人が、<b>知行高帳で鉄炮衆二十二人の指南だった大高四郎右衛門</b>である。<b>帳簿の肩書きと、六年後の実際の使われ方が噛み合う。</b></p>
+      <div class="pair">
+        <div class="pane">
+          <h4>原文</h4>
+          <p class="genbun">小野寺謀叛を仕るヲ見て、八嶌<span class="k">〈由利郡矢島〉</span>と申所之もの共一揆を起し、仁賀保兵庫<span class="k">〈挙誠〉</span>所江取懸可申手たて有之由申来候に付て、<b>城之介家老并足輕大将田村作右衛門・檜山作兵衛・大高四郎右衛門抔と申ものに鉄炮計り相添さし遣し</b>、一往事静り申處、此度は八嶌の奥の山中自然古<span class="k">〈由利郡笹子〉</span>と申要害江取籠り、事既ニ大事に成候に付て自然古江とりかけ、<b>即時に打破て一揆原百余人成敗仕られ</b>、事を静申候</p>
+        </div>
+        <div class="pane">
+          <h4>訳文</h4>
+          <p class="yaku">小野寺が謀叛したのを見て、矢島（由利郡）の者どもが一揆を起こし、仁賀保兵庫（挙誠）のところへ攻めかかる手はずがあるという知らせが来た。そこで<b>城介（実季）の家老ならびに足軽大将である田村作右衛門・檜山作兵衛・大高四郎右衛門といった者に、鉄炮だけを添えて差し向けた。</b>ひとまず事は静まったが、こんどは矢島の奥の山中、自然古（笹子）という要害に立て籠もった。事が大事になってきたので自然古へ攻めかかり、<b>即座に打ち破って一揆勢百余人を成敗し</b>、事を静めた。</p>
+        </div>
+      </div>
+      <p style="font-size:.8rem;line-height:1.95;color:var(--sumi2);margin:1rem 0 0;max-width:none">読みどころが三つある。<b>①「家老并足軽大将」という肩書きが本文にある。</b>編者の註ではない。<b>②「鉄炮計り相添」。</b>文禄三年の帳が「鉄炮之者 大高四郎右衛門指南」と書いた、その鉄炮衆をそのまま率いている。<b>③ 並ぶのが檜山作兵衛である。</b>『世臣譜』が大高の兄弟家とする薦槌秋田家の二代・秋田作兵衛範季と同じ名だが、<b>同一人かどうかは確かめていない</b>。<br>〈　〉内は県史編者の比定註で、原文にはない。</p>
+    </div>
+    <p class="lt-meta"><span class="g g-bk">近世の編纂物</span> 『秋田実季・最上義光対決之次第』橋元家文書／三春町歴史民俗資料館寄託　<a href="https://kenshi-archives.pref.aomori.lg.jp/il/meta_pub/G0000004txt_Chus2-1310-000-a">原文（青森県史DA）</a></p>
+  </div>
+
+  <div class="letter">
+    <div class="lt-head">
+      <span class="yy">その翌年 — 百姓に宛てた裁許状</span>
+      <span class="ww">慶長6年（1601）4月5日　秋田右近・大高又兵衛 → ふつと村勘助</span>
+      <span class="no">秋田男鹿名勝誌 下</span>
+    </div>
+    <div class="lt-body">
+      <p class="lt-what"><b>合戦の紙ではない。漁場の境をめぐる村どうしの争いを、公儀の場で裁いた文書である。</b>男鹿の拂戸村と船越村が漁場の境を争い、双方を対決させたうえで拂戸村の言い分を認めた。<b>そしてこの一枚は、拂戸村の百姓・勘助の家に伝わった。</b>勘助の家は慶長以前から肝煎を勤めた家で、同じ家がもう一枚、実季自筆とされる書付も伝えている。<b>大高が百姓に向かって出した紙は、いまのところこれだけである。</b></p>
+      <div class="pair">
+        <div class="pane">
+          <h4>原文</h4>
+          <p class="genbun">ふつと村・船越村りやう<span class="k">〔漁場〕</span>はのさかい有之よし、船越之者御公儀に申上候所ニ、ふつとの者「さかい者無御坐」由を御公儀に罷出、たかいに法かい<span class="k">〔封解・対決〕</span>候節、ふつと村之者之申所きこしめしとりられ候、以來も先々のごとくニりやうを可被致候、後いらん<span class="k">〔違乱〕</span>有間敷ため墨付可申よし御意候間、一書如此候者也<br>　　慶長六年四月五日　　<b>秋田右近 書判</b><br>　　　　　　　　　　　　<b>大高又兵衞　同</b><br>　ふつと村勘助方へ</p>
+        </div>
+        <div class="pane">
+          <h4>訳文</h4>
+          <p class="yaku">拂戸村と船越村のあいだに漁場の境の件があるとのことで、船越の者が公儀へ申し上げたところ、拂戸の者が「境などというものはございません」と公儀へ出てまいりました。互いに対決させましたところ、<b>拂戸村の者の申すところをお聞き届けになりました。</b>今後も先々のとおりに漁をなさってよろしい。のちに違乱のないよう墨付を出すようにとの御意でしたので、一書このとおりです。<br>　慶長六年四月五日　<b>秋田右近 書判／大高又兵衞 同</b><br>　拂戸村 勘助方へ</p>
+        </div>
+      </div>
+      <p style="font-size:.8rem;line-height:1.95;color:var(--sumi2);margin:1rem 0 0;max-width:none"><b>この一枚が埋める穴は大きい。</b>又兵衛は文禄三年（1594）の帳に二百六十七石余で載ったあと、次に名が出るのは年欠の「大又兵」（資料1125、近世の写）まで飛んでいた。<b>慶長六年、国替えの前年に、この人が秋田右近と並んで公儀の裁許を伝える立場にいたことが分かる。</b>——そして翌年、主家に従って常陸へ発つ。</p>
+    </div>
+    <p class="lt-meta"><span class="g g-bk">近世の編纂物</span> 『秋田男鹿名勝誌』下（秋田活版社 1884）<a href="https://dl.ndl.go.jp/pid/763201/1/36">NDL pid 763201 コマ36</a>　同文が『雄鹿名勝誌』(1902) <a href="https://dl.ndl.go.jp/pid/763255">pid 763255</a>、『真澄遊覧記』第38冊 <a href="https://dl.ndl.go.jp/pid/2533432">pid 2533432</a> にも　※<b>原本は拂戸村 加藤家（旧肝煎）伝来。現存の有無は未確認</b></p>
+  </div>
+
+  <div class="caveat" style="margin-top:1.8rem">
+    <h3>同じ帳が、もう一本あった — 『柞山峯之嵐』巻之二</h3>
+    <p>上の表は青森県史 資料1052「秋田実季代官所知行高帳<b>写</b>」による。<b>原本は伝わっていない。</b>ところが二〇二六年九月、<b>同じ内容を載せる別系統の本が、活字になって公開されていることが分かった。</b>『秋田叢書』第1巻（一九三三）所収『<b>柞山峯之嵐</b>』巻之二である（<a href="https://dl.ndl.go.jp/pid/1174002">NDL pid 1174002</a>、コマ二三七〜二四六）。</p>
+    <p><b>数字は合う。</b>野代城代 大高傳右衞門代官所の三百八十六石七斗一升三合はそのままである。<b>ただし甚介代官所の合計だけが一字違う</b>——資料1052「三千百九十四石八<b>斗四</b>升六合」／柞山「三千百九十四石八<b>斗二</b>升六合」。どちらが正しいかは決まらない。<b>どちらも個別値の和（三千百九十五石一斗二升七合）とは合わない。</b></p>
+    <p><b>名前の書き方も違う。</b>甚介は代官所では「<b>甚之助</b>」、鎗の者を預かる箇所では「<b>勘助</b>」と書かれる。右馬丞は「右馬介」。<b>そして資料1052の九人に無い名が一つ出る——「大高四郎左衞門」（コマ二三九）。</b>嘉成重郞兵衞・八島出雲・堀田權左衞門・太田太右衞門と並んで立っている。国立国会図書館の画像で一字ずつ校合した。<b>ただし同じ本のコマ二四〇は、同じ層を「大高四郎右衞門」と書く。写し誤りか別人かは決められない。</b>だからこの頁の九人には加えない。</p>
+    <p><b>校合で消えた名もある。</b>全文検索の機械が読んだ文字には「大高孫兵衞」「大高右馬介」「大高藤十郞」が現れた。<b>画像を見ると、いずれも実在しなかった。</b>縦書き多段の人名列を機械が段またぎで拾い、隣り合う別人の姓と名が合体していたのである（大高<b>孫</b>四郎＋神馬太郎<b>兵衞</b>＝「大高孫兵衞」）。<b>機械の読んだ文字は、画像で確かめるまで典拠にしない。</b></p>
+  </div>
+</section>
+
+<!-- ══ 五 ══ -->
+<section class="wide">
+  <div class="shead"><span class="snum">五</span><h2>安時の花押 — 若狭へ木を送る</h2></div>
+  <p class="slede">若狭国小浜に羽賀寺という古刹がある。嘉吉三年、蝦夷地を追われた安東康季が私財を投じて再興した、<b>安東家の氏寺</b>である。その伽藍の修理にあたり材木を進上する旨の書状が、四百年を越えて同寺に伝わった。<br><b>檜山と小浜のあいだには、もっと前から回路があった。</b>永禄年間に上杉方から関戸和泉守へ宛てた一通（資料1000）に、県史はこう註を付けている——「<b>天文年間に若狭国小浜湊に駐在していた檜山屋形下国舜季家中関戸豊前守久興</b>の一族で、ここでは<b>大高筑前守と共に下国愛季執事の立場で表記</b>」。愛季の一代前、舜季の代には、檜山の家中が小浜の湊に人を置いていたことになる。<b>安時が木を送る三十年以上前から、この湊は檜山にとって身内の湊だった。</b></p>
+
+  <div class="letter">
+    <div class="lt-head">
+      <span class="yy">大高傳右衛門、自ら花押を据える</span>
+      <span class="ww">慶長7年（1602）5月3日　大高安時 → 羽賀寺</span>
+      <span class="no">資料1231／福井県文書館</span>
+    </div>
+    <div class="lt-body">
+      <p class="lt-what">これで、軍記の「大高伝右衛門」に<b>安時</b>という実名がついた。そして仕事の中身がわかる。<b>米代川の流域から切り出した丈木を、日本海の船に積んで若狭へ送る。</b>祖先の再興した寺へ、その子孫の家臣が木を届ける——外交も戦も、この一族にとっては材木と湊の延長線上にあった。</p>
+      <div class="pair">
+        <div class="pane">
+          <h4>原文（差出書）</h4>
+          <p class="genbun">〈大高傳右〉<b>安時</b>（花押）　　羽賀寺様<br><span class="k">表題「（伽藍修理ノ為丈木進上ニ付）」二通（一紙・折紙）</span></p>
+        </div>
+        <div class="pane">
+          <h4>読みどころ</h4>
+          <p class="yaku">受け取る側ではなく、<b>自分で書き、自分の花押を据えた</b>紙である。この一族の人物が発給者として立つ、数少ない例。<br><br>昭和三十二年の『桧山郷土史稿』下巻には、彼らが自分で書いた実務文書の翻刻が三点収められている——「大高甚介御代官御物成算用状」「大高甚介諸役算用状」、そして「<b>大高安時能代川添諸役算用状</b>」。<b>能代川</b>とは米代川の旧称である。</p>
+        </div>
+      </div>
+    </div>
+    <p class="lt-meta"><span class="g g-doc">同時代文書</span> 羽賀寺文書（福井県小浜市）／<a href="https://www.archives.pref.fukui.lg.jp/">福井県文書館デジタルアーカイブ</a> data_id <b>011-521364・011-521571</b>（同館サイト内で番号検索）　※青森県史DAには羽賀寺文書97件の本文が未登録で、原文は福井県側でしか取れない</p>
+  </div>
+</section>
+
+<!-- ══ 六 ══ -->
+<section class="wide">
+  <div class="shead"><span class="snum">六</span><h2>慶長七年、道が二つに分かれる</h2></div>
+  <p class="slede">関ヶ原ののち秋田実季は常陸宍戸へ移され、佐竹義宣が秋田に入る。<b>一族はここで分かれた。</b>軍記は、檜山城を今宮摂津守に引き渡した役を「大高相模」とするが、それを裏づける同時代文書はない。</p>
+
+  <div class="branch">
+    <div class="br">
+      <h3>主家に従った系 — 三春へ</h3>
+      <ol>
+        <li>常陸<b>宍戸</b>、のち陸奥<b>三春</b>へ。二百二十年つづく秋田家中で、<b>家老家のすぐ後に並ぶ家格</b>を保つ</li>
+        <li><b>大高甚助家</b>が八代。通字は「時」。初代の知行<b>414石3斗3升2合</b>が、文禄3年の帳と<b>一石まで一致する</b></li>
+        <li>兄弟家に<b>薦槌（薦土）秋田家</b>——蓬田筑前の二男・伊駒兵右衛門が安東一門の名跡を継いだ。天正19年に千石</li>
+        <li>大高又兵衛は<b>慶長6年に秋田右近と連署して男鹿の漁場相論を裁許し</b>（上）、翌年主家に従う。大坂陣の功で<b>主家と同じ「秋田」姓を賜り</b>、大郡代兼老職に至るが「<b>不幸子孫絶</b>」</li>
+        <li><b>『世臣譜』に載らない大高家が、江戸の武鑑に二家ある。</b>『享保武鑑』『延享武鑑』の三春秋田家の項に「秋田右近・三宅藤左衛門・<b>大高源太夫</b>・秋田半太夫」、『宝暦武鑑』に「<b>大高文右衛門</b>」。同じ『延享武鑑』は用人として「細川主計・<b>大高甚助</b>」を挙げる——<b>甚助家の当主は用人職にあった</b></li>
+        <li>※三春の秋田姓の重臣家（秋田図書家・靱負家・求馬家・山館秋田氏）は<b>大高由来ではなく</b>藩主家の一門・庶流。大浦家も賜姓。逆に<b>大高源太夫家は「秋田求馬家分」</b></li>
+      </ol>
+      <p class="foot">七代・孚時は安永元年（1772）に武器を紛失して役を解かれるが、その処分にこうある——「守職不固段、此漏失、罪亦非小、<b>但議祖勲宥恕従軽</b>」。<b>先祖の功に免じて罪一等を減じる。</b>檜山で愛季の侍大将を勤めた大高筑前の名が、百八十年後の三春で子孫の処分を軽くしている。孚時は八年後に帰参し、天明六年には大目付になった。</p>
+    </div>
+    <div class="br">
+      <h3>従わなかった系 — 檜山に残る</h3>
+      <ol>
+        <li>久保田藩の「諸士系図」1,275家、文化2年提出の系図1,831点の<b>いずれにも大高姓がない</b>。索引の大澤と大塚のあいだが、そのまま空いている</li>
+        <li>＝<b>佐竹家臣にはならなかった。</b>刀を置いて田に下りた</li>
+        <li><b>近世の地誌は、檜山城と能代城を別々の人物に振っている。</b>『秋田沿革史大成』上——檜山は「實季ノ臣<b>大高相模守</b>ヲ置キ渡サシメ、<b>今宮攝津守</b>ヲシテ之ヲ受取ラシム」、能代浦は「實季ノ臣<b>大高傳左衛門</b>〔傳右衛門〕<b>城代タリ</b>、<b>大窪參河守光久</b>ヲシテ之レヲ受取ラシム」。『帝國地名辭典』下巻も独立に「天正年中、秋田城介は其臣大高傳右衞門を置き、<b>慶長の初は大窪三河守を置けり</b>」。<b>明治以降の辞典が一斉に書く「相模守＝野代城代」は、この書き分けが崩れた形かもしれない</b></li>
+        <li>『能代市史年表』は「檜山城代大高相模守の弟<b>新助</b>農に下り開田に着手。<b>荷八田の名、新助の初田から起る</b>」と伝える</li>
+        <li>以後この家は代々<b>「伝右衛門」を名乗り、村の肝煎（庄屋）</b>を勤めた</li>
+        <li>『能代市史稿』第4輯——「<b>大高相模守カ末孫ナリトゾ</b>　伝右エ門ト云フ者　<b>武具家系等ハ先年自火ニテ焼亡ス</b>ト云フ　今幽ニ殘レリ　吹越村荷八田ヨリ十丁西　<b>高十五石</b>」</li>
+        <li>明治の県庁文書に戸長・地主として頻出。現在も<b>二ツ井町飛根富根・荷八田・向能代</b>に集住する</li>
+        <li><b>近世の古文書に名前つきで出る大高は、いまのところ一人だけである</b>——秋田県公文書館の渡部斧松文書に「中村直之進宛書状（<b>水も大不足二付たつの口拵</b>…）」、差出は<b>大高市右エ門（竹生村）</b>（資料番号 斧3360）。竹生は現在の能代市竹生、檜山のすぐ近くで、<b>渡部斧松自身の村</b>である。用件は<b>龍の口（堰の取水口）の普請</b>——水利であった。<span style="color:var(--sumi3)">※目録に年紀の記載がない。斧松文書に入る以上は十九世紀前半とみるのが自然だが、これは推測である</span></li>
+      </ol>
+      <p class="foot"><b>この欄は山本郡側の帰農家（枝1）で、依頼者の家（南秋田郡八郎潟町）と同一の家ではない。ただし別の家と決まったわけでもない——檜山と八郎潟は一日の行程である。関係は序を参照。</b>三百八十六石の代官所を預かった家が十五石になり、由緒を証する紙も焼けた。文化年間、菅江真澄が二八田で聞き取ったのは、それでも残っていたものの話である——先祖の絵仏師が描いた阿弥陀如来と聖徳太子の像を、能代の<b>敬正寺</b>に納めた、と。<b>武具も系図も焼けたあとに残っていたのは、絵だった。</b></p>
+    </div>
+  </div>
+
+  <p><strong>三春の系は文書で追える。</strong>世臣譜が代ごとに知行と役職を書き、初代の石高は文禄3年の帳と一石まで合う。いっぽう<strong>檜山に残った系（山本郡側の帰農家）は、伝承でしか追えない。</strong>1594年から1602年まで野代城代を勤めた大高傳右衛門＝安時と、荷八田の伝右衛門家をつなぐ紙は、いまのところ一点も見つかっていない。<strong>檜山の側では、いちばん大きな穴がここである。依頼者の家との関係は序に書いた。</strong></p>
+</section>
+
+<!-- ══ 補 ══ -->
+<section class="wide">
+  <div class="shead"><span class="snum">補</span><h2>赤穂の大高源五は、どの系か</h2></div>
+  <p class="slede">元禄十五年十二月十四日、吉良邸へ討ち入った四十七人のなかに<b>大高源五忠雄</b>がいる。同じ姓であるからには、どこかで分かれた家のはずである。<b>依頼者はこれを「三春の大高家の庶流」と見る。</b>以下はその見立てを作業仮説として置き、支える材料と、まだ紙で裏の取れていない点とを分けて並べたものである。</p>
+
+  <div class="caveat" style="margin:0 0 1.6rem">
+    <h3>先に断っておく</h3>
+    <p><b>この一節だけ、等級がちがう。</b><span class="g g-den">伝承・未検証</span>　ここまでの各節は、原本または近世の写にさかのぼれる紙を土台にしている。この節はそうではない。骨になる「<b>寛永十六年ごろ、大高忠晴が浅野長直に二百石で仕官した</b>」という一行を、まだ原典で確認できていない。浅野家の分限帳、『赤穂義人纂書』、『赤穂精義参考内侍所』——<b>そこを見るまで、これは仮説である。</b></p>
+  </div>
+
+  <div class="ledger">
+    <div class="ledgerscroll">
+      <table>
+        <caption>三つの家が、同じ百年をどう動いたか</caption>
+        <thead><tr><th>年</th><th>大高（赤穂へ出た系）</th><th>秋田家（主家）</th><th>浅野家</th></tr></thead>
+        <tbody>
+          <tr><td class="nm">慶長7<br>(1602)</td><td class="pos">—</td><td class="pos">檜山 → <b>常陸宍戸</b></td><td class="pos">—</td></tr>
+          <tr><td class="nm">元和8<br>(1622)</td><td class="pos">—</td><td class="pos">宍戸</td><td class="pos">真壁 → <b>常陸笠間</b></td></tr>
+          <tr class="contested"><td class="nm">寛永16ヵ<br>(1639)</td><td class="pos"><b>大高忠晴、浅野長直に二百石で仕官</b><br><span style="color:var(--sumi3);font-size:.94em">※この一行が未確認。仮説の急所</span></td><td class="pos">宍戸</td><td class="pos">笠間</td></tr>
+          <tr><td class="nm">正保2<br>(1645)</td><td class="pos"><b>浅野に従い赤穂へ</b></td><td class="pos">宍戸 → <b>陸奥三春</b></td><td class="pos">笠間 → <b>播磨赤穂</b></td></tr>
+          <tr><td class="nm">寛文12<br>(1672)</td><td class="pos">大高源五忠雄 生</td><td class="pos">三春</td><td class="pos">赤穂</td></tr>
+          <tr><td class="nm">延宝4ヵ<br>(1676)</td><td class="pos">父・兵左衛門忠晴 歿。源五五歳。<b>禄は十分の一に</b></td><td class="pos">三春</td><td class="pos">赤穂</td></tr>
+          <tr><td class="nm">元禄15<br>(1702)</td><td class="pos"><b>討ち入り</b>（十二月十四日＝西暦1703年1月30日）</td><td class="pos">三春</td><td class="pos">前年に改易</td></tr>
+        </tbody>
+      </table>
+    </div>
+    <p class="figcap"><b>宍戸と笠間は、隣国どころか目と鼻の先である。</b>どちらもいまの茨城県笠間市にあたる。秋田家が宍戸にいた四十三年のあいだ、両家は歩いて行き来できる距離にいた。そして<b>正保二年、秋田家は三春へ、浅野家は赤穂へ、同じ年に、反対方向へ発った</b>。<br>※色を敷いた行が、この節の急所である。</p>
+  </div>
+
+  <p><strong>数字は、内側では閉じている。</strong>赤穂側の伝えは、父の兵左衛門が没したとき源五は五歳で、幼少ゆえと藩の財政の事情もあって<strong>禄は十分の一になった</strong>とする。そして大高源五忠雄の禄は<strong>二十石五人扶持</strong>と伝わる。<strong>二百石を十で割れば、二十石。</strong>父の二百石という数字は、この割り算の側からも支持される。——ただし、どちらも同じ赤穂側の伝えのなかの数字である。<strong>一つの伝承が自分自身と整合しているにすぎない</strong>、という読み方も同じだけ成り立つ。外から支える紙が要る。</p>
+
+  <p><strong>そして、その二百石には気をつけたほうがいい。</strong>三春（当時は宍戸）の大高甚助家そのものが、<strong>同じ正保二年に二百石</strong>だった。世臣譜の三代・十大夫重時の項にこうある——「<strong>正保二年宍戸知行帳、大高十大夫二百石</strong>　内百石藤井村・百石三个村」。<strong>「二百石」と「正保二年」という二つの符合が、三春の側の記録にもそろって出てくる。</strong>赤穂側の伝えがこれと混線した可能性は、いまの材料では排除できない。二百石は珍しい額ではないから、ただの偶然かもしれない。それでも、<strong>この数字を庶流説の傍証として使うなら、この一致も並べて置いておくべきである。</strong></p>
+
+  <div class="ledger">
+    <div class="ledgerscroll">
+      <table>
+        <caption>庶流説に向けられる三つの疑問</caption>
+        <thead><tr><th>疑問</th><th>どう読むか</th></tr></thead>
+        <tbody>
+          <tr><td class="nm">通字が<br>ちがう</td><td class="pos">三春の甚助家は八代とも例外なく「<b>時</b>」である（季時・重時・貞時・憲時・宣時・孚時・道時／分家の時直）。赤穂は「<b>忠</b>」（忠晴・忠雄）。——だが<b>庶流が分立にあたって通字を改めるのは普通のことで、これは反証にならない</b>。むしろ早い時期にきれいに分かれた形と整合する</td></tr>
+          <tr><td class="nm">世臣譜に<br>載らない</td><td class="pos">『三春藩秋田家世臣譜』が立項するのは<b>三春藩の家臣</b>である。他家（浅野家）へ出た庶子は原則として対象外で、載らないこと自体は不自然でない。現に世臣譜は、三春に残った<b>大高源太夫家・大高文右衛門家すら採っていない</b>。<br><b>——ただし原文にあたると、「載らなくて当然」とまでは言えなかった。</b>同じ分冊のなかで河尻家は「<b>長子湊平左衛門季弘、往于松前</b>」と、他家へ出た子をはっきり書いている。そう書かなければ、なぜ異姓の二男が継いだのかを説明できないからである。<b>世臣譜が他家行きを書くのは家督の説明に要るときで、家督に関わらない庶子まで網羅する体裁ではない。</b>＝載らないことは、庶流説の反証にも傍証にもならない。<b>中立である</b></td></tr>
+          <tr><td class="nm">年代は<br>合うか</td><td class="pos">秋田家の三春入部と浅野家の赤穂入部は<b>ともに正保二年（1645）</b>。三春 甚助家の二代・季時の歿年は<b>寛永十九年（1642）</b>。忠晴が寛永十六年に仕官できる年齢なら生年は1620年前後で、<b>季時の庶子と見て年代の無理はない</b>。ただし<b>そう書いた史料はまだ一点もない</b>。ここは推測である</td></tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+
+  <div class="caveat">
+    <h3>混ぜてはいけないもの</h3>
+    <p><b>「大高本家のみ秋田姓を許された／秋田忠久＝大高本家四十五代当主」——これは庶流説とは別物である。</b>この説が主張しているのは<b>本家</b>であって、向きが逆である。しかも『世臣譜』は、大高由来の秋田姓（大高又兵衛→秋田主馬）を<b>「不幸子孫絶」</b>とはっきり書いて終わらせている。<span class="g g-x">正面衝突</span>　辿れる典拠は脚注も参考文献もない Wikipedia の記述だけで、「四十五代」は安倍貞任後裔という遠祖伝承ありきの代数である。<b>混ぜると、庶流説まで巻き添えになる。</b></p>
+    <p><b>別系統の大高氏とも混同しない。</b>太田亮『姓氏家系大辞典』第二巻は、赤穂義士・大高源吾忠雄の家を<b>独立の第六項</b>に立て「<b>源姓と稱す</b>」とする（安倍姓としない）。また常陸国那珂郡大高発祥の藤原姓大高氏（佐竹家臣、のち久保田藩士）は、この頁で扱ってきた家とは無関係である。</p>
+    <p><b>次に確かめること。</b>①「寛永十六年ごろ・二百石」の原典——浅野家分限帳、赤穂市立歴史博物館、中央義士会。②『世臣譜』大高の項は確認済み——庶子・他家奉公の記載は無い（中立）。次は浪士が提出した『親類書』（『赤穂義人纂書』『赤穂義士史料』所収）。③三春側で「忠」を持つのは<b>秋田求馬＝大高忠光</b>と<b>治右衛門＝忠邦</b>（原文「祖父」。誰の祖父かは未確定）の二人だけである（資料1400）。ただし<b>忠光・忠邦という実名はいずれも県史編者の比定註で、原文は「秋田求馬」「治右衛門」という通称しか書いていない</b>。編者がその実名をどこから当てたのかを確かめないかぎり、通字の議論は編者の判断に乗ったままである。</p>
+  </div>
+</section>
+
+<!-- ══ 七 ══ -->
+<section class="wide">
+  <div class="shead"><span class="snum">七</span><h2>この頁の限界</h2></div>
+  <div class="caveat">
+    <h3>読むときの約束</h3>
+    <p><b>史料に等級を付けた。</b><span class="g g-doc">同時代文書</span>はその時代に書かれ現存する紙。<span class="g g-cpy">近世の写</span>は江戸期に書き写されたもので誤写が入りうる。<span class="g g-bk">近世の編纂物</span>は後世の編纂で、骨格は信頼できるが細部に誤伝を含む。<span class="g g-den">軍記・伝承</span>は脚色を前提に読む。</p>
+    <p><b>丸括弧は原文ではない。</b>青森県史の翻刻に出る（　）〔　〕「註：」は<b>編者による人物比定</b>である。「大高相模（康澄入道安叟）」の原文は「大高相模」までしかない。この一点を守るかどうかで、結論が変わる。</p>
+    <p><b>訳文は本頁の筆者によるもの</b>で、原文の解釈が分かれうる箇所を含む。判断の根拠になる語は原文で確かめていただきたい。</p>
+    <p><b>この調査で一度まちがえたこと。</b>作業の途中で、まさにその丸括弧を原文と同格に扱う誤りを四件おかした。宛所を落として引用したもの（資料1141）、近世の写を「自筆」と書いたもの（1125）、編者が系譜書から当てた実名をその系譜書の裏づけに使ったもの（1181・循環論法）、原文に区分見出しが無いのに「序列表」と書いたもの（1143）。いずれも独立の検証にかけて差し戻し、本文から落とした。<br>
+    <b>五件目は、指示語を確かめなかったことによる。</b>『梅津政景日記』元和四年の秋田・津軽境目相論に、古老の証言として「<b>太郎殿御代之時鯨より候処を、太高〔大高〕孫六奉行ニ而秋田へ切取候</b>」とある。この「大高孫六」を中世の人物として扱っていた。<b>誤りである。</b>同じ一条の中に「右京大夫〔佐竹義宣〕事ハ秋田<b>藤大郎〔太郎〕殿御跡無残拝領被致</b>」とあり、<b>藤太郎殿＝秋田実季</b>と原文自身が決めている。孫六の一条も同じ角ヶ沢の話で、同じ「太郎殿」である。<b>孫六は実季代（1587-1602）の奉行であって、筑前より前の人ではない。</b>文書全体を読めば防げた誤りだった。</p>
+    <p><b>探し方について。</b>この頁の史料は、青森県史デジタルアーカイブスの<b>五つのデータベース</b>から採っている。二〇二六年九月、その<b>横断検索</b>で「大高」「大髙」「大鷹」「太高」を全件洗い直した。<b>新しい大高氏の史料は、一点も出なかった。</b>それ自体が一つの結果である。<br>
+    <b>取りこぼしやすい点が三つある。</b>①<b>「大鷹」の大半は鷹の鳥名である。</b>津軽・松前・南部から秋田へ贈られる鷹の記事が大量にあり、『梅津政景日記』に出る「大鷹」も全部これで、大高氏とは関係がない。②<b>「大高檀紙」は紙の名である。</b>徳川家康や柴田勝家の書状が検索に掛かるのはこれによる。③<b>「大高伝右衛門」は新字では一件も出ない。</b>県史の表記は「<b>傳</b>」だけである。<br>
+    <b>そして檜山は「日山」とも書かれる。</b>同館の古文書データベースにある「先方時秋田動乱評」（県史未収録）は「<b>日山に居城すえ来</b>」「<b>日山の城主愛季</b>」と書く。檜山・桧山だけで探すと落ちる。<b>ただし総当たりをかけた結果、「日山」と書く例はこの一点しか無かった</b>——国立国会図書館・ADEAC全機関横断・秋田県デジタルアーカイブの目録・青森県史の横断検索、そのいずれにも、檜山の意味の「日山」は出ない。<b>見つからなかったことも、一つの結果である。</b><br>
+    なお同館の古文書データベースは、<b>県史に採録しなかった資料も可能な限り翻刻して載せている</b>。湊學氏所蔵秋田湊文書だけで<b>四百二十六件</b>あり、県史に載ったのはそのごく一部である。そのうち中世の未収録四件（南北朝・室町の棟札三点ほか）を読んだが、<b>大高の名は出なかった</b>。檜山愛宕神社の社領寄進を伝える「舘主大高相模守康澄」を同時代の棟札で裏づけることは、いまのところできていない。</p>
+    <p><b>六件目は、寺の名だった。</b>浦大町の三浦盛永を弔う寺を、この頁は長く「青松寺」と書いていた。<b>誤りである。正しくは「花嶽山 清源寺」（曹洞宗、南秋田郡八郎潟町字一日市）。</b>近代の地誌が三様に書き分けており——『文化の秋田』は「靑松寺」、『大日本市町村案内』と『日本国勢総攬』は「靑原寺」——そのうちの一つをそのまま採ってしまった。三冊が三様に書いていた時点で疑うべきだった。<b>近代の地誌の固有名詞、とくに寺社名は、いま現に在るものと突き合わせなければならない。</b></p>
+
+    <p><b>ウェブに出る「大高相模守」は、確かめるたびに落ちた。</b>二〇二六年九月、次の三つを一つずつ当たった。<br>
+    ①<b>「慶長三年（または四年）に檜山城の代官に任じられた」</b>——<b>年が三通りに揺れる。</b>しかも資料1309は、実季の湊移座についてこう書く——「湊の城へ移り居城し給ふ。<b>檜山城には舍弟比內忠二郞實泰を置れ</b>」。<b>任命の記録そのものが、どこにも無い。</b>この人が出るのは慶長七年の引き渡しの場面だけである。<br>
+    ②<b>「茶臼館は別名 大高館」</b>——檜山安東氏城館跡の三つの構成資産は、檜山城跡・<b>大館</b>跡・茶臼館跡である。「大<b>館</b>」の誤読と見られる。ただし<b>茶臼館＝大高相模守の居館という伝承そのものは実在する</b>。『秋田沿革史大成』下は「檜山東北ニ茶臼館有リ　大高相模守<b>廉澄</b>居住」と書く——<b>実名は「康澄」ではない。</b><br>
+    ③<b>「房住山で寺を焼いた」</b>——菅江真澄「房住山昔物語」（『秋田叢書』別集第2、<a href="https://dl.ndl.go.jp/pid/1174005">pid 1174005</a>、コマ二六一〜二七七）の本文に、<b>大高は一字も出ない。</b>同書全巻で「大高」「大鷹」ともに零件である。物語の中身は坂上田村麻呂と蝦夷の三兄弟（阿計徒麿・阿計留麿・阿計志麿）の伝説で、真澄自身が冒頭に「<b>此ものかたりは、あやしき事どももあれと</b>」と断っている。</p>
+
+    <p><b>なぜ一次史料がこれほど少ないのか。</b>この問いには、はっきりした答えがある。<b>大高家由来の文書は、一点も残っていない。</b>この頁に並べた紙は、すべて<b>他家の文書箱の中</b>にあったものである——995・999・1000・1017・1018は<b>湊家</b>の集積、1115と1052は<b>佐竹藩が家臣から集めた写</b>、1231は<b>寺</b>。つまり残存量は、大高家がどれだけ重要だったかではなく、<b>他家がどれだけ紙を残したか</b>で決まっている。土佐林禅棟の書状がいま読めるのも、包紙ごと湊家に伝わったからであって、大高家が守ったからではない。<br>
+    <b>そして大高家は、紙を持ち続ける器を失った。</b>慶長七年に家は割れ、残った側は田に下りた。知行も家格も無くなれば、書状を伝える理由が消える。『能代市史稿』第4輯は荷八田の家について「<b>武具家系等ハ先年自火ニテ焼亡ス</b>」と書く。三春へ行った側も、『世臣譜』大高の項の冒頭が「<b>本稱蓬田、系譜失</b>」である。<br>
+    <b>だから、問いは裏返る。</b>一次史料が少ないのは異常ではない。この階層の在地武士としてはむしろ普通で、同時代文書に名が残る檜山家臣は数えるほどしかいない。<b>異常なのは、後世の記述の多さのほうである。</b>「檜山城最後の城代」という物語上の座席が空いていて、そこに一人分の名前が要った——軍記も地誌も、名前の無い人物では書けない。<b>実名が「康澄／勝澄／廉澄」と揺れているのは、実名が史料に無いことの証拠である。</b></p>
+
+    <p><b>いま最も欲しいもの。</b>除籍謄本で真坂から夜叉袋への移動時期を確定し、面潟一帯の宗門人別改帳・村明細帳に当たること。<b>2026年9月10日に在所が判明した——南秋田郡八郎潟町。安政期は真坂、いまは夜叉袋。山本郡ではない。</b>この頁が追ってきた檜山の大高と、依頼者の家をつなぐ史料は、いまのところ一点も無い。手がかりは、複数の地誌が伝える「天正年中、南秋田郡<b>面潟村字浦大町</b>の城主 三浦兵庫頭盛永が檜山の大高相模守に殺された」という一条である（<b>面潟村も一日市も、いまの八郎潟町</b>）。文献の側からは、太田實「安藤(東)實季家臣団と大高甚助」『出羽路』140号（2007）pp.1-19——<b>大高氏を正面から扱った唯一の専論</b>——がまだ未読である。<b>所在は判明した</b>——秋田県立図書館蔵、請求記号 <b>A205-3-140</b>。2007年の刊行であるから、NDLのデジタル全文検索（1968年以前）に出ないのは当然で、<b>郵送複写で取るほかない。</b></p>
+    <p><b>どこまで遡れるか。</b>同時代文書で名前が分かる最も古い大高は、この頁の冒頭に置いた<b>天文十年（1541）の四郎右衛門尉</b>ただ一人である。その先は『三春藩秋田家世臣譜』の大高の項が冒頭に書くとおり——「<b>本稱蓬田、系譜失</b>」。<b>近世の当主自身が、それより前の系譜を失っていた。</b>問いの上限もはっきりしている。『青森県通史』（東奥日報社 1941）は、安東政季が<b>康正二年（1456）</b>に湊の堯季に招かれて秋田小鹿島に入り、その子<b>忠季の代に河北千町を知行して「檜山屋形」となった</b>と書く。檜山屋形の成立と大高の初見のあいだには、<b>八十五年の空白</b>がある。<b>大高が安東に随ってきた家なのか、檜山の在地の家なのかは、まだ決められない。</b></p>
+  </div>
+
+  <div style="margin-top:2rem">
+    <h3 style="font-family:var(--goth); font-weight:700; font-size:.74rem; letter-spacing:.18em; color:var(--ai); margin:0 0 .9rem">主な典拠</h3>
+    <ul class="srcs">
+      <li><b>『青森県史 資料編 中世2』</b>— 995（大高四郎右衛門尉宛封紙）、999・1000（大鷹筑前守宛／執事の註）、1017・1018（元亀2年 土佐林禅棟書状）、1052（文禄3年 知行高帳）、1111（<b>安東相模入道安叟の署名</b>）、710（<b>檜山城留守居下国相模入道安叟</b>）、1115（嘉成康清書状）、1141、1143、1231（大高安時書状）、1308（三春藩秋田家世臣譜）、1309・1310（秋田実季公御一代記）、1400（三春大高家の分家）。<a href="https://kenshi-archives.pref.aomori.lg.jp/">青森県史デジタルアーカイブスで全文公開</a></li>
+      <li><b>中世2 資料1310『秋田実季・最上義光対決之次第』</b>（橋元家文書／三春町歴史民俗資料館寄託）— 慶長5年、由利の一揆へ差し向けられた「城之介家老并足輕大将田村作右衛門・檜山作兵衛・大高四郎右衛門」</li>
+      <li><b>『青森県史 資料編 中世1・3・4／近世1』</b>— 675-183（南部信直書状の蓬田内膳）、1374（蓬田越前の子・相馬小三郎の由緒）、1908（『津軽一統志』巻四）、kins1-1-0015（『湊・桧山両家合戦覚書』＝「大高筑前胡斎ノおや也」）</li>
+      <li><b>『南部叢書』第2冊</b>（1931、<a href="https://dl.ndl.go.jp/pid/1179163/1/198">NDL pid 1179163 コマ198</a>）— <b>「家老大高主馬」と六千の内訳</b>／<b>『秋田男鹿名勝誌』下</b>（1884、<a href="https://dl.ndl.go.jp/pid/763201/1/36">pid 763201 コマ36</a>）— <b>慶長6年 大高又兵衛の裁許状</b>／<b>『秋田沿革史大成』上</b>（<a href="https://dl.ndl.go.jp/pid/763198/1/43">pid 763198 コマ43</a>）・<b>『帝國地名辭典』下巻</b>（<a href="https://dl.ndl.go.jp/pid/1086068">pid 1086068</a>）— 檜山と能代の書き分け／<b>享保・延享・宝暦の武鑑</b>（<a href="https://dl.ndl.go.jp/pid/2532618">pid 2532618</a>・<a href="https://dl.ndl.go.jp/pid/2571244">2571244</a>・<a href="https://dl.ndl.go.jp/pid/2571245">2571245</a>・<a href="https://dl.ndl.go.jp/pid/2571232">2571232</a>）— <b>大高源太夫家・大高文右衛門家・用人大高甚助</b></li>
+      <li><b>『鹿角市史』</b>第1巻ほか — 中の平の会見、大高主馬、大高伝右衛門。<a href="https://adeac.jp/kazuno-city/top/01history/jinmei-sakuin.html">鹿角市デジタルアーカイブで全文検索可</a></li>
+      <li><b>『能代市史稿』第4輯</b>（1959）／<b>『能代市史年表』</b>（1965）／長岡幸作<b>『能代湊・桧山周辺史話』</b>（1997）— 荷八田の伝右衛門家</li>
+      <li><b>菅江真澄『霞むつきほし』</b>（『秋田叢書』別集第3、<a href="https://dl.ndl.go.jp/pid/1174006/1/74">NDL コマ74</a>）／<b>『上津野の花』</b>文政4年「大高氏の末　出羽の山本ノ郡八森に在り」</li>
+      <li><b>『秋田叢書』第1巻</b>（『柞山峯之嵐』巻之二＝<b>知行高帳の別系統本</b>、<a href="https://dl.ndl.go.jp/pid/1174002">NDL pid 1174002</a> コマ237-246）／<b>同 別集第2</b>（菅江真澄「房住山昔物語」、<a href="https://dl.ndl.go.jp/pid/1174005">pid 1174005</a>）／<b>『史籍集覧』第8冊</b>（奥羽永慶軍記、<a href="https://dl.ndl.go.jp/pid/3431175">pid 3431175</a>）／<b>『秋田沿革史大成』</b>（<a href="https://dl.ndl.go.jp/pid/763199">pid 763199</a>）</li>
+      <li><b>羽賀寺文書</b>「（伽藍修理ノ為丈木進上ニ付）」福井県文書館 data_id 011-521364・011-521571 ／ <b>『桧山郷土史稿』下巻</b>（<a href="https://dl.ndl.go.jp/pid/9539245">NDL pid 9539245</a>）に大高甚介・大高安時<b>自身が作成した算用状</b>の翻刻</li>
+      <li><b>『荘内人名辞書』</b>（言霊書房 1937、<a href="https://dl.ndl.go.jp/pid/1880281">NDL pid 1880281</a>）— 土佐林禅棟の出家が天文10年11月であること。<b>同書全巻に「大高」は一件も出ない</b>＝大高は庄内の家ではない ／ <b>『青森県通史』</b>（東奥日報社 1941、<a href="https://dl.ndl.go.jp/pid/1042078">pid 1042078</a>）— 康正2年の小鹿島招請と忠季代の檜山屋形 ／ <b>『最上郡史料叢書』</b>（1925、<a href="https://dl.ndl.go.jp/pid/983231">pid 983231</a>）— 資料1017を山形側から引く</li>
+      <li><b>秋田県公文書館</b>（<a href="https://adeac.jp/akita-pref/">目録を検索できる</a>）— 渡部斧松文書 斧3360（<b>大高市右エ門</b>）、卒家譜45 檜山＝複-000132・29/30 檜山町＝複-000116/117、士族卒明細短冊「山本全部」第十九号・第二十号、明治11年「山林原野其他原由取調書」夜叉袋村・浦大町村・荷八田村</li>
+      <li>未読：太田實<b>「安藤(東)實季家臣団と大高甚助」『出羽路』140号</b>（2007）pp.1-19、<b>秋田県立図書館 A205-3-140</b> ／ 能代市教育委員会『檜山城と檜山城跡』（2004）／『二ツ井町史』（1977）・『二ツ井町史稿』</li>
+    </ul>
+  </div>
+</section>
+
+</main>
+
+<footer class="wide">
+  檜山大高家記／出羽国檜山郡（現・秋田県能代市檜山）の大高氏について、現存する文書・近世の写・編纂物・在地伝承から編んだもの。原文は表記のままに引き、訳文を添えた。丸括弧内が県史編者の比定である場合はその旨を明記した。<br>
+  紙の裏づけを持たない話は、別巻『<a href="https://mochanwanwan.github.io/hiyama-otaka/yomimono.html">伝承帖</a>』にまとめた。<br>
+  二〇二六年九月、青森県史デジタルアーカイブス全五データベースの総ざらいにより全面改訂。<br>同月、知行高帳の別系統本『柞山峯之嵐』巻之二を国立国会図書館の画像で校合し、「日山」の総当たりと、ウェブ上の伝聞三件の検証を加えた。
+</footer>
+
+</body>
+</html>
