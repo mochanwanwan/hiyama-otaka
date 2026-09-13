@@ -1119,7 +1119,10 @@ details.after:not([open])>summary{margin:0}
     links.forEach(function(a,i){a.classList.toggle('on',i===idx)});
     var on=links[idx]; if(on && getComputedStyle(on.closest('.toc')).position==='sticky'){ on.scrollIntoView({block:'nearest',inline:'nearest'}) }
   }
-  addEventListener('scroll',onScroll,{passive:true}); onScroll();
+  addEventListener('scroll',onScroll,{passive:true});
+  addEventListener('hashchange',function(){requestAnimationFrame(onScroll)});
+  addEventListener('load',function(){requestAnimationFrame(onScroll)});
+  onScroll();
 })();
 </script>
 
