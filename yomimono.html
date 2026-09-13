@@ -1121,7 +1121,8 @@ details.after:not([open])>summary{margin:0}
   }
   addEventListener('scroll',onScroll,{passive:true});
   addEventListener('hashchange',function(){requestAnimationFrame(onScroll)});
-  addEventListener('load',function(){requestAnimationFrame(onScroll)});
+  addEventListener('load',function(){requestAnimationFrame(onScroll); setTimeout(onScroll,400); setTimeout(onScroll,1500)});
+  addEventListener('resize',onScroll,{passive:true});
   onScroll();
 })();
 </script>
