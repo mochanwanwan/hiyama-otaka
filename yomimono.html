@@ -114,8 +114,19 @@ td:first-child{min-width:9.5em}
 ul{margin:0 0 1.35rem;padding-left:1.3rem}
 li{margin:0 0 .5rem}
 hr{border:0;border-top:1px solid var(--rule);margin:2.6rem 0}
-.oku{margin-top:3.4rem;padding-top:1.3rem;border-top:2px solid var(--sumi);
- font-size:.78rem;line-height:1.95;color:var(--sumi3)}
+.oku{margin-top:3.4rem;padding:1rem 0 .9rem;border-top:2px solid var(--sumi);border-bottom:1px solid var(--sumi);
+ font-size:.78rem;line-height:1.95;color:var(--sumi2)}
+.oku p{margin:0}
+.oku .dai{font-size:.95rem;font-weight:700;letter-spacing:.08em;color:var(--sumi);margin-bottom:.4rem}
+.oku .hi{text-align:right;margin-top:.4rem}
+.in rect{fill:var(--shu)} .in .waku{fill:none;stroke:#fff;stroke-width:2.2}
+.in text{fill:#fff;font-family:"Shippori Mincho B1",serif;font-weight:800;font-size:64px}
+.hyoshi{display:none}
+.urabyoshi{margin:3rem 0 1rem;text-align:center}
+.urabyoshi .in{display:inline-block;width:2.6rem;height:2.6rem}
+.kan{text-align:center;font-size:1.25rem;font-weight:800;letter-spacing:.2em;margin:3rem 0 1rem;color:var(--sumi)}
+.sakuin thead th{border-top:2px solid var(--sumi)}
+.sakuin tbody tr:last-child td{border-bottom:1px solid var(--sumi)}
 @media print{
  @page{size:A4;margin:18mm 16mm}
  body{background:#fff;color:#000;font-size:10.5pt;line-height:1.85}
@@ -131,7 +142,8 @@ hr{border:0;border-top:1px solid var(--rule);margin:2.6rem 0}
 }
 /* 行取り（辞典・本の組み方）〈依頼者 2026-09-21「文字の開始の位置が違うとガタガタする」「辞典の書き方を真似て」〉
    一頁 38 行の決まった行送り（--L）に、見出し・箱・絵・表・出所をすべて行の倍数で乗せ、見開きの左右で行の高さをそろえる。
-   段落の間は空けず頭を一字下げる。枠の線は場所を取らない描き方（box-shadow／outline）にして行をずらさない。
+   段落の間は空けず頭を一字下げる。枠の線は場所を取らない描き方（outline／地の色の帯）にして行をずらさない。
+   影（box-shadow）で線を描くと PDF で薄く途切れ、端に継ぎ目が出る〈依頼者 2026-09-22「枠が実線になってない」〉ので使わない。
    箱は頭の札を一行に取り、中身を行に乗せ、下の余白と外の空きで半行ずつ足して次の行へ戻す。
    本文の頭は左端、箱の中は一字、原文はさらに一字入れる（字の幅の倍数）。pdf.sh はこの印のある紙に見立て書の印刷の決まりを重ねない。 */
 @media print{
@@ -140,25 +152,52 @@ hr{border:0;border-top:1px solid var(--rule);margin:2.6rem 0}
  .sheet p,.sheet li,.sheet td,.sheet th,.sheet blockquote,.sheet figcaption,.sheet summary{line-height:var(--L)!important}
  .sheet>p:not([class]){margin:0!important;text-indent:1em}
  h2{font-size:15pt!important;line-height:calc(var(--L) * 2)!important;margin:0 0 var(--L)!important;padding:0!important;
-  border:0!important;box-shadow:inset 0 -1px 0 var(--rule2)}
+  border:0!important;box-shadow:none!important;background:linear-gradient(var(--rule2),var(--rule2)) no-repeat 0 100% / 100% .75pt}
  .obi{display:block;width:fit-content;height:var(--L);line-height:calc(var(--L) - 2px)!important;margin:0 0 var(--L)!important;padding:0 .7em!important}
  .yoten,details,.tw,figure.e,.deto{margin:var(--L) 0!important}
  .yoten,details{margin-bottom:calc(var(--L) / 2)!important}
  :is(.yoten,details,.tw,figure.e,.deto)+:is(.yoten,details,.tw,figure.e,.deto){margin-top:0!important}
- .yoten{padding:0 1em calc(var(--L) / 2)!important;border:0!important;box-shadow:inset 0 2px 0 var(--sumi),inset 0 -1px 0 var(--rule)}
+ .yoten{padding:0 1em calc(var(--L) / 2)!important;border:0!important;box-shadow:none!important;
+  background:linear-gradient(var(--sumi),var(--sumi)) no-repeat 0 0 / 100% 1.5pt,linear-gradient(var(--rule),var(--rule)) no-repeat 0 100% / 100% .75pt,var(--raise)}
  .yoten .lbl{margin:0!important} .yoten ul{margin:0!important} .yoten li{margin:0!important;font-size:10pt!important}
- details{border:0!important;box-shadow:0 0 0 1px var(--rule);padding:0 0 calc(var(--L) / 2)!important}
+ details{border:0!important;box-shadow:none!important;outline:.75pt solid var(--rule2);outline-offset:0;padding:0 0 calc(var(--L) / 2)!important}
  summary{height:var(--L);padding:0 1em!important;font-size:8pt!important}
  details>div{padding:0 1em!important;border:0!important}
- blockquote{margin:0!important;padding:0 0 0 1em!important;border:0!important;box-shadow:inset 2px 0 0 var(--rule2);font-size:10pt!important}
+ blockquote{margin:0!important;padding:0 0 0 1em!important;border:0!important;box-shadow:none!important;
+  background:linear-gradient(var(--rule2),var(--rule2)) no-repeat 0 0 / 1.5pt 100%;font-size:10pt!important}
  blockquote p{margin:0!important;text-indent:0}
- .deto{padding:0 0 0 1em!important;border:0!important;box-shadow:inset 1px 0 0 var(--rule);font-size:8pt!important}
+ .deto{padding:0 0 0 1em!important;border:0!important;box-shadow:none!important;
+  background:linear-gradient(var(--rule),var(--rule)) no-repeat 0 0 / .75pt 100%;font-size:8pt!important}
  figure.e img{height:calc(var(--L) * 13)!important;max-height:none!important;border:0!important;outline:1px solid var(--rule);object-fit:cover}
  figure.e figcaption{height:var(--L);padding:0 .8em!important;margin:0!important;border:0!important;font-size:8pt!important}
  .tw table{font-size:9pt!important}
- th,td{padding:0 .7em 0 0!important;border:0!important;box-shadow:inset 0 -1px 0 var(--rule)}
+ /* 表の罫は地の色の帯で引く（影で描くと PDF で欄の境に細い縦の継ぎ目が出た〈2026-09-22 索引〉） */
+ th,td{padding:0 .7em 0 0!important;border:0!important;box-shadow:none!important;
+  background:linear-gradient(var(--rule),var(--rule)) no-repeat 0 100% / 100% 1px}
  .sheet ul:not(.yoten ul){margin:0!important;padding-left:1em!important} .sheet li{margin:0!important}
- .oku{margin:calc(var(--L) * 2) 0 0!important;padding:var(--L) 0 0!important;border:0!important;box-shadow:inset 0 2px 0 var(--sumi)}
+ /* 巻末：索引の表と奥付を墨の罫で挟む（上は太く、下は細く）。罫は地の色の帯で引き、行をずらさない */
+ .sakuin thead th{background:linear-gradient(var(--sumi),var(--sumi)) no-repeat 0 0 / 100% 1.2pt,
+  linear-gradient(var(--sumi2),var(--sumi2)) no-repeat 0 100% / 100% .5pt}
+ .sakuin tbody tr:last-child td{background:linear-gradient(var(--sumi),var(--sumi)) no-repeat 0 100% / 100% .6pt}
+ .oku{margin:calc(var(--L) * 2) 0 0!important;padding:calc(var(--L) / 2) 0!important;border:0!important;box-shadow:none!important;
+  background:linear-gradient(var(--sumi),var(--sumi)) no-repeat 0 0 / 100% 1.2pt,
+   linear-gradient(var(--sumi),var(--sumi)) no-repeat 0 100% / 100% .6pt;
+  font-size:9pt!important;color:var(--sumi)!important}
+ .oku p{margin:0!important;text-indent:0!important}
+ .oku .dai{font-size:10.5pt!important;font-weight:700;letter-spacing:.08em}
+ /* 表紙と裏表紙。柱とノンブルは pdf.sh の @page hyoshi／ura で消す */
+ .hyoshi{display:block;page:hyoshi;break-after:page;height:257mm;box-sizing:border-box;border:1.5pt solid var(--sumi);padding:2.2mm}
+ .hy-waku{height:100%;box-sizing:border-box;border:.5pt solid var(--sumi);
+  display:flex;flex-direction:column;align-items:center;justify-content:center}
+ .sheet .hy-kicker{font-size:11pt!important;line-height:1.6!important;letter-spacing:.4em;padding-left:.4em;color:var(--tan);margin:0 0 16mm!important}
+ .sheet .hy-dai{margin:0!important;text-align:center;line-height:1.3!important;color:var(--sumi)}
+ .hy-dai .ie{display:block;font-size:40pt;font-weight:800;letter-spacing:.2em;padding-left:.2em}
+ .hy-dai .shina{display:block;font-size:20pt;font-weight:700;letter-spacing:.3em;padding-left:.3em;margin-top:9mm}
+ .hy-kamon{margin-top:18mm} .hy-kamon svg{display:block;width:30mm;height:30mm}
+ .urabyoshi{page:ura;break-before:page;height:257mm;margin:0!important;box-sizing:border-box;padding-bottom:24mm;
+  display:flex;align-items:flex-end;justify-content:center}
+ .urabyoshi .in{width:15mm;height:15mm}
+ .kan{margin:calc(var(--L) * 2) 0 0!important;line-height:calc(var(--L) * 2)!important;font-size:14pt!important;text-indent:0!important}
 }
 /* 章の見出しは一行に詰め、絵の帯の上に細い罫を引く〈依頼者 2026-09-21 百科事典の紙面と二段組みを比べて「B」〉 */
 @media print{
@@ -177,78 +216,80 @@ hr{border:0;border-top:1px solid var(--rule);margin:2.6rem 0}
  .gyodori h3{font-size:10.5pt!important;line-height:var(--L)!important;margin:0!important;padding:var(--L) 0 0!important;
   background:linear-gradient(var(--rule),var(--rule)) no-repeat 0 calc(var(--L) / 2) / 100% .5pt;break-after:avoid}
  .gyodori .yoten+h3,.gyodori .obi+h3{padding-top:0!important;background:none}
- .gyodori .genbun{margin:var(--L) 0 0!important;padding:0!important;border:0!important;box-shadow:inset 0 1.2pt 0 var(--rule2)}
+ .gyodori .genbun{margin:var(--L) 0 0!important;padding:0!important;border:0!important;box-shadow:none!important;
+  background:linear-gradient(var(--rule2),var(--rule2)) no-repeat 0 0 / 100% 1.2pt}
  .gyodori .genbun>.lbl{height:var(--L);line-height:var(--L)!important;margin:0!important;font-size:8pt!important;text-indent:0;break-after:avoid}
  .gyodori .genbun>.lbl+details{margin-top:0!important}
  .gyodori .gen{font-size:8pt}
  /* 章末の欄は箱の枠だけで区切る。原文と出所の縦線は外す〈依頼者 2026-09-21「欄の中にある縦にあるグレーの線」〉 */
- .gyodori .genbun blockquote,.gyodori .genbun .deto{box-shadow:none!important;border:0!important}
+ .gyodori .genbun blockquote,.gyodori .genbun .deto{box-shadow:none!important;border:0!important;background:none!important}
  /* 章末の原文は一段小さく（10pt→9pt）。章の終わりの数行だけが次の頁へはみ出して白い頁になっていた〈2026-09-21 伝承帖の見本の3頁〉 */
  .gyodori .genbun blockquote{font-size:9pt!important}
  .gyodori .genbun details .deto{margin:0!important;padding:0!important}
 }
 </style></head>
 <body><div class="sheet gyodori">
+<section class="hyoshi"><div class="hy-waku"><p class="hy-kicker">出羽国檜山郡　安東（秋田）氏家中</p><p class="hy-dai"><span class="ie">檜山大高</span><span class="shina">伝承帖</span></p></div></section>
 <header class="mast">
 <p class="kicker">出羽国檜山郡　安東（秋田）氏家中</p>
 <h1>檜山大高 伝承帖</h1>
 <p class="lede">この帖は、檜山安東氏の家中にいた大高一族について、同時代の文書や軍記、近世の地誌、村で聞き取られた口碑をもとにまとめたものである。個々の話は断片的だが、年代順に並べると、一続きの流れとして捉えられる。二つに分かれていた安東家は一つにまとまり、6千の兵が国境を越える。その後、当主の死をきっかけに内乱が起こり、隣国が攻め返す。最後は国替えによって家が散る。この帖では、その移り変わりの中で大高一族がどこにいたのかをたどる。現存する文書だけを並べた本編は<a href="https://mochanwanwan.github.io/hiyama-otaka/" rel="noopener">『檜山大高家記』</a>にある。</p>
 </header>
-<nav class="toc"><p class="lbl">目次</p><ol><li><a href="#c1"><span class="n">序</span>地図と年表</a></li><li><a href="#c2"><span class="n">一</span>大高四郎右衛門尉　檜山の家と湊の家</a></li><li><a href="#c3"><span class="n">二</span>大高筑前守　他国の重臣が書状を送った人</a></li><li><a href="#c4"><span class="n">三</span>大高主馬　6千人を率いた大将</a></li><li><a href="#c5"><span class="n">四</span>大高相模守　湊合戦のとき</a></li><li><a href="#c6"><span class="n">五</span>大高相模守　八森の古館と下岩川の館</a></li><li><a href="#c7"><span class="n">六</span>大高傳右衛門　野代城の城代</a></li><li><a href="#c8"><span class="n">七</span>大高四郎右衛門　鉄炮ばかりを添えて</a></li><li><a href="#c9"><span class="n">八</span>大高安時　城を渡す</a></li><li><a href="#c10"><span class="n">補</span>千田秋田軍記　旧家に伝わった写本</a></li><li><a href="#c11"><span class="n">附</span>出所を調べても確認できない話</a></li><li><a href="#c12"><span class="n">終</span>この帖の使い方</a></li><li><a href="#c13"><span class="n">注</span>推定の理由と、絵や図について</a></li><li><a href="#c14"><span class="n">索引</span>登場する人</a></li></ol></nav>
+<nav class="toc"><p class="lbl">目次</p><ol><li><a href="#c1"><span class="n">序</span>地図と年表</a></li><li><a href="#c2"><span class="n">一</span>大高四郎右衛門尉　檜山の家と湊の家</a></li><li><a href="#c3"><span class="n">二</span>大高筑前守　他国の重臣が書状を送った人</a></li><li><a href="#c4"><span class="n">三</span>大高主馬　6千人を率いた大将</a></li><li><a href="#c5"><span class="n">四</span>大高相模守　湊合戦のとき</a></li><li><a href="#c6"><span class="n">五</span>大高相模守　八森の古館と下岩川の館</a></li><li><a href="#c7"><span class="n">六</span>大高傳右衛門　野代城の城代</a></li><li><a href="#c8"><span class="n">七</span>大高四郎右衛門　鉄炮ばかりを添えて</a></li><li><a href="#c9"><span class="n">八</span>大高安時　城を渡す</a></li><li><a href="#c10"><span class="n">補</span>千田秋田軍記　旧家に伝わった写本</a></li><li><a href="#c11"><span class="n">終</span>この帖の使い方</a></li><li><a href="#c12"><span class="n">附</span>出所を調べても確認できない話</a></li><li><a href="#c13"><span class="n">注</span>推定の理由と、絵や図について</a></li><li><a href="#c14"><span class="n">索引</span>登場する人</a></li></ol></nav>
 <h2 id="c1"><span class="n">序</span>地図と年表</h2>
 <p class="obi">康正2年（1456）から、慶長7年（1602）の国替え後まで。</p>
 <div class="zu-map"><!-- hassho:start -->
 <figure class="hassho" style="margin:14px 0 18px;background:var(--paper);border:1px solid var(--rule);border-radius:6px;padding:14px 12px 8px">
 <svg viewBox="0 0 760 386" role="img" aria-label="大高の家の起こりとして伝わる土地3つと、本籍 真坂別当田 へのつながり" style="width:100%;height:auto;color:var(--sumi);font-family:var(--gothic)">
-<defs><marker id="h567947a" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="currentColor"/></marker></defs>
+<defs><marker id="h677448a" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="currentColor"/></marker></defs>
 <line x1="246.5" y1="38" x2="246.5" y2="286" stroke="currentColor" stroke-opacity=".14"/>
-<text x="246.5" y="32" font-size="11" text-anchor="middle" fill="currentColor" fill-opacity=".6">1500年</text>
 <line x1="319.4" y1="38" x2="319.4" y2="286" stroke="currentColor" stroke-opacity=".14"/>
-<text x="319.4" y="32" font-size="11" text-anchor="middle" fill="currentColor" fill-opacity=".6">1600年</text>
 <line x1="392.3" y1="38" x2="392.3" y2="286" stroke="currentColor" stroke-opacity=".14"/>
-<text x="392.3" y="32" font-size="11" text-anchor="middle" fill="currentColor" fill-opacity=".6">1700年</text>
 <line x1="465.2" y1="38" x2="465.2" y2="286" stroke="currentColor" stroke-opacity=".14"/>
-<text x="465.2" y="32" font-size="11" text-anchor="middle" fill="currentColor" fill-opacity=".6">1800年</text>
 <line x1="538.1" y1="38" x2="538.1" y2="286" stroke="currentColor" stroke-opacity=".14"/>
-<text x="538.1" y="32" font-size="11" text-anchor="middle" fill="currentColor" fill-opacity=".6">1900年</text>
 <line x1="630.0" y1="38" x2="630.0" y2="286" stroke="currentColor" stroke-opacity=".3"/>
-<text x="630.0" y="32" font-size="11" text-anchor="middle" fill="currentColor" fill-opacity=".6">現在</text>
-<text x="196" y="83.0" font-size="13" font-weight="700" text-anchor="end" fill="currentColor">檜山の大高</text>
-<text x="196" y="99.0" font-size="11" text-anchor="end" fill="currentColor" fill-opacity=".7">文禄3年の帳簿には9人の名があり、</text>
-<text x="196" y="113.0" font-size="11" text-anchor="end" fill="currentColor" fill-opacity=".7">ほかに相模守の名も見える</text>
 <rect x="276.4" y="82.0" width="44.5" height="8" rx="4" fill="currentColor"/>
-<path d="M326.8,86.0 C475.4,86.0 475.4,166.0 615.0,166.0" fill="none" stroke="currentColor" stroke-width="1.6" stroke-dasharray="1.5 5" stroke-linecap="round" marker-end="url(#h567947a)"/>
-<text x="330.8" y="78.0" font-size="11" fill="currentColor">約22 km</text>
-<text x="196" y="163.0" font-size="13" font-weight="700" text-anchor="end" fill="currentColor">浦城</text>
-<text x="196" y="179.0" font-size="11" text-anchor="end" fill="currentColor" fill-opacity=".7">三浦氏の城。湊合戦で落城する</text>
+<path d="M326.8,86.0 C475.4,86.0 475.4,166.0 615.0,166.0" fill="none" stroke="currentColor" stroke-width="1.6" stroke-dasharray="1.5 5" stroke-linecap="round" marker-end="url(#h677448a)"/>
 <line x1="299.7" y1="166.0" x2="313.5" y2="166.0" stroke="currentColor" stroke-width="1.2" stroke-opacity=".55"/>
 <path d="M306.6,159.0 L313.6,166.0 L306.6,173.0 L299.6,166.0 z" style="fill:var(--paper)" stroke="currentColor" stroke-width="1.8" stroke-dasharray="0.6 2.2"/>
-<path d="M319.5,166.0 C471.8,166.0 471.8,166.0 615.0,166.0" fill="none" stroke="currentColor" stroke-width="1.6" stroke-dasharray="1.5 5" stroke-linecap="round" marker-end="url(#h567947a)"/>
-<text x="327.8" y="158.0" font-size="11" fill="currentColor">約1.2 km</text>
-<text x="196" y="243.0" font-size="13" font-weight="700" text-anchor="end" fill="currentColor">大高又兵衛の代官所</text>
-<text x="196" y="259.0" font-size="11" text-anchor="end" fill="currentColor" fill-opacity=".7">大川村・浅原村・石崎村を預かる</text>
+<path d="M319.5,166.0 C471.8,166.0 471.8,166.0 615.0,166.0" fill="none" stroke="currentColor" stroke-width="1.6" stroke-dasharray="1.5 5" stroke-linecap="round" marker-end="url(#h677448a)"/>
 <rect x="311.4" y="242.0" width="8.8" height="8" rx="4" fill="none" stroke="currentColor" stroke-width="1.6"/>
-<path d="M326.1,246.0 C475.1,246.0 475.1,166.0 615.0,166.0" fill="none" stroke="currentColor" stroke-width="1.6" stroke-dasharray="1.5 5" stroke-linecap="round" marker-end="url(#h567947a)"/>
-<text x="330.1" y="238.0" font-size="11" fill="currentColor">約4.5 km</text>
-<path d="M306.6,94.0 L306.6,156.0" fill="none" stroke="currentColor" stroke-width="1.3" stroke-dasharray="7 5" stroke-opacity=".8" marker-end="url(#h567947a)"/>
-<text x="327.8" y="185.0" font-size="10.5" fill="currentColor" fill-opacity=".85">相模守が攻めたと伝える</text>
-<path d="M320.8,94.0 C320.8,166.0 320.1,166.0 320.1,238.0" fill="none" stroke="currentColor" stroke-width="1.3" stroke-opacity=".8" marker-end="url(#h567947a)"/>
-<text x="327.8" y="121.0" font-size="10.5" fill="currentColor" fill-opacity=".85">代官として預かる</text>
+<path d="M326.1,246.0 C475.1,246.0 475.1,166.0 615.0,166.0" fill="none" stroke="currentColor" stroke-width="1.6" stroke-dasharray="1.5 5" stroke-linecap="round" marker-end="url(#h677448a)"/>
+<path d="M306.6,94.0 L306.6,156.0" fill="none" stroke="currentColor" stroke-width="1.3" stroke-dasharray="7 5" stroke-opacity=".8" marker-end="url(#h677448a)"/>
+<path d="M320.8,94.0 C320.8,166.0 320.1,166.0 320.1,238.0" fill="none" stroke="currentColor" stroke-width="1.3" stroke-opacity=".8" marker-end="url(#h677448a)"/>
 <circle cx="630.0" cy="166.0" r="11" style="fill:var(--paper);stroke:var(--shu)" stroke-width="3"/>
-<text x="648.0" y="164.0" font-size="13" font-weight="700" fill="currentColor">本籍</text>
-<text x="648.0" y="180.0" font-size="11" fill="currentColor" fill-opacity=".75">真坂別当田</text>
 <line x1="46" y1="326" x2="84" y2="326" stroke="currentColor" stroke-width="1.6"/>
-<text x="92" y="330" font-size="11" fill="currentColor">同時代の文書によって関係を確認できる</text>
 <line x1="318" y1="326" x2="356" y2="326" stroke="currentColor" stroke-width="1.6" stroke-dasharray="7 5"/>
-<text x="364" y="330" font-size="11" fill="currentColor">軍記や後世の本が伝える</text>
 <line x1="513" y1="326" x2="551" y2="326" stroke="currentColor" stroke-width="1.6" stroke-dasharray="1.5 5" stroke-linecap="round"/>
-<text x="559" y="330" font-size="11" fill="currentColor">伝承や距離・分布のみに基づく関係</text>
 <rect x="46" y="342" width="14" height="8" rx="4" fill="currentColor"/>
-<text x="68" y="350" font-size="11" fill="currentColor">出身地と考えられる土地（本籍へ点線を引く）</text>
 <rect x="323" y="342" width="14" height="8" rx="4" fill="none" stroke="currentColor" stroke-width="1.6"/>
-<text x="345" y="350" font-size="11" fill="currentColor">勤務先や知行地（居住地ではない）</text>
 <path d="M552,340 L558,346 L552,352 L546,346 z" style="fill:var(--paper)" stroke="currentColor" stroke-width="1.6"/>
-<text x="567" y="350" font-size="11" fill="currentColor">出来事の地（合戦など）</text>
+<text paint-order="stroke" stroke="var(--paper)" stroke-width="3" stroke-linejoin="round" x="246.5" y="32" font-size="11" text-anchor="middle" fill="currentColor" fill-opacity=".6">1500年</text>
+<text paint-order="stroke" stroke="var(--paper)" stroke-width="3" stroke-linejoin="round" x="319.4" y="32" font-size="11" text-anchor="middle" fill="currentColor" fill-opacity=".6">1600年</text>
+<text paint-order="stroke" stroke="var(--paper)" stroke-width="3" stroke-linejoin="round" x="392.3" y="32" font-size="11" text-anchor="middle" fill="currentColor" fill-opacity=".6">1700年</text>
+<text paint-order="stroke" stroke="var(--paper)" stroke-width="3" stroke-linejoin="round" x="465.2" y="32" font-size="11" text-anchor="middle" fill="currentColor" fill-opacity=".6">1800年</text>
+<text paint-order="stroke" stroke="var(--paper)" stroke-width="3" stroke-linejoin="round" x="538.1" y="32" font-size="11" text-anchor="middle" fill="currentColor" fill-opacity=".6">1900年</text>
+<text paint-order="stroke" stroke="var(--paper)" stroke-width="3" stroke-linejoin="round" x="630.0" y="32" font-size="11" text-anchor="middle" fill="currentColor" fill-opacity=".6">現在</text>
+<text paint-order="stroke" stroke="var(--paper)" stroke-width="3" stroke-linejoin="round" x="196" y="83.0" font-size="13" font-weight="700" text-anchor="end" fill="currentColor">檜山の大高</text>
+<text paint-order="stroke" stroke="var(--paper)" stroke-width="3" stroke-linejoin="round" x="196" y="99.0" font-size="11" text-anchor="end" fill="currentColor" fill-opacity=".7">文禄3年の帳簿には9人の名があり、</text>
+<text paint-order="stroke" stroke="var(--paper)" stroke-width="3" stroke-linejoin="round" x="196" y="113.0" font-size="11" text-anchor="end" fill="currentColor" fill-opacity=".7">ほかに相模守の名も見える</text>
+<text paint-order="stroke" stroke="var(--paper)" stroke-width="3" stroke-linejoin="round" x="330.8" y="78.0" font-size="11" fill="currentColor">約22 km</text>
+<text paint-order="stroke" stroke="var(--paper)" stroke-width="3" stroke-linejoin="round" x="196" y="163.0" font-size="13" font-weight="700" text-anchor="end" fill="currentColor">浦城</text>
+<text paint-order="stroke" stroke="var(--paper)" stroke-width="3" stroke-linejoin="round" x="196" y="179.0" font-size="11" text-anchor="end" fill="currentColor" fill-opacity=".7">三浦氏の城。湊合戦で落城する</text>
+<text paint-order="stroke" stroke="var(--paper)" stroke-width="3" stroke-linejoin="round" x="327.8" y="158.0" font-size="11" fill="currentColor">約1.2 km</text>
+<text paint-order="stroke" stroke="var(--paper)" stroke-width="3" stroke-linejoin="round" x="196" y="243.0" font-size="13" font-weight="700" text-anchor="end" fill="currentColor">大高又兵衛の代官所</text>
+<text paint-order="stroke" stroke="var(--paper)" stroke-width="3" stroke-linejoin="round" x="196" y="259.0" font-size="11" text-anchor="end" fill="currentColor" fill-opacity=".7">大川村・浅原村・石崎村を預かる</text>
+<text paint-order="stroke" stroke="var(--paper)" stroke-width="3" stroke-linejoin="round" x="330.1" y="238.0" font-size="11" fill="currentColor">約4.5 km</text>
+<text paint-order="stroke" stroke="var(--paper)" stroke-width="3" stroke-linejoin="round" x="327.8" y="185.0" font-size="10.5" fill="currentColor" fill-opacity=".85">相模守が攻めたと伝える</text>
+<text paint-order="stroke" stroke="var(--paper)" stroke-width="3" stroke-linejoin="round" x="327.8" y="121.0" font-size="10.5" fill="currentColor" fill-opacity=".85">代官として預かる</text>
+<text paint-order="stroke" stroke="var(--paper)" stroke-width="3" stroke-linejoin="round" x="648.0" y="164.0" font-size="13" font-weight="700" fill="currentColor">本籍</text>
+<text paint-order="stroke" stroke="var(--paper)" stroke-width="3" stroke-linejoin="round" x="648.0" y="180.0" font-size="11" fill="currentColor" fill-opacity=".75">真坂別当田</text>
+<text paint-order="stroke" stroke="var(--paper)" stroke-width="3" stroke-linejoin="round" x="92" y="330" font-size="11" fill="currentColor">同時代の文書によって関係を確認できる</text>
+<text paint-order="stroke" stroke="var(--paper)" stroke-width="3" stroke-linejoin="round" x="364" y="330" font-size="11" fill="currentColor">軍記や後世の本が伝える</text>
+<text paint-order="stroke" stroke="var(--paper)" stroke-width="3" stroke-linejoin="round" x="559" y="330" font-size="11" fill="currentColor">伝承や距離・分布のみに基づく関係</text>
+<text paint-order="stroke" stroke="var(--paper)" stroke-width="3" stroke-linejoin="round" x="68" y="350" font-size="11" fill="currentColor">出身地と考えられる土地（本籍へ点線を引く）</text>
+<text paint-order="stroke" stroke="var(--paper)" stroke-width="3" stroke-linejoin="round" x="345" y="350" font-size="11" fill="currentColor">勤務先や知行地（居住地ではない）</text>
+<text paint-order="stroke" stroke="var(--paper)" stroke-width="3" stroke-linejoin="round" x="567" y="350" font-size="11" fill="currentColor">出来事の地（合戦など）</text>
 </svg>
 <figcaption class="note" style="margin-top:6px">出身地と預かった土地を分けて示している。横軸は時代を表す。上段は、大高の家の起こりとして伝わる檜山の大高である。文禄3年の知行高帳には9人の名があり、ほかに相模守の名も見える。下段は、大高又兵衛が代官所として預かった大川村・浅原村・石崎村である。大川村は本籍から約4.5km、石崎村は約4.2km離れている。本籍への点線は、距離と分布から推定されるつながりを示す。戸籍や人別の文書によってつながりが確認できれば、実線になる。代官所として預かるのは年貢を納めさせる直轄地であり、代官がその村に住んだことまでは示さない。</figcaption>
 </figure>
@@ -889,25 +930,34 @@ hr{border:0;border-top:1px solid var(--rule);margin:2.6rem 0}
 <p>この本では、大高相模守は浦城を攻めていない。浦城へ討手として向かうのは石郷岡（石岡）主典で、相模守はその間ずっと檜山・男鹿・湊で戦っており、むしろ攻められる側にいる。近世から明治時代の地誌のいくつかは「檜山の大高相模守が三浦盛永を殺した」と書いており、この本とは食い違う。どちらが正しいかは、現時点では判断を留保する。</p>
 <p>清源寺は八郎潟町の中心にあり、周辺の多くの家の菩提寺である。寺の成り立ちと八郎潟町の大高家の家系は、別の話として読む。</p>
 <div class="genbun"><p class="lbl">この章の原文と出所</p><details><summary>①　檜山落城と男鹿からの反撃</summary><div><blockquote><p>〔目録〕〇 女正　檜山・桐山城責ル支　附　黒熊カ支<br>〇 桐山城落城　大高相模守　男鹿城ニ参ル支<br>〇 大高相模守　船越川ニテ九郎殿〔討〕…<br>〇 兵庫守自害　附　石頭院自害支<br>〔本文〕〇柳 大高相模守　男鹿城ニ馳参シ　／　其時　相摸守　親末代官トシテ<br>〔本文〕馬場目玄番正…檜山城ェ向フ　／　相摸守　大キニ驚キ</p></blockquote><p class="deto"><b>出所</b>　軍記。『千田秋田軍記』千田家本　複写版 genpon_04（目録）・13・14・12（本文）。画像から読み取った文字。目録は一条ごとに「〇」で始まり、「支」は「事」をくずした字である。</p></div></details><details><summary>②　一日市の寺</summary><div><blockquote><p>其〔須〕ヶ　〔石〕頭院ハ　父　兵庫守　御〔菩〕提…ノ御所ナリト<br>先年ノ〔堂〕ヲ　一日市村ェ　移〔ス〕<br>（別の面）五郎カ亡魂…崇リ…親末殿 聞召…五郎殿ノ御影ヲ拵エ…〔押〕建立 被成…神ニ<br>（別の面）花嶽山石頭院ヲ改〔メ〕　／　松原補陀寺　九代之和尚　草庵　／　此度　弐拾ヵ弐百　領ヲ可付</p></blockquote><p class="deto"><b>出所</b>　軍記。複写版 genpon_18・20・22。画像から読み取った字である。「…」は読めなかった箇所を示す。社領の数字は、20とも200とも読める。</p></div></details></div>
-<h2 id="c11"><span class="n">附</span>出所を調べても確認できない話</h2>
+<h2 id="c11"><span class="n">終</span>この帖の使い方</h2>
+<h3>この帖の読み方</h3>
+<p>この帖は、檜山安東氏の家中にいた大高一族について、断片的に残る話を年代順に並べ、一続きの読み物にしたものである。</p>
+<p>話の確かさは、よりどころとした資料によって異なる。各章の終わりにある「この章の原文と出所」では、出所の冒頭に、その時代の文書、軍記、後の時代にまとめられた本など、資料の種類を記した。年代の確度は、序の年表で「ヵ」や「推定」の印を付けて示している。附には、よく語られるものの、出所を調べても確認できなかった話を集めた。いま確かなのは、そう語られてきたという事実だけである。同時代の記録が一点でも見つかれば、その記録をよりどころとして書き改める。</p>
+<h3>家系の由来を調べるには</h3>
+<p>慶長7年の国替えの後、大高一族には、主家に従って常陸から陸奥三春へ移った甚助の家と、檜山に残って田を開いたと伝えられる新助の家がある。一族の歩みと、その後に続く家々の由来をたどるには、次の三つの資料が手がかりになる。</p>
+<ul><li><strong>古内龍夫「檜山城百五十日の籠城」『年報能代市史研究』第5号</strong>　籠城した側の武将の名が並んでいるため、そこに大高の名があるかどうかを確認できる。</li><li><strong>太田實「安藤(東)實季家臣団と大高甚助」『出羽路』140号（2007）pp.1-19</strong>　家臣団のなかでの大高の位置を正面から扱った唯一の論文である。秋田県立図書館の請求記号は A205-3-140。</li><li><strong>「桧山安東氏の家臣大高相模守の子孫」『出羽路』77号（1983）</strong>　表題どおり、この帖の中心にいる人物とその子孫を扱っている。</li></ul>
+<p>もう一つ、確かめたい点がある。明治31年（1898）の『秋田沿革史大成』は、よりどころとした資料として、元文5年（1740）の池内盈雄の記と、檜山の給士である白坂丹後高寛の記を挙げている。二つの記から確認したいのは、茶臼館に住んでいたことや、天正（1573〜1592）の末に檜山城を守っていて火を掛けられたことなど、細部に関する記述が18世紀の記録までさかのぼれるかどうかである。記そのものの所在も、次に確かめる。</p>
+<p>四章の三浦盛永の段で引用した『文化の秋田』『土崎港町史』『姓氏家系大辞典』と、五章で引用した『山本郡探勝案内』のコマ57前後についても、原本の頁で確認する。</p>
+<p class="kan">完</p>
+<h2 id="c12"><span class="n">附</span>出所を調べても確認できない話</h2>
 <p>房住山の焼き討ちについて、「安東氏が大高相模守に命じて房住山の寺院を焼き払わせた」と書くものがある。その出所は菅江真澄の「房住山昔物語」とされている。しかし、本文には「大高」の文字が一字も見られない。</p>
 <p>『秋田叢書』別集第2のコマ261〜277が全編で、全巻を通じて「大高」「大鷹」ともに出てこない。「相模」はコマ247に一度だけ出るが、「おなし名の、相模の國にも聞へたり」とあり、国名である。物語は坂上田村麻呂と蝦夷の三兄弟の伝説で、焼き討ちの場面も文亀2年（1502）の盗賊の話である。真澄自身も冒頭で「此ものかたりは、あやしき事どももあれと」と断っている。</p>
 <p>慶長3年（または4年）に檜山城の代官に任命されたという話がある。任命の年には3つの説があるが、任命の記録そのものは見つからない。『御一代記』は、実季が湊へ移ったときに「檜山城には舍弟比內忠二郞實泰を置れ」と記している。相模が記録に登場するのは、慶長7年の引き渡しの場面だけである。</p>
 <p>茶臼館の別名が「大高館」だという話がある。国史跡「檜山安東氏城館跡」の三つの構成資産は、檜山城跡・大館跡・茶臼館跡である。このため、「大高館」は「大館」を読み誤ったものと考えられる。ただし、茶臼館が相模守の居館だったという伝承自体は残っている。『秋田沿革史大成』下は「檜山東北ニ茶臼館有リ　大高相模守廉澄居住」と書く。</p>
 <p>慶長7年以後については、「常陸へ同行した」か「佐竹に仕えた」かの二説があるという話がある。しかし、「佐竹に仕えた」という説は、久保田藩の三系統の名簿に大高姓が見えないため、成り立たない。「常陸へ同行した」のよりどころとして引かれる『奥南落穂集』「一、秋田城介之事」は、南部家が召し抱えた秋田の旧臣の名簿で、全文3878字のなかに「大高」も「相模」も出てこない。</p>
 <p>「大鷹」の大半は鷹の鳥名である。津軽・松前・南部から秋田へ贈られる鷹の記事が大量にあり、『梅津政景日記』に出る「大鷹」もすべて鷹を指すもので、大高氏とは関係がない。「大高檀紙」は紙の名である。『梅津政景日記』元和4年の境目相論に出る「太高〔大高〕孫六」は、同じ一条の「太郎殿」が秋田実季を指すので、実季代（1587〜1602）の奉行であり、筑前より前の人ではない。</p>
-<p>赤穂義士の大高源五忠雄の家について、広く知られている話がある。源五の家は大高の傍流で、秋田家が常陸国宍戸にいたころ、隣の笠間にあった浅野家に仕え、正保2年（1645）の浅野家の国替えに従って赤穂へ行ったという。宍戸と笠間はどちらも現在の茨城県笠間市にあり、秋田家の三春への国替えと浅野家の赤穂への国替えは、同じ正保2年である。この説を記した本としては、昭和45年（1970）の斎藤半蔵編『大高家家伝集』が早い。源五の父を「大高兵左衛門忠晴」、その父を「秋田伊織忠久」とし、忠晴は寛永6年（1629）に生まれたとする。昭和50年（1975）の『大田原市史』前編は、忠晴が浅野家に仕えて知行200石であったと書く。どちらも、佐久山（いまの栃木県大田原市）の大高家に伝わった家伝をもとにしたものと考えられる。「忠晴」の名と笠間で仕えた話が本に現れるのは、この家伝集からである。</p>
-<p>源五自身が書いた文書も残っている。討ち入りの後、源五は伊予松山藩主の松平隠岐守の屋敷に預けられ、元禄16年（1703）正月に幕府へ親類書を出した。その写しが『鶯宿雑記』巻476〜477に収録されている。親類書は父方の祖父を「秋田伊織」とし、「秋田城之介様に罷在候」と書く。秋田城介は秋田実季の官途であり、源五の祖父は実季に仕えていたことになる。父は「大高兵左衛門」で、「二十七年以前死去」とあるから、延宝4年（1676）ごろに没した。一方、弟の小野寺幸右衛門が出した親類書（『元禄四十七士』下、1914）は、父方の祖父を「大高氏　名覚不申候」「浪人にて罷在候」と記しており、兄の親類書とは内容が一致しない。『三春藩秋田家世臣譜』に出る「伊織」は、宝暦3年（1753）に名跡を継いだ別の人である。源五の家が大高のどの家から分かれたかは、まだ確定していない。</p>
-<p>源五についてよく知られている話の多くは、その時代の記録で確かめられる。源五は自分ではおおむね「源五」と署名し、ほかの人の記録には「源吾」と書くものが多い。俳諧を水間沾徳に学んで子葉と号し、其角も遺稿集『類柑子』に子葉の名を書いている。討ち入りの前、源五は町人に扮して茶人の山田宗偏に弟子入りし、吉良邸で茶会の開かれる日を聞き出した。大石内蔵助が寺井玄渓に宛てた12月14日付の書状に「此宗偏へ、大高源五町人ニ作り、弟子いたし候て、會日迄も自然と承之」とある。母に宛てた手紙は2通残り、12月7日付の手紙には「是かぎりの文にて御座候」とある。松山藩士の聞き書きは、当夜、源五が表門から一番に乗り込み、年老いた堀部弥兵衛を軒から抱き下ろしたと伝えている。元禄16年2月4日、源五は松山藩の屋敷で切腹し、泉岳寺に葬られた。辞世は、藩の記録では「梅を呑茶屋もあるへし死出の山」である。</p>
+<p>赤穂義士の大高源五忠雄の家について、広く知られている話がある。源五の家は大高の傍流で、秋田家が常陸国宍戸にいたころ、隣の笠間にあった浅野家に仕え、正保2年（1645）の浅野家の国替えに従って赤穂へ行ったという。宍戸と笠間はどちらも現在の茨城県笠間市にあり、秋田家の三春への国替えと浅野家の赤穂への国替えは、同じ正保2年である。</p>
+<p>この説を記した本としては、昭和45年（1970）の斎藤半蔵編『大高家家伝集』が早い。源五の父を「大高兵左衛門忠晴」、その父を「秋田伊織忠久」とし、忠晴は寛永6年（1629）に生まれたとする。昭和50年（1975）の『大田原市史』前編は、忠晴が浅野家に仕えて知行200石であったと書く。どちらも、佐久山（いまの栃木県大田原市）の大高家に伝わった家伝をもとにしたものと考えられる。「忠晴」の名と笠間で仕えた話が本に現れるのは、この家伝集からである。</p>
+<p>源五自身が書いた文書も残っている。討ち入りの後、源五は伊予松山藩主の松平隠岐守の屋敷に預けられ、元禄16年（1703）正月に幕府へ親類書を出した。その写しが『鶯宿雑記』巻476〜477に収録されている。親類書は父方の祖父を「秋田伊織」とし、「秋田城之介様に罷在候」と書く。秋田城介は秋田実季の官途であり、源五の祖父は実季に仕えていたことになる。父は「大高兵左衛門」で、「二十七年以前死去」とあるから、延宝4年（1676）ごろに没した。</p>
+<p>一方、弟の小野寺幸右衛門が出した親類書（『元禄四十七士』下、1914）は、父方の祖父を「大高氏　名覚不申候」「浪人にて罷在候」と記しており、兄の親類書とは内容が一致しない。『三春藩秋田家世臣譜』に出る「伊織」は、宝暦3年（1753）に名跡を継いだ別の人である。源五の家が大高のどの家から分かれたかは、まだ確定していない。</p>
+<p>源五についてよく知られている話の多くは、その時代の記録で確かめられる。源五は自分ではおおむね「源五」と署名し、ほかの人の記録には「源吾」と書くものが多い。俳諧を水間沾徳に学んで子葉と号し、其角も遺稿集『類柑子』に子葉の名を書いている。討ち入りの前、源五は町人に扮して茶人の山田宗偏に弟子入りし、吉良邸で茶会の開かれる日を聞き出した。大石内蔵助が寺井玄渓に宛てた12月14日付の書状に「此宗偏へ、大高源五町人ニ作り、弟子いたし候て、會日迄も自然と承之」とある。</p>
+<p>母に宛てた手紙は2通残り、12月7日付の手紙には「是かぎりの文にて御座候」とある。松山藩士の聞き書きは、当夜、源五が表門から一番に乗り込み、年老いた堀部弥兵衛を軒から抱き下ろしたと伝えている。元禄16年2月4日、源五は松山藩の屋敷で切腹し、泉岳寺に葬られた。辞世は、藩の記録では「梅を呑茶屋もあるへし死出の山」である。</p>
 <p>両国橋で宝井其角と行き会い、其角の「年の瀬や水の流れと人の身は」に、煤竹売りに身をやつした源五が「あした待たるるその宝船」と付けたという逸話も広く知られている。この話は、調べた範囲では、その時代の記録にも、源五と其角の著作や書簡にも見当たらない。文献上確認できる最も早い形は、為永春水の読本『いろは文庫』第一編（天保7年・1836）に見られる。芝居では、安政3年（1856）の『新臺いろは書始』に両国橋の場があり、いまも演じられる『松浦の太鼓』は、その十一段目を改作したものである。福本日南『元禄快挙真相録』（1914）と『赤穂義士研究』（1942）は、この話を作り話としている。</p>
-<h2 id="c12"><span class="n">終</span>この帖の使い方</h2>
-<p>ここに並べた話は、そのままでは確かなよりどころにならない。同時代の記録が一点でも見つかれば、根拠として用いることができる。いま確かなのは、そう語られてきたという事実だけである。</p>
-<p>決め手になりそうな資料は三つある。第一は、古内龍夫「檜山城百五十日の籠城」『年報能代市史研究』第5号である。籠城した側の武将の名が並んでおり、そこに大高がいるかどうかを確認できる。第二は、太田實「安藤(東)實季家臣団と大高甚助」『出羽路』140号（2007）pp.1-19（秋田県立図書館 A205-3-140）である。家臣団のなかでの大高の位置を正面から扱った唯一の論文である。第三は、『出羽路』77号（1983）の「桧山安東氏の家臣大高相模守の子孫」である。表題どおり、この帖の中心にいる人物とその子孫を扱っている。</p>
-<p>もう一つ、確かめたい点がある。明治31年（1898）の『秋田沿革史大成』はよりどころとして、元文5年（1740）の池内盈雄の記と、檜山の給士白坂丹後高寛の記を挙げている。二つの記から確認したいのは、茶臼館に住んでいたことや、天正（1573〜1592）の末に檜山城を守っていて火を掛けられたことなどの細部が、18世紀の記録までさかのぼれるかどうかである。記そのものの所在も、次に確かめる。</p>
-<p>四章の三浦盛永の段で引用した『文化の秋田』『土崎港町史』『姓氏家系大辞典』と、五章で引用した『山本郡探勝案内』のコマ57前後も、原本の頁で確かめる。</p>
 <h2 id="c13"><span class="n">注</span>推定の理由と、絵や図について</h2>
 <ul><li>注1　天正11年以前。相手の大宝寺義氏は天正11年に討たれる。</li><li>注2　天正10〜15年。武田家の滅亡（天正10年）の後、愛季の死（天正15年）の前。</li><li>注3　天正17年。原文は「天正の末」。天正（1573〜1592）の末に檜山城が囲まれたのは湊合戦なので、この年と見る。</li><li>注4　天正17年〜慶長7年。檜山に城代が置かれてから国替えまで。根拠は弱い。</li><li>注5　慶長7年以後。佐竹氏の入部により武士をやめた後。</li><li>年代の帯と序の表の年は、本文の出所による。</li><li>絵は生成画像である。山の形状や城郭・家屋の構造、人々の姿や装束は、作画の際に想像で補ったものである。</li><li>距離は、国土地理院の住所検索で求めた各地点間の直線距離である。</li><li>青森県史デジタルアーカイブスの画像は、同館の使用条件に従い、転載していない。</li><li>補章の『千田秋田軍記』の引用は、複写版の画像から判読した文字である。中冨たつ子氏が校訂した訳文は、校訂者と公開者の著作物であるため、引用していない。</li></ul>
 <h2 id="c14"><span class="n">索引</span>登場する人</h2>
-<div class="tw"><table><thead><tr><th>名前</th><th>何をした人か</th><th>登場する章</th></tr></thead><tbody><tr><td>大高四郎右衛門尉</td><td>天文（1532〜1555）期の取次。のちの筑前守と見る</td><td>一・二</td></tr><tr><td>大高筑前守</td><td>越後・庄内との取次。湊合戦で使者として立ち、討たれる</td><td>二・三・四・八・附</td></tr><tr><td>大高主馬</td><td>長牛城攻めの大将</td><td>二・三</td></tr><tr><td>大高相模（守）</td><td>脇本への通路を開く。檜山城を渡す</td><td>四・五・六・八・補・附</td></tr><tr><td>大高甚介（甚助）</td><td>代官所18か村。三春大高甚助家の祖</td><td>七・八</td></tr><tr><td>大高傳右衛門（安時）</td><td>野代城代。羽賀寺へ丈木</td><td>六・八</td></tr><tr><td>大高四郎右衛門</td><td>鉄炮衆の指南</td><td>七</td></tr><tr><td>大高又兵衛（秋田主馬）</td><td>大坂陣の侍大将。子孫絶える</td><td>八</td></tr><tr><td>安東愛季</td><td>檜山屋形の当主</td><td>二・三・四・五・補</td></tr><tr><td>秋田実季</td><td>愛季の子。城介</td><td>二・四・六・七・八・補・附</td></tr><tr><td>湊九郎通季</td><td>湊合戦を起こす</td><td>四・補</td></tr><tr><td>下国相模入道安叟</td><td>安東一門。檜山城留守居</td><td>四</td></tr><tr><td>戸沢九郎盛安</td><td>仙北の戸沢。湊方</td><td>四・補</td></tr><tr><td>土佐林禅棟・氏頼</td><td>庄内・藤島城の父子</td><td>一・二・八</td></tr><tr><td>直江政綱</td><td>上杉謙信の重臣</td><td>二</td></tr><tr><td>嘉成康清（常陸介）</td><td>「大なる相模」の書状の差出</td><td>四・六・補</td></tr><tr><td>三浦兵庫頭盛永・五郎盛末</td><td>浦城の主と子</td><td>四・補</td></tr><tr><td>武田重左衛門</td><td>八森の古館を守る</td><td>五</td></tr><tr><td>長牛縫殿助</td><td>長牛城の籠城の大将</td><td>三</td></tr><tr><td>菅江真澄</td><td>村で伝えを聞き取る</td><td>五・附</td></tr><tr><td>大高源五忠雄</td><td>赤穂義士。父方の祖父は秋田伊織</td><td>附</td></tr><tr><td>秋田伊織</td><td>源五の父方の祖父。秋田城介に仕えた</td><td>附</td></tr></tbody></table></div>
-<p class="oku">檜山大高 伝承帖。檜山安東氏の家中にいた大高の一族について、その時代の文書に加え、軍記、近世の地誌、口碑が伝える話も用い、年代順に構成した読み物である。原文は表記を改めず、各章の終わりにまとめて引用した。国立国会図書館デジタルコレクションの画像で文字を確かめた資料には、頁（コマ）を記した。画像は転載していない。2026年9月。</p>
+<div class="tw sakuin"><table><thead><tr><th>名前</th><th>何をした人か</th><th>登場する章</th></tr></thead><tbody><tr><td>大高四郎右衛門尉</td><td>天文（1532〜1555）期の取次。のちの筑前守と見る</td><td>一・二</td></tr><tr><td>大高筑前守</td><td>越後・庄内との取次。湊合戦で使者として立ち、討たれる</td><td>二・三・四・八・附</td></tr><tr><td>大高主馬</td><td>長牛城攻めの大将</td><td>二・三</td></tr><tr><td>大高相模（守）</td><td>脇本への通路を開く。檜山城を渡す</td><td>四・五・六・八・補・附</td></tr><tr><td>大高甚介（甚助）</td><td>代官所18か村。三春大高甚助家の祖</td><td>七・八</td></tr><tr><td>大高傳右衛門（安時）</td><td>野代城代。羽賀寺へ丈木</td><td>六・八</td></tr><tr><td>大高四郎右衛門</td><td>鉄炮衆の指南</td><td>七</td></tr><tr><td>大高又兵衛（秋田主馬）</td><td>大坂陣の侍大将。子孫絶える</td><td>八</td></tr><tr><td>安東愛季</td><td>檜山屋形の当主</td><td>二・三・四・五・補</td></tr><tr><td>秋田実季</td><td>愛季の子。城介</td><td>二・四・六・七・八・補・附</td></tr><tr><td>湊九郎通季</td><td>湊合戦を起こす</td><td>四・補</td></tr><tr><td>下国相模入道安叟</td><td>安東一門。檜山城留守居</td><td>四</td></tr><tr><td>戸沢九郎盛安</td><td>仙北の戸沢。湊方</td><td>四・補</td></tr><tr><td>土佐林禅棟・氏頼</td><td>庄内・藤島城の父子</td><td>一・二・八</td></tr><tr><td>直江政綱</td><td>上杉謙信の重臣</td><td>二</td></tr><tr><td>嘉成康清（常陸介）</td><td>「大なる相模」の書状の差出</td><td>四・六・補</td></tr><tr><td>三浦兵庫頭盛永・五郎盛末</td><td>浦城の主と子</td><td>四・補</td></tr><tr><td>武田重左衛門</td><td>八森の古館を守る</td><td>五</td></tr><tr><td>長牛縫殿助</td><td>長牛城の籠城の大将</td><td>三</td></tr><tr><td>菅江真澄</td><td>村で伝えを聞き取る</td><td>五・附</td></tr><tr><td>大高源五忠雄</td><td>赤穂義士。父方の祖父は秋田伊織</td><td>附</td></tr><tr><td>秋田伊織</td><td>源五の父方の祖父。秋田城介に仕えた</td><td>附</td></tr></tbody></table></div>
+<div class="oku"><p class="dai">檜山大高 伝承帖</p><p class="bun">檜山安東氏の家中にいた大高の一族について、その時代の文書に加え、軍記、近世の地誌、口碑が伝える話も用い、年代順に構成した読み物である。原文は表記を改めず、各章の終わりにまとめて引用した。国立国会図書館デジタルコレクションの画像で文字を確かめた資料には、頁（コマ）を記した。画像は転載していない。</p><p class="hi">2026年9月</p></div>
+<section class="urabyoshi"><svg class="in" viewBox="0 0 100 100" role="img" aria-label="綴の印"><rect x="2" y="2" width="96" height="96" rx="7"/><rect class="waku" x="9" y="9" width="82" height="82" rx="3"/><text x="50" y="54" text-anchor="middle" dominant-baseline="middle">綴</text></svg></section>
 </div></body></html>
